@@ -314,7 +314,7 @@
                 <h4 class="tabBtn_2"><a href="#">What's On</a></h4>
                 <div class="sevenWhts_wrap">
                     <form action="#" method="get">
- <!--                        <fieldset>
+                        <fieldset>
                             <legend>제주에서 할것</legend>
                             <div>
                               <p><img src="images/main/icon_whtsOn_sch.png" alt="검색"></p>
@@ -339,37 +339,41 @@
                                 <p><label for="to">to</label></p>
                                 <input type="text" name="to" id="to" readonly>
                             </div>
-                            <div>
-                                <button type="submit">SEARCH<img src="images/main/arrow_sch.png" alt="이동화살표"></button>
+                            <div class="ta_r">
+                                <button type="submit" class="submit">SEARCH<em><img src="images/main/arrow_sch.png" alt="이동화살표"></em></button>
                             </div>
-                        </fieldset> -->
+                        </fieldset>
                     </form>
                 </div>
             </div>
         </section>
-        <section class="row_2 wrapIn">
+        <section class="row_2 wrapIn line clearFix">
             <h3>UNESCO World Natural Heritage in Jeju</h3>
             <div class="cot_unesco_wrap">
                 <div class="unesco_row_1">
-                    <a href="hallasan.html"><img src="images/main/img_halla.png" alt="한라산"></a>
-                    <h4><a href="hallasan.html">Natural reserve,<br/>Halla mountain</a></h4>
-                    <p>우리나라에서 자라는 4,000여 종의 식물 가운데
-                        <br/>2,000여 종이 서식하고 있어 '살아있는 생태 공원'으로
-                        <br/>불리는데 특히 정상부의 구상나무 숲은 세계 최대 규모이다. </p>
+                    <a href="hallasan.html"><span class="ObulletT"><img src="images/main/img_halla.png" alt="한라산"></span></a>
+                    <div>
+                        <h4><a href="hallasan.html">Natural reserve,<br/>Halla mountain</a></h4>
+                        <p>우리나라에서 자라는 4,000여 종의 식물 가운데
+                            2,000여 종이 서식하고 있어 '살아있는 생태 공원'으로
+                            불리는데 특히 정상부의 구상나무 숲은 세계 최대 규모이다. </p>
+                    </div>
                 </div>
                 <div class="unesco_row_2">
                     <div class="unesco_row_2_col_1">
-                        <a href="#"><img src="images/main/img_sungsan.png" alt="성산일출봉"></a>
-                        <h4><a href="#">Seongsan Sunrise Peak </a></h4>
+                        <a href="#"><span class="ObulletB"><img src="images/main/img_sungsan.png" alt="성산일출봉"></span>
+                        <h5>Seongsan Sunrise Peak</h5>
                         <p> 높이 180m의 성산일출봉은 약 5천 년 전 얕은 바다에서 일어난 수성화산
-                            <br/> 활동으로 형성된 응회구이다. </p>
+                            활동으로 형성된 응회구이다. </p>
+                        </a>
                     </div>
                     <div class="unesco_row_2_col_2">
-                        <a href="#"><img src="images/main/img_gumun.png" alt="거문오름 및 용암동굴"></a>
-                        <h4><a href="#">Geomun Oreum and lava tubes</a></h4>
+                        <a href="#"><span class="ObulletB"><img src="images/main/img_gumun.png" alt="거문오름 및 용암동굴"></span>
+                        <h5>Geomun Oreum and lava tubes</h5>
                         <p> 거문오름에서 수 차례 분출한 용암이 13㎞ 떨어진 해안까지 흘러가는
-                            <br/>동안 만들어낸 용암동굴 무리를 말하는데 벵뒤굴, 만장굴, 김녕굴, 용천
-                            <br/>동굴, 당처물동굴이다.</p>
+                            동안 만들어낸 용암동굴 무리를 말하는데 벵뒤굴, 만장굴, 김녕굴, 용천
+                            동굴, 당처물동굴이다.</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -382,15 +386,16 @@
                 </div>
             </div>
         </section>
-        <section class="row_3 wrapIn">
+        <section class="row_3 wrapIn line">
             <h3>what’s on</h3>
             <div class="whtsOn_row_wrap1">
                 <form action="#" method="get">
-                    <fieldset>
+                    <fieldset class="clearFix">
                         <legend>제주에서 할것</legend>
                         <div class="whtsOn_col_1">
                             <span><img src="images/main/icon_sch_whtsOn.png" alt="검색아이콘"></span>
-                            <ul>
+                            <button class="whtsList">All</button>
+                            <!-- <ul>
                                 <li><a href="#">All</a></li>
                                 <li><a href="#">Exhibition</a></li>
                                 <li><a href="#">Festival</a></li>
@@ -400,18 +405,18 @@
                                 <li><a href="#">Trade fair, trade show, exhibition</a></li>
                                 <li><a href="#">Sport</a></li>
                                 <li><a href="#">Second-hand market</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="whtsOn_col_2">
-                            <label for="from_2"></label>
+                            <label for="from_2">from</label>
                             <input type="text" name="from_2" id="from_2" readonly>
                         </div>
                         <div class="whtsOn_col_3">
-                            <label for="to_2"></label>
+                            <label for="to_2">to</label>
                             <input type="text" name="to_2" id="to_2" readonly>
                         </div>
                         <div class="whtsOn_col_4">
-                            <button type="submit">SEARCH<img src="images/main/arrow_sch.png" alt="이동화살표"></button>
+                            <button type="submit">SEARCH<em><img src="images/main/arrow_sch.png" alt="이동화살표"></em></button>
                         </div>
                     </fieldset>
                 </form>
