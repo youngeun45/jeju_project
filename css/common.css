@@ -20,7 +20,6 @@ button span{text-indent: -9999px;display: inline-block}
 address, em{font-style: normal;}
 [class*=wrapIn]{margin: 0 auto;padding: 0 9px;max-width: 1200px}
 input[type=text],input[type=password]{border:none;}
-
 /*헤더*/
 #header_wrap{ width: 100%;position: relative;background-color: #fff;border-bottom: 1px solid #eee;}
 #header_wrap .skipMenu a{display: block;color: #fff; background-color: #000; height: 20px; text-align: center;font-weight: bold;position:absolute; top:-50px; left:0;}

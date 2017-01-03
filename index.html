@@ -1,32 +1,20 @@
 <!doctype html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="Author" content="">
-    <meta name="Keywords" content="">
-    <meta name="Description" content="">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
-    <script type="text/javascript" src="js/html5shiv.min.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-<script type="text/javascript">
-$(function(){
-	$(".mySlider_1").bxSlider({
-	auto:true,//auto:true 기본값은 false : 자동슬라이더 
-	autoControls: true, // 정지재생버튼
-	controls:true,
-	pager:true
-	}); 
-
-})
-</script>
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>JEjU | 메인페이지</title>
+<script type="text/javascript" src="js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>JEjU | 메인페이지</title>
 </head>
-
 <body>
     <div id="header_wrap">
         <p class="skipMenu"><a href="#container">본문바로가기</a></p>
@@ -121,7 +109,7 @@ $(function(){
                     <h2 class="메인메뉴"></h2>
                     <ul>
                         <li><a href="jejustory.html">LUXURY JEJU</a>
-                           <!--  <div>
+                            <div>
                             	<div class="subGnb_wrapIn">
                             		<ul>
                             		    <li><a href="jejustory.html">제주이야기</a></li>
@@ -135,7 +123,7 @@ $(function(){
                             		</ul>
                             	</div>
                             </div>
-                        </li> -->
+                        </li>
                         <li><a href="festival.html">WHAT TO SEE</a>
                          <!--    <div>
                             	<div class="subGnb_wrapIn">
@@ -194,54 +182,62 @@ $(function(){
         </div>
     </div>
     <div id="container">
-        <section class="row_1 wrapIn">
+        <section class="row_1 wrapIn clearFix">
             <h3 class="blind">주력상품이미지 및 7대 비경메뉴</h3>
             <div class="main_prdt_wrap">
                 <div class="main_prdt_frame">
-                    <ul>
+                    <ul class="main_prdt_Slide">
                         <li>
                             <a href="#"><img src="images/main/img_main_1.png" alt="주력상품이미지1"></a>
-                            <a href="#">
-                                <h4>Scuba Diving</h4>
-                            </a>
-                            <a href="#">
-                                <p>용암분출로 만들어진 각각의 바위들, 열대어, 산호군락으로 이루어진 제주의 바다는, 연중 수온이 20도를
-                                    <br/>유지해 일년 내내 스쿠버다이빙을 즐길 수 있다.</p>
-                            </a>
+                           <div>
+                                <a href="#">
+                                   <h4>Scuba Diving</h4>
+                               </a>
+                               <a href="#">
+                                   <p>용암분출로 만들어진 각각의 바위들, 열대어, 산호군락으로 이루어진 제주의 바다는, 연중 수온이 20도를
+                                       <br/>유지해 일년 내내 스쿠버다이빙을 즐길 수 있다.</p>
+                               </a>
+                           </div>
                         </li>
-                        <!-- <li>
+                        <li>
                             <a href="#"><img src="images/main/img_main_2.png" alt="주력상품이미지2"></a>
-                            <a href="#">
-                                <h4>OSULLOC Tea Museum</h4>
-                            </a>
-                            <a href="#">
-                                <p>제주 오설록 서광 차밭과 맞닿아 있는 오설록 티뮤지엄은 아모레퍼시픽이 차와 한국 전통차 문화를 소개하고,
-                                    <br/> 널리 보급하고자 2001년 9월에 개관한 국내 최초의 차 박물관입니다</p>
-                            </a>
+                           <div>
+                                <a href="#">
+                                   <h4>OSULLOC Tea Museum</h4>
+                               </a>
+                               <a href="#">
+                                   <p>제주 오설록 서광 차밭과 맞닿아 있는 오설록 티뮤지엄은 아모레퍼시픽이 차와 한국 전통차 문화를 소개하고,
+                                       <br/> 널리 보급하고자 2001년 9월에 개관한 국내 최초의 차 박물관입니다</p>
+                               </a>
+                           </div>
                         </li>
                         <li>
                             <a href="#"><img src="images/main/img_main_3.png" alt="주력상품이미지3"></a>
-                            <a href="#">
-                                <h4>Sehwa Beach</h4>
-                            </a>
-                            <a href="#">
-                                <p>코발트 빛깔의 맑은 바다를 볼 수 있는 해변!
-                                    <br/>잘 알려지지 않은 조그마한 해수욕장이지만, 주위가 깨끗하고 물이 더럽지 않은
-                                    <br/>순정한 바다라서 도민들은 많이 찾는 곳입니다</p>
-                            </a>
+                            <div>
+                                <a href="#">
+                                    <h4>Sehwa Beach</h4>
+                                </a>
+                                <a href="#">
+                                    <p>코발트 빛깔의 맑은 바다를 볼 수 있는 해변!
+                                        <br/>잘 알려지지 않은 조그마한 해수욕장이지만, 주위가 깨끗하고 물이 더럽지 않은
+                                        <br/>순정한 바다라서 도민들은 많이 찾는 곳입니다</p>
+                                </a>
+                            </div>
                         </li>
                         <li>
                             <a href="#"><img src="images/main/img_main_4.png" alt="주력상품이미지4"></a>
-                            <a href="#">
-                                <h4>Meglioecopia</h4>
-                            </a>
-                            <a href="#">
-                                <p>환상의 모험과 자연의 감성이 어우러진 에코피아제주에서 소중한 추억을 담아가세요</p>
-                            </a>
-                        </li> -->
+                            <div>
+                                <a href="#">
+                                    <h4>Meglioecopia</h4>
+                                </a>
+                                <a href="#">
+                                    <p>환상의 모험과 자연의 감성이 어우러진 에코피아제주에서 소중한 추억을 담아가세요</p>
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <p class="controls">
+               <!--  <p class="controls">
                     <button><img src="images/main/arrow_left.png" alt="왼쪽버튼"></button>
                     <button><img src="images/main/arrow_right.png" alt="오른쪽버튼"></button>
                 </p>
@@ -250,11 +246,11 @@ $(function(){
                     <button>두번째이미지</button>
                     <button>세번째이미지</button>
                     <button>네번째이미지</button>
-                </p>
+                </p> -->
             </div>
             <div class="sevenMenu">
-                <h4><a href="#">7대 비경</a></h4>
-                <div>
+                <h4 class="tabBtn_1"><a href="#">7대 비경</a></h4>
+                <!-- <div class="seven_wrap">
                     <ul>
                         <li>
                             <a href="#">
@@ -313,16 +309,16 @@ $(function(){
                             </a>
                         </li>
                     </ul>
-                    <p>more &gt;</p>
-                </div>
-                <h4><a href="#">What's On</a></h4>
-                <div>
+                    <p class="seven_moreBtn"><a href="#"><span>more &gt;</span></a></p>
+                </div> -->
+                <h4 class="tabBtn_2"><a href="#">What's On</a></h4>
+                <div class="sevenWhts_wrap">
                     <form action="#" method="get">
-                        <fieldset>
+ <!--                        <fieldset>
                             <legend>제주에서 할것</legend>
                             <div>
-                                <img src="images/main/icon_whtsOn_sch.png" alt="검색">
-                                <br/>
+                              <p><img src="images/main/icon_whtsOn_sch.png" alt="검색"></p>
+                                <button class="seven_whtsList">All</button>
                                 <ul>
                                     <li><a href="#">All</a></li>
                                     <li><a href="#">Exhibition</a></li>
@@ -336,17 +332,17 @@ $(function(){
                                 </ul>
                             </div>
                             <div>
-                                <label for="from">from</label>
+                                <p><label for="from">from</label></p>
                                 <input type="text" name="from" id="from" readonly>
                             </div>
                             <div>
-                                <label for="to">to</label>
+                                <p><label for="to">to</label></p>
                                 <input type="text" name="to" id="to" readonly>
                             </div>
                             <div>
                                 <button type="submit">SEARCH<img src="images/main/arrow_sch.png" alt="이동화살표"></button>
                             </div>
-                        </fieldset>
+                        </fieldset> -->
                     </form>
                 </div>
             </div>
