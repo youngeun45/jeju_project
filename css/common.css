@@ -83,6 +83,39 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:before{display: inline-block;content:url(../images/common/arrow_gnbMenu.png);position: absolute;top:15px; right:0;}
 .gnb_wrap .gnb_wrapIn>ul>li>div>div>ul:first-child{margin-right: 3.5%;}
 /*헤더종료*/
+/*네비게이션 시작*/
+.common_navi{width: 100%; height:49px; background: url(../images/common/bg_info.png) 0 0 repeat-x; line-height: 49px;font-size: 14px; font-weight: bold; color: #999;}
+.common_navi a{color: #999;}
+.common_navi a:hover,.common_navi a:focus{text-decoration: underline;}
+
+/*네비게이션 종료*/
+/*그레이박스 시작*/
+.row_1{margin-bottom: 78px;}
+.row_1 .sevenMenu{float: right; width: 32.27%;position: relative;}
+.row_1 .sevenMenu h4 a{position: relative;display: block;width:50%; height: 60px; background-color: #393939;color: #fff;font-weight: bold; font-size: 16px; text-align: center;line-height:60px ;}
+.row_1 .sevenMenu h4 a:before{content: "";width: 114px; height: 1px; background-color: #1c1b1b;display: block;position: absolute;top:59px; left: 40px}
+.row_1 .sevenMenu h4.tabBtn_2 a{background: url(../images/main/opa_box_r.png) 0 0 no-repeat;line-height: 50px;position: absolute;top:10px; left:50%;}
+.row_1 .sevenMenu h4.tabBtn_2 a:before{display: none;}
+.row_1 .sevenMenu .seven_wrap{width: 100%;min-width: 381px; height: 552px;background-color: #393939;position: relative;}
+
+.row_1 .sevenMenu .seven_wrap ul li{float: left;width: 50%;}
+.row_1 .sevenMenu .seven_wrap ul li a{border: solid #1c1b1b;border-width:0 0 1px 1px;font-size: 14px; font-weight: bold;display:inline-block;width: 100%; text-align: center;height: 124px; padding: 22px 0;color: #fff;}
+.row_1 .sevenMenu .seven_wrap ul li:first-child+li+li+li+li+li+li a{border-width:0 1px 0 1px;margin-left: 1px;}
+.row_1 .sevenMenu .seven_wrap ul li a img{margin-bottom: 13px;}
+.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{text-transform: uppercase;position: absolute;bottom:3px;left:0;text-align: right; width: 100%; height: 53px;line-height: 53px;color: #fd6602;font-weight: bold;border-top: 1px solid #1c1b1b;}
+.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a span{padding-right: 16px;}
+.row_1 .sevenMenu .sevenWhts_wrap{width: 100%; height: 395px;background-color: #393939;position: relative;padding: 20px 20px 28px;text-align: center;}
+.row_1 .sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
+.row_1 .sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
+.row_1 .sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
+.row_1 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
+.row_1 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
+.row_1 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul{display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:87%;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul a:hover,.row_1 .sevenMenu .sevenWhts_wrap div ul a:focus{color: #fff; background-color: #f9893f;}
+/*그레이박스 종료*/
+
 /*플랜유어스테이 시작*/
 .plan_wrapIn{margin-bottom: 107px;}
 .plan_wrapIn .plan_col_1{float: left;width: 37.25%;padding-left: 24px;padding-top: 81px;}
@@ -114,5 +147,4 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 #footerwrap .footer_wrapIn{position: relative;}
 #footerwrap .footer_wrapIn h2{position: absolute; top:0; left:0;}
 #footerwrap .footer_wrapIn div {color: #fff;padding-left: 121px;line-height: 16px;}
-
 /*푸터 종료*/

@@ -1,0 +1,4 @@
+#container{margin: 0;padding-top: 40px;}
+#container .row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
+.global_main_wrap{float: left;width: 60%;}
+.global_main_wrap>p{font-size: 14px;line-height: 23px;}
