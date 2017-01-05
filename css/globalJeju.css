@@ -1,4 +1,39 @@
 #container{margin: 0;padding-top: 40px;}
 #container .row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
 .global_main_wrap{float: left;width: 60%;}
-.global_main_wrap>p{font-size: 14px;line-height: 23px;}
+.global_main_wrap>p{font-size: 14px;line-height: 23px;padding-bottom: 30px;}
+.global_main_wrap .glb_main h3{margin-bottom: 30px;}
+.global_main_wrap .glb_main .global_row_1{width: 100%;background-color: #eee;}
+.global_main_wrap .glb_main .global_row_1:hover h4 a,.global_main_wrap .glb_main .global_row_1:focus h4 a{text-decoration: underline;}
+.global_main_wrap .glb_main .global_row_1>a{display: inline-block;width:49%;}
+.global_main_wrap .glb_main .global_row_1 a span img{width: 100%;}
+.global_main_wrap .glb_main .global_row_1 div{display: inline-block;width: 50%;vertical-align: top;padding: 32px 21px;}
+.global_main_wrap .glb_main .global_row_1 div h4 a{font-weight: bold; font-size: 24px; color: #282828;display: inline-block;margin-bottom: 15px;overflow: hidden;-ms-text-overflow: ellipsis;
+text-overflow: ellipsis;white-space: nowrap;width: 100%;}
+.global_main_wrap .glb_main .global_row_1 div h4+p{line-height: 22px;height: 66px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word; }
+.row_1{margin-bottom: 127px;}
+.row_1 .sevenMenu{width: 28.11%;}
+.row_1 .sevenMenu .seven_wrap{height: 439px;}
+.row_1 .sevenMenu .seven_wrap ul li a{height: 98px;padding: 14px 0;font-size: 12px;}
+.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 48px; line-height: 48px;bottom: 0;}
+.row_2 {position: relative;margin-bottom: 98px;}
+.row_2.line:before {top :-46px;}
+
+.row_2 .global_row_2 ul li{float: left;width: 23%;background-color: #eee;margin-left: 19px;height: ;}
+.row_2 .global_row_2 ul li img{width: 100%;}
+.row_2 .global_row_2 ul li a{display: block; width: 100%;max-width: 277px;text-align: center;}
+.row_2 .global_row_2 ul li a div{min-height: 118px;padding: 21px 19px;}
+.row_2 .global_row_2 ul li a div h5{color: #282828;font-weight: bold; font-size: 16px;padding-bottom: 14px;}
+.row_2 .global_row_2 ul li a div p{line-height: 18px;height:36px ;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word;}
+
+.plan_wrapIn {position: relative;}
+.plan_wrapIn.line:before{top:-45px;}
+
+
+
+
+
+
+
+
+

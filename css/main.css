@@ -15,16 +15,16 @@
 .main_prdt_frame .main_prdt_Slide div a p{font-size: 14px; color: #282828;line-height: 25px;height: 20px;}
 
 .row_2{position: relative;margin-bottom: 86px;}
-.row_2 .cot_unesco_wrap{float: left;width: 65%;}
+.row_2 .cot_unesco_wrap{float: left;width: 66%;}
 .row_2 .cot_ad_wrap{float: right;width: 25.3%;}
 .row_2 .unesco_row_1{width: 100%;background-color: #eee;margin-bottom: 52px;position: relative;}
 .row_2 .unesco_row_1:hover h4 a,.row_2 .unesco_row_1:focus h4 a{text-decoration: underline;}
 .row_2 .unesco_row_1:before{content: "";width: 100%; height: 1px; background-color: #eee;display: block;position: absolute;bottom:-26px; left: 0}
 .row_2 .unesco_row_1>a{display: inline-block;width:49%;}
 .row_2 .unesco_row_1 a span img{width: 100%;}
-.row_2 .unesco_row_1 div{display: inline-block;width: 50%;vertical-align: top;padding: 19px 23px 0;}
+.row_2 .unesco_row_1 div{display: inline-block;width: 50%;vertical-align: top;padding: 19px 23px;}
 .row_2 [class^=unesco_row_] div h4 a{font-weight: bold; font-size: 24px; color: #282828;display: inline-block;margin-bottom: 15px;}
-.row_2 [class^=unesco_row_] div p{line-height: 22px;}
+.row_2 [class^=unesco_row_] div p{line-height: 22px;height: 66px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word;}
 .cot_unesco_wrap .unesco_row_2 {width: 100%;}
 .cot_unesco_wrap .unesco_row_2 .unesco_row_2_col_1{display: inline-block;width: 49%;float: left;}
 .cot_unesco_wrap .unesco_row_2 .unesco_row_2_col_2{display: inline-block;width: 49%;float: right;}
