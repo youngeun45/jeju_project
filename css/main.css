@@ -62,7 +62,7 @@
 .row_3 .whtsOn_row_wrap2 ul li:first-child{margin: 0;}
 .row_3 .whtsOn_row_wrap2>ul>li>a:first-child{display: block;min-height: 310px}
 .row_3 .whtsOn_row_wrap2>ul>li>a:hover h4{text-decoration: underline;}
-.row_3 .whtsOn_row_wrap2>ul>li>a>img{width: 100%;margin-bottom: 16px;}
+.row_3 .whtsOn_row_wrap2>ul>li>a>span>img{width: 100%;}
 .row_3 .whtsOn_row_wrap2>ul>li h4{color: #282828; font-size: 17px;font-weight: bold;margin-bottom: 10px;}
 .row_3 .whtsOn_row_wrap2>ul>li p.date{color: #be4c02; font-size: 13px;font-weight: bold;}
 .row_3 .whtsOn_row_wrap2>ul>li p+p{font-size: 13px;color: #282828;}
@@ -71,7 +71,8 @@
 .row_3 .whtsOn_row_wrap2 a.seeMore{position: absolute;top:0;right: 9px;display: block;width:13.95%;height: 26px;line-height: 24px;background-color: #eee;text-align: center;font-size: 14px; color: #282828; font-weight: bold;}
 .row_3 .whtsOn_row_wrap2 a.seeMore:hover,.row_3 .whtsOn_row_wrap2 a.seeMore:focus{text-decoration: underline;}
 .row_3 .whtsOn_row_wrap2 a.seeMore em img{padding-left: 13px;margin-top:-2px;}
-.row_3 .whtsOn_row_wrap2 ul li span{position: absolute;top:0;left: 0;display: block;width: 78px; height: 25px; background: url(../images/main/opaBox_whtsOn.png) 0 0 no-repeat;text-align: center;line-height: 25px; color: #fff;font-size: 14px;}
+.row_3 .whtsOn_row_wrap2 ul li strong{position: absolute;top:0;left: 0;display: block;width: 78px; height: 25px; background: url(../images/main/opaBox_whtsOn.png) 0 0 no-repeat;text-align: center;line-height: 25px; color: #fff;font-size: 14px;z-index: 1;}
+.row_3 .whtsOn_row_wrap2>ul>li>a>span{display: block;margin-bottom: 16px;}
 
 .row_4{background-color: #393939;padding: 31px 0 16px 0;margin-bottom: 38px;}
 .row_4 .color_wh{color: #fff;}

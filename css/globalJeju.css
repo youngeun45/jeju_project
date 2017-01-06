@@ -19,11 +19,11 @@ text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .row_2 {position: relative;margin-bottom: 98px;}
 .row_2.line:before {top :-46px;}
 
-.row_2 .global_row_2 ul li{float: left;width: 23%;background-color: #eee;margin-left: 19px;height: ;}
+.row_2 .global_row_2 ul li{float: left;width: 25%;padding: 10px;}
 .row_2 .global_row_2 ul li img{width: 100%;}
-.row_2 .global_row_2 ul li a{display: block; width: 100%;max-width: 277px;text-align: center;}
-.row_2 .global_row_2 ul li a div{min-height: 118px;padding: 21px 19px;}
-.row_2 .global_row_2 ul li a div h5{color: #282828;font-weight: bold; font-size: 16px;padding-bottom: 14px;}
+.row_2 .global_row_2 ul li a{display: block; width: 100%;max-width: 277px;text-align: center;background-color: #eee}
+.row_2 .global_row_2 ul li a div{height: 118px;padding: 21px 19px;}
+.row_2 .global_row_2 ul li a div h5{color: #282828;font-weight: bold; font-size: 16px;padding-bottom: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
 .row_2 .global_row_2 ul li a div p{line-height: 18px;height:36px ;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word;}
 
 .plan_wrapIn {position: relative;}
