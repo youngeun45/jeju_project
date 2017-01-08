@@ -1,5 +1,5 @@
 #container{margin: 0;padding-top: 40px;}
-.col_quick {width: 6.18%;float: left;margin-right: 2.3%;border-top: 5px solid #eee;text-align: center;}
+.col_quick {width: 6.18%;float: left;margin-right: 2.3%;border-top: 5px solid #eee;text-align: center;margin-top: 68px;}
 .col_quick ul li{margin-bottom: 28px;}
 .col_quick ul li:first-child+li+li+li+li+li{margin: 0;}
 

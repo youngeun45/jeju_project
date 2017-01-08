@@ -1,0 +1,18 @@
+#container{margin: 0;padding-top: 40px;}
+.qna_wrapIn{margin-bottom: 220px;}
+.qna_wrapIn .h3_wrap h3{margin: 0;}
+.qna_wrapIn .h3_wrap p{padding:19px 0 27px 0; font-size: 14px;color: #282828;}
+.qna_wrapIn .col_1{float: left;width: 23.69%;border-top: 1px solid #eee;}
+.qna_wrapIn .col_1 a{display: block; color: #282828;padding: 17px 0;font-size: 16px;border-bottom: 1px solid #eee;background: url(../images/qna/qna_arrow_next.png) 97% 50% no-repeat;}
+.qna_wrapIn .col_1 a:hover,.qna_wrapIn .col_1 a.on{color: #fd6602;background-image: url(../images/qna/qna_arrow_next_ov.png);}
+.qna_wrapIn .col_2 a.on{color: #fd6602;}
+.qna_wrapIn .col_2{float: right;width: 65%;border-top: 1px solid #eee;}
+.qna_wrapIn .col_2 ul li{border-bottom: 1px solid #eee;padding-left: 10px;}
+.qna_wrapIn .col_2 ul li div{/*display: none;*/;padding: 10px 0 27px 0;font-size: 14px; color: #282828;}
+.qna_wrapIn .col_2 ul li div span{display: block;padding-bottom: 14px;}
+.qna_wrapIn .col_2 ul li a{display: block;padding: 18px 0;color: #282828; font-size: 16px; font-weight: bold;background: url(../images/qna/qna_arrow.png) 97.8% 50% no-repeat;}
+.qna_wrapIn .col_2 ul li a.on{background-image: url(../images/qna/qna_arrow_ov2.png);}
+
+
+
+

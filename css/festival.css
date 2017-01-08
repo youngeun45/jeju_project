@@ -1,6 +1,6 @@
 #container{margin: 0;padding-top: 40px;}
 #container .row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
-.festival_main_wrap{float: left;width: 60%;}
+.festival_main_wrap{float: left;width: 65.2%;}
 .festival_main_wrap>p{font-size: 14px;line-height: 23px;padding-bottom: 30px;}
 .festival_main_wrap .ftvl_main h3{margin-bottom: 30px;}
 .festival_main_wrap .ftvl_main .festival_row_1{width: 100%;background-color: #eee;}
@@ -14,6 +14,7 @@ text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .festival_main_wrap .ftvl_main .festival_row_1 div h4+p{line-height: 22px;height: 66px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word; }
 .row_1{margin-bottom: 127px;}
 .row_1 .sevenMenu{width: 28.11%;}
+.row_1 .sevenMenu:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left:-12%;}
 .row_1 .sevenMenu .seven_wrap{height: 439px;}
 .row_1 .sevenMenu .seven_wrap ul li a{height: 98px;padding: 14px 0;font-size: 12px;}
 .row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 48px; line-height: 48px;bottom: 0;}
