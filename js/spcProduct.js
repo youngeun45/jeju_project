@@ -16,12 +16,4 @@ $(function(){
 	  	$("#slider_pager").stop().animate({"margin-left":-sliderWidth*sliderNum+"px"},100);
 	  }
 	});
-	$( ".etc_wrap" ).accordion({
-      collapsible: true
-    });
-
-
-
-
-
 })

@@ -22,6 +22,7 @@ address, em, strong{font-style: normal;}
 input[type=text],input[type=password]{border:none;}
 .m_0{margin: 0;}
 .ta_r{text-align: right;}
+.c_28{color: #282828 !important;}
 .line:before{content: "";display: block; background: url(../images/common/line.png) 0 0 repeat-x;width: 100%;height: 8px;position: absolute;top:-40px; left: 0;}
 h3{font-size: 30px;text-transform: uppercase;color: #282828;position: relative;margin-bottom: 45px;}
 h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left: 0;background-color: #fd6602;}
