@@ -1,11 +1,13 @@
 #container{margin: 0;padding-top: 40px;}
+.sp_wrapIn{margin-bottom: 89px;}
 .sp_wrapIn h3{margin: 0;}
 .sp_wrapIn .cot_dscp_wrap {float: right;width: 39.66%;height: 385px;}
 .sp_wrapIn .cot_dscp_wrap h4{font-size: 14px;color: #282828;}
 .sp_wrapIn .cot_dscp_wrap h5{font-size: 28px;color: #282828;font-weight: bold;padding: 30px 0;}
 .sp_wrapIn .cot_dscp_wrap p.c_28{color: #282828;}
 .sp_wrapIn .cot_dscp_wrap p{font-size: 14px;font-weight: bold;padding-bottom: 16px;}
-.sp_wrapIn .cot_wrap {float: left;width: 52.58%;}
+.sp_wrapIn .cot_wrap {float: left;width: 52.58%;position: relative;}
+.sp_wrapIn .cot_wrap.line:before{top:initial; bottom:0;}
 .sp_wrapIn .img_wrap{position: relative;padding-bottom: 39px;}
 .sp_wrapIn .img_wrap .active{position: relative;display: inline-block;}
 .sp_wrapIn .img_wrap .active:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(253,102,2,0.7);}
@@ -24,17 +26,25 @@
 .sp_wrapIn .dscp_wrap h3{margin-bottom: 30px;}
 .sp_wrapIn .dscp_wrap p{font-size: 16px;color: #282828; line-height: 24px;padding-bottom: 35px;}
 
-.sp_wrapIn .etc_wrap{position: relative;padding-top: 33px;}
+.sp_wrapIn .etc_wrap{position: relative;padding-bottom: 41px;}
 .sp_wrapIn .etc_wrap.line:before{top: 0;}
-.sp_wrapIn .etc_wrap li{font-size: 14px;padding: 14px 0;border-bottom: 1px solid #eee;}
-.sp_wrapIn .etc_wrap li img{float: left;}
-.sp_wrapIn .etc_wrap li img+div{padding-left: 32%;padding-bottom: 35px;}
+.sp_wrapIn .etc_wrap li.sp_boxShadow a span{position: relative; display: inline-block;}
+.sp_wrapIn .etc_wrap li.sp_boxShadow span:hover:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(0,0,0,0.2);}
+
+
+
+.sp_wrapIn .etc_wrap li{font-size: 14px;padding: 24px 0;border-top: 1px solid #eee;}
+.sp_wrapIn .etc_wrap li:first-child{border: none;}
+.sp_wrapIn .etc_wrap li a{float: left;}
+.sp_wrapIn .etc_wrap li a+div{padding-left: 32%;padding-bottom: 10px;}
+.sp_wrapIn .etc_wrap li a+div>p{line-height: 24px;}
 .sp_wrapIn .etc_wrap h4{font-size: 20px; color: #282828;font-weight: bold;margin-bottom: 23px;}
 
 
-.sp_wrapIn .ad_wrap {float: right;width: 25.25%;background-color: aqua;}
+.sp_wrapIn .ad_wrap {float: right;width: 25.25%;margin-right: 85px;}
 .sp_wrapIn .ad_wrap img{width: 100%;}
 .sp_wrapIn .ad_wrap a{display: block;position: relative;}
+.sp_wrapIn .ad_wrap a:first-child{margin-bottom: 51px;}
 .sp_wrapIn .ad_wrap a:hover p.more{text-decoration: underline;}
 .sp_wrapIn .ad_wrap div {width: 100%;background-color: #393939;text-align: center;color: #fff;height: 70px;padding: 15px 0;font-size: 14px; line-height: 21px;position: absolute;bottom:0; left:0; z-index: 20;}
 .sp_wrapIn .ad_wrap p.more{font-size: 12px;}

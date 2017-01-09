@@ -27,9 +27,10 @@
 .ss_wrapIn .dscp_wrap p{font-size: 16px;color: #282828; line-height: 24px;padding-bottom: 55px;}
 .ss_wrapIn .etc_wrap p{font-size: 14px;padding: 14px 0;border-bottom: 1px solid #eee;}
 
-.ss_wrapIn .ad_wrap {float: right;width: 25.25%;background-color: aqua;}
+.ss_wrapIn .ad_wrap {float: right;width: 25.25%;margin-right: 85px;}
 .ss_wrapIn .ad_wrap img{width: 100%;}
 .ss_wrapIn .ad_wrap a{display: block;position: relative;}
+.ss_wrapIn .ad_wrap a:first-child{margin-bottom: 51px;}
 .ss_wrapIn .ad_wrap a:hover p.more{text-decoration: underline;}
 .ss_wrapIn .ad_wrap div {width: 100%;background-color: #393939;text-align: center;color: #fff;height: 70px;padding: 15px 0;font-size: 14px; line-height: 21px;position: absolute;bottom:0; left:0; z-index: 20;}
 .ss_wrapIn .ad_wrap p.more{font-size: 12px;}
