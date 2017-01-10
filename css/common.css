@@ -67,7 +67,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .header .header_wrapIn .iconMenu{position: absolute;top:38px; right:0;width: 50%;}
 .header .header_wrapIn .iconMenu ul{text-align: right;}
 .header .header_wrapIn .iconMenu li{float: left;margin-left: 20%;text-align: center;}
-.sch_wrap{display: none;background-color: #fff;position: absolute;top: 148px; left: 0;width: 100%; height: 77px ;box-shadow:0 4px 10px -2px rgba(0,0,0,0.4);z-index: 2}
+.sch_wrap{display: none;/*display: inline-block*/;background-color: #fff;position: absolute;top: 148px; left: 0;width: 100%; height: 77px ;box-shadow:0 4px 10px -2px rgba(0,0,0,0.4);z-index: 2}
 .sch_wrap .sch_wrapIn{padding: 26px 0;}
 .sch_wrap input[type=text]{font-style: italic; font-size: 20px; color: #ccc; font-weight: bold;width:83.33% ;}
 .sch_wrap button[type=submit]{width: 116px; height: 40px;background-color: #363636; color: #fff; font-weight: bold;margin-left: 24px; font-size: 14px;}
@@ -79,16 +79,16 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .gnb_wrap .gnb_wrapIn>ul>li>a{position: relative;font-weight: bold;display: block;color: #fff;font-size: 14px;padding: 0 20px;}
 .gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap ul li a:focus{background-color: #f9893f;height: 50px;border-bottom: 5px solid #fff;}
 .gnb_wrap .gnb_wrapIn>ul>li>a:before{display: inline-block;content:url(../images/common/bar_gnb.png);position: absolute;top:7px; right:0;}
-.gnb_wrap .gnb_wrapIn>ul>li>div{display: none;position: absolute;top:51px; left:0;height: 220px;width: 100%;background: #fff url(../images/common/subGnb_c_line.png) center center no-repeat;}
+.gnb_wrap .gnb_wrapIn>ul>li>div{position: absolute;top:51px; left:0;height: 220px;width: 100%;background: #fff url(../images/common/subGnb_c_line.png) center center no-repeat;z-index: 10;border-bottom: 1px solid #ccc;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul{display:inline-block;width: 48%;vertical-align: top;}
-.gnb_wrap .gnb_wrapIn>ul>li>div ul li {border-bottom: 1px solid #eee;}
+.gnb_wrap .gnb_wrapIn>ul>li>div ul li {border-bottom: 1px solid #eee;font-size: 16px}
 .gnb_wrap .gnb_wrapIn>ul>li>div div ul:first-child li:first-child+li+li+li,.gnb_wrap .gnb_wrapIn>ul>li>div div ul:first-child+ul li:first-child+li,.gnb_wrap .gnb_wrapIn>ul>li>div ul li.bd_n{border: none;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a{position: relative;padding: 14px 0;color: #282828;display: block;line-height: initial;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:hover,.gnb_wrapIn>ul>li>div ul li a:focus{text-decoration: underline;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:before{display: inline-block;content:url(../images/common/arrow_gnbMenu.png);position: absolute;top:15px; right:0;}
 .gnb_wrap .gnb_wrapIn>ul>li>div>div>ul:first-child{margin-right: 3.5%;}
 /*로그인 시작*/
-.login_wrap{position: fixed;margin-top: 44px; left: 32%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;}
+.login_wrap{display: none;position: fixed;margin-top: 44px; left: 32%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;}
 .login_wrap .log_logo,.join_wrap .log_logo{margin-bottom: 14px;}
 .login_wrap .inp_sec{float: right;width: 248px;position: relative;}
 .login_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
@@ -111,7 +111,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .login_wrap .closeWindow{position: absolute;top:16px; right:16px;cursor: pointer}
 /*로그인종료*/
 /*회원가입 시작*/
-.join_wrap{position: fixed;margin-top: 44px; left: 32%;background-color: #fff;width: 688px; height: 479px;padding: 34px 40px 41px;z-index:10;}
+.join_wrap{display: none;position: fixed;margin-top: 44px; left: 32%;background-color: #fff;width: 688px; height: 479px;padding: 34px 40px 41px;z-index:10;}
 .join_wrap .log_logo{margin-bottom: 14px;}
 .join_wrap .inp_sec{float: right;width: 248px;position: relative;}
 .join_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
@@ -140,10 +140,12 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 /*네비게이션 종료*/
 /*그레이박스 시작*/
 .row_1{margin-bottom: 78px;}
-.row_1 .sevenMenu{float: right; width: 32.27%;position: relative;}
-.row_1 .sevenMenu h4 a{position: relative;display: block;width:50%; height: 60px; background-color: #393939;color: #fff;font-weight: bold; font-size: 16px; text-align: center;line-height:60px ;}
+.row_1 .sevenMenu{float: right; width: 32.2%;position: relative;}
+.row_1 .sevenMenu>div{display: none;}
+.row_1 .sevenMenu h4 a{position: relative;display: block;width:50%;text-align: center;}
 .row_1 .sevenMenu h4 a:before{content: "";width: 114px; height: 1px; background-color: #1c1b1b;display: block;position: absolute;top:59px; left:20%; right:30%;}
-.row_1 .sevenMenu h4.tabBtn_2 a{background: url(../images/main/opa_box_r.png) 0 0 no-repeat;line-height: 50px;position: absolute;top:10px; left:50%;}
+.row_1 .sevenMenu h4.tabBtn_1+div{display: block;}
+.row_1 .sevenMenu h4.tabBtn_2 a{position: absolute;top:0; left:50%;}
 .row_1 .sevenMenu h4.tabBtn_2 a:before{display: none;}
 .row_1 .sevenMenu .seven_wrap{width: 100%;height: 552px;background-color: #393939;position: relative;}
 .row_1 .sevenMenu .seven_wrap ul li{float: left;width: 50%;}
@@ -152,7 +154,8 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .row_1 .sevenMenu .seven_wrap ul li a img{margin-bottom: 13px;}
 .row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{text-transform: uppercase;position: absolute;bottom:3px;left:0;text-align: right; width: 100%; height: 53px;line-height: 53px;color: #fd6602;font-weight: bold;border-top: 1px solid #1c1b1b;}
 .row_1 .sevenMenu .seven_wrap p.seven_moreBtn a span{padding-right: 16px;}
-.row_1 .sevenMenu .sevenWhts_wrap{width: 100%; height: 395px;background-color: #393939;position: relative;padding: 20px 20px 28px;text-align: center;}
+.row_1 .sevenMenu .sevenWhts_wrap{z-index: 1000;;width: 100%; height: 395px;background-color: #393939;position: relative;padding: 20px 20px 28px;text-align: center;}
+.row_1 .sevenMenu .sevenWhts_wrap form fieldset{z-index: 1000;}
 .row_1 .sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
 .row_1 .sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
 .row_1 .sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
