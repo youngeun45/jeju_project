@@ -6,7 +6,7 @@
 .ss_wrapIn .cot_dscp_wrap p.c_28{color: #282828;}
 .ss_wrapIn .cot_dscp_wrap p{font-size: 14px;font-weight: bold;padding-bottom: 16px;}
 .ss_wrapIn .cot_wrap {float: left;width: 52.58%;}
-.ss_wrapIn .img_wrap{position: relative;padding-bottom: 39px;}
+.ss_wrapIn .img_wrap{position: relative;padding-bottom: 39px;z-index:-1;}
 .ss_wrapIn .img_wrap .active{position: relative;display: inline-block;}
 .ss_wrapIn .img_wrap .active:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(253,102,2,0.7);}
 .ss_wrapIn .img_wrap .bx-viewport{margin-bottom: 22px;}

@@ -12,7 +12,7 @@
 .festival_main_wrap .ftvl_main .festival_row_1 div h4 a{font-weight: bold; font-size: 24px; color: #282828;display: inline-block;margin-bottom: 15px;overflow: hidden;-ms-text-overflow: ellipsis;
 text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .festival_main_wrap .ftvl_main .festival_row_1 div h4+p{line-height: 22px;height: 66px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word; }
-.row_1{margin-bottom: 127px;}
+.row_1{;min-height:500px;}
 .row_1 .sevenMenu{width: 28.11%;}
 .row_1 .sevenMenu:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left:-12%;}
 .row_1 .sevenMenu .seven_wrap{height: 439px;}

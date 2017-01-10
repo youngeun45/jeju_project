@@ -24,28 +24,31 @@
 
 
 
-.col_2 .sevenMenu{float: right; width: 100%;;position: relative;margin-bottom: 50px;}
-.col_2 .sevenMenu h4 a{position: relative;display: block;width:50%; height: 60px; background-color: #393939;color: #fff;font-weight: bold; font-size: 16px; text-align: center;line-height:60px ;}
-.col_2 .sevenMenu h4 a:before{content: "";width: 114px; height: 1px; background-color: #1c1b1b;display: block;position: absolute;top:59px; left:20%; right:30%;}
-.col_2 .sevenMenu h4.tabBtn_2 a{background: url(../images/main/opa_box_r.png) 0 0 no-repeat;line-height: 50px;position: absolute;top:10px; left:50%;}
-.col_2 .sevenMenu h4.tabBtn_2 a:before{display: none;}
-.col_2 .sevenMenu .seven_wrap{width: 100%;height: 439px;background-color: #393939;position: relative;}
-.col_2 .sevenMenu .seven_wrap ul li{float: left;width: 50%;}
-.col_2 .sevenMenu .seven_wrap ul li a{border: solid #1c1b1b;border-width:0 0 1px 1px;font-size: 12px; font-weight: bold;display:inline-block;width: 100%; text-align: center;height: 98px; padding: 14px 0;color: #fff;}
-.col_2 .sevenMenu .seven_wrap ul li:first-child+li+li+li+li+li+li a{border-width:0 1px 0 1px;margin-left: 1px;}
-.col_2 .sevenMenu .seven_wrap ul li a img{margin-bottom: 13px;}
-.col_2 .sevenMenu .seven_wrap p.seven_moreBtn a{text-transform: uppercase;position: absolute;bottom:0;left:0;text-align: right; width: 100%; height: 48px;line-height: 48px;color: #fd6602;font-weight: bold;border-top: 1px solid #1c1b1b;}
-.col_2 .sevenMenu .seven_wrap p.seven_moreBtn a span{padding-right: 16px;}
-.col_2 .sevenMenu .sevenWhts_wrap{width: 100%; height: 395px;background-color: #393939;position: relative;padding: 20px 20px 28px;text-align: center;}
-.col_2 .sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
-.col_2 .sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
-.col_2 .sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
-.col_2 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
-.col_2 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
-.col_2 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
-.col_2 .sevenMenu .sevenWhts_wrap div ul{display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:87%;}
-.col_2 .sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
-.col_2 .sevenMenu .sevenWhts_wrap div ul a:hover,.col_2 .sevenMenu .sevenWhts_wrap div ul a:focus{color: #fff; background-color: #f9893f;}
+.sevenMenu{float: right; width: 100%;;position: relative;margin-bottom: 50px;}
+.sevenMenu>div{display: none;}
+.sevenMenu h4 a{position: relative;display: block;width:50%;text-align: center;}
+.sevenMenu h4 a:before{content: "";width: 114px; height: 1px; background-color: #1c1b1b;display: block;position: absolute;top:96%; left:20%; right:30%;}
+.sevenMenu h4 a img{width: 100%;}
+.sevenMenu h4.tabBtn_1+div{display: block;}
+.sevenMenu h4.tabBtn_2 a{position: absolute;top:0; left:50%;}
+.sevenMenu h4.tabBtn_2 a:before{display: none;}
+.sevenMenu .seven_wrap{width: 100%;height: 439px;background-color: #393939;position: relative;}
+.sevenMenu .seven_wrap ul li{float: left;width: 50%;}
+.sevenMenu .seven_wrap ul li a{border: solid #1c1b1b;border-width:0 0 1px 1px;font-size: 12px; font-weight: bold;display:inline-block;width: 100%; text-align: center;height: 98px; padding: 14px 0;color: #fff;}
+.sevenMenu .seven_wrap ul li:first-child+li+li+li+li+li+li a{border-width:0 1px 0 1px;margin-left: 1px;}
+.sevenMenu .seven_wrap ul li a img{margin-bottom: 13px;}
+.sevenMenu .seven_wrap p.seven_moreBtn a{text-transform: uppercase;position: absolute;bottom:0;left:0;text-align: right; width: 100%; height: 48px;line-height: 48px;color: #fd6602;font-weight: bold;border-top: 1px solid #1c1b1b;}
+.sevenMenu .seven_wrap p.seven_moreBtn a span{padding-right: 16px;}
+.sevenMenu .sevenWhts_wrap{width: 100%; height: 395px;background-color: #393939;position: relative;padding: 20px 20px 28px;text-align: center;}
+.sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
+.sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
+.sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
+.sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
+.sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
+.sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
+.sevenMenu .sevenWhts_wrap div ul{display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:87%;}
+.sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
+.sevenMenu .sevenWhts_wrap div ul a:hover,.col_2 .sevenMenu .sevenWhts_wrap div ul a:focus{color: #fff; background-color: #f9893f;}
 
 .col_2 .cot_ad_wrap .ad_col_1{margin-bottom: 50px;}
 .col_2 .cot_ad_wrap .ad_col_1 img{width: 100%;}
