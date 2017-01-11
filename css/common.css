@@ -53,13 +53,13 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .header .util_wrap .util_wrapIn .snsLng_wrap .sns_wrap li:first-child{margin-left: 16px;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .sns_wrap li:first-child+li+li+li+li{margin-right: 16px;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .sns_wrap li a{padding: 0 10px;}
-.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap{position: relative;float: right;text-align: center;width: 63px;}
+.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap{position: relative;float: right;text-align: center;width: 63px;z-index: 2}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap:before{content:"";position: absolute;top:5px; left: -2px;width: 1px; height: 18px; background:#eee;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .sns_wrap li{float: left;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button{padding: 6px 19px;background: url("../images/common/arrow_lang.png") 50px 11px no-repeat;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button+ul{display: none;}
-.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button:hover{background-color: #282828;}
-.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul{box-shadow: 3px 3px 3px lightgray;}
+.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button.on{background-color: #282828;}
+.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul{box-shadow:0 0 2px 3px rgba(0,0,0,0.1);}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul>li>a{display: block;padding: 0 20px;border-bottom: 1px solid #eee;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul>li>a:hover{background-color: #eee;}
 .header .header_wrapIn{position: relative;margin-bottom: 29px;padding-top:38px}
@@ -160,7 +160,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .row_1 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
 .row_1 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
 .row_1 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
-.row_1 .sevenMenu .sevenWhts_wrap div ul{display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:87%;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul{display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:86.7%;}
 .row_1 .sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
 .row_1 .sevenMenu .sevenWhts_wrap div ul a:hover,.row_1 .sevenMenu .sevenWhts_wrap div ul a:focus{color: #fff; background-color: #f9893f;}
 /*그레이박스 종료*/
