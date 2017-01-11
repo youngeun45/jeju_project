@@ -52,3 +52,8 @@
 
 .col_2 .cot_ad_wrap .ad_col_1{margin-bottom: 50px;}
 .col_2 .cot_ad_wrap .ad_col_1 img{width: 100%;}
+
+@media (max-width:1024px) {
+.col_tablet_12 {width: 100% !important;}
+.col_2 .context_wrap{display: none;}
+}

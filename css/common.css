@@ -56,7 +56,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap{position: relative;float: right;text-align: center;width: 63px;z-index: 2}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap:before{content:"";position: absolute;top:5px; left: -2px;width: 1px; height: 18px; background:#eee;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .sns_wrap li{float: left;}
-.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button{padding: 6px 19px;background: url("../images/common/arrow_lang.png") 50px 11px no-repeat;}
+.header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button{line-height: 10px;height:29px;padding: 6px 19px;background: url("../images/common/arrow_lang.png") 50px 11px no-repeat;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button+ul{display: none;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap>button.on{background-color: #282828;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul{box-shadow:0 0 2px 3px rgba(0,0,0,0.1);}
@@ -83,7 +83,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .gnb_wrap .gnb_wrapIn>ul>li>div ul{display:inline-block;width: 48%;vertical-align: top;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li {border-bottom: 1px solid #eee;font-size: 16px}
 .gnb_wrap .gnb_wrapIn>ul>li>div div ul:first-child li:first-child+li+li+li,.gnb_wrap .gnb_wrapIn>ul>li>div div ul:first-child+ul li:first-child+li,.gnb_wrap .gnb_wrapIn>ul>li>div ul li.bd_n{border: none;}
-.gnb_wrap .gnb_wrapIn>ul>li>div ul li a{position: relative;padding: 14px 0;color: #282828;display: block;line-height: initial;}
+.gnb_wrap .gnb_wrapIn>ul>li>div ul li a{position: relative;padding: 14px 0;color: #282828;display: block;line-height: 18px;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:hover,.gnb_wrapIn>ul>li>div ul li a:focus{text-decoration: underline;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:before{display: inline-block;content:url(../images/common/arrow_gnbMenu.png);position: absolute;top:15px; right:0;}
 .gnb_wrap .gnb_wrapIn>ul>li>div>div>ul:first-child{margin-right: 3.5%;}
@@ -157,7 +157,11 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .row_1 .sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
 .row_1 .sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
 .row_1 .sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
-.row_1 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
+.row_1 .sevenMenu .sevenWhts_wrap input[type=text]{;width: 97%; height: 52px;/*background: #fff url(../images/main/calendar.png) 98% center no-repeat*/;cursor: pointer;}
+.row_1 .sevenMenu .sevenWhts_wrap .p_r{position: relative;}
+.row_1 .sevenMenu .sevenWhts_wrap .ui-datepicker-trigger{text-indent: -9999px;position: absolute;top:37px; right:14px;width: 27px; height: 27px;background: #fff url(../images/main/calendar.png) 0 0 no-repeat }
+.row_1 .sevenMenu .sevenWhts_wrap .ui-datepicker-prev span {color: #f00;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;}
+
 .row_1 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
 .row_1 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
 .row_1 .sevenMenu .sevenWhts_wrap div ul{display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:86.7%;}
@@ -196,3 +200,34 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 #footerwrap .footer_wrapIn h2{position: absolute; top:0; left:0;}
 #footerwrap .footer_wrapIn div {color: #fff;padding-left: 121px;line-height: 16px;}
 /*푸터 종료*/
+
+
+/*미디어쿼리*/
+@media (max-width:1024px) {
+  .col_tablet_1{width: 8.333%;}
+  .col_tablet_2{width: 16.666%;}
+  .col_tablet_3{width: 24.999%;}
+  .col_tablet_4{width: 33.33%;}
+  .col_tablet_5{width: 41.665%;}
+  .col_tablet_6{width: 49.998%;}
+  .col_tablet_7{width: 58.331%;}
+  .col_tablet_8{width: 58.331%;}
+  .col_tablet_9{width: 74.997%;}
+  .col_tablet_10{width: 83.33%;}
+  .col_tablet_11{width: 91.663%;}
+  .col_tablet_12{width: 100%;}
+}
+@media (max-width:640px) {
+  .col_mobile_1{width: 8.333%;}
+  .col_mobile_2{width: 16.666%;}
+  .col_mobile_3{width: 24.999%;}
+  .col_mobile_4{width: 33.33%;}
+  .col_mobile_5{width: 41.665%;}
+  .col_mobile_6{width: 49.998%;}
+  .col_mobile_7{width: 58.331%;}
+  .col_mobile_8{width: 58.331%;}
+  .col_mobile_9{width: 74.997%;}
+  .col_mobile_10{width: 83.33%;}
+  .col_mobile_11{width: 91.663%;}
+  .col_mobile_12{width: 100%;}
+}

@@ -1,14 +1,20 @@
+
 <? include "inc/top.html"; ?>
 <title>JEjU | 메인페이지</title>
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+<!-- 헤더시작 -->
 <? include "inc/header.html"; ?>
+<!-- 헤더종료 -->
+<!-- 비주얼랩 시작 -->
     <div class="visual_wrap">
         <div class="visual_wrapIn">
             <p>Welcome to JEJU!</p>
         </div>
     </div>
+<!-- 비주얼랩 종료 -->
+<!-- 컨테이너 시작 -->
     <div id="container">
         <section class="row_1 wrapIn clearFix">
             <h3 class="blind">주력상품이미지 및 7대 비경메뉴</h3>
@@ -149,11 +155,11 @@
                                     <li><a href="#">Second-hand market</a></li>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="p_r">
                                 <p><label for="from">from</label></p>
                                 <input type="text" name="from" id="from" readonly>
                             </div>
-                            <div>
+                            <div class="p_r">
                                 <p><label for="to">to</label></p>
                                 <input type="text" name="to" id="to" readonly>
                             </div>
@@ -347,6 +353,8 @@
                 </div>
         </section>
     </div>
+<!-- 컨테이너 종료 -->
+<!-- 계획짜기 시작 -->
     <div class="plan_wrapIn clearFix">
         <h3>plan your stay</h3>
         <div class="plan_col_1">
@@ -404,6 +412,10 @@
             <p>of customers recommend<br/>jeju.co.kr</p>
         </div>
     </div>
+<!-- 계획짜기 종료 -->
+<!-- 푸터 시작 -->
 <? include "inc/footer.html"; ?>
+<!-- 푸터 종료 -->
+
 </body>
 </html>

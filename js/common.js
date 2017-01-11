@@ -1,4 +1,5 @@
 $(function(){
+	/*bxSlider*/
 	var mSl = ".main_prdt_Slide";
 				$(mSl).bxSlider({
 			        auto:true,//auto:true 기본값은 false : 자동슬라이더 
@@ -7,35 +8,35 @@ $(function(){
 			        pager:true
 				}); 
 				var myGnbLiA = $(".gnb_wrapIn ul>li>a");
+	/*gnb*/
+		$.fn.gnb = function(){
+	         //alert(1234);
+	         var myThis = $(this);  //이건쥐엔비
+	         var activeMenu = null;
+		       	var mouseOver = function(){
+								if(activeMenu){ //null이 아니라면
+									activeMenu.next().hide();
+								}
+								var ts = $(this);
+								ts.next().show();
+								activeMenu = ts;
+							}
+	         $("ul>li>div",myThis).hide();
+	         $(">ul>li>a",myThis).on({
+	            "mouseover focus": mouseOver
+	         });
+	         myThis.css({height:"150px;"}); //프로젝트할 때 빼기
+	         
+	         myThis.on({
+	            "mouseleave":function(){
+	               // console.log(3432);
+	               if(activeMenu){
+	               activeMenu.next().hide();
+	            }
+	            }
+	         });
+	      }
 
-				$.fn.gnb = function(){
-			         //alert(1234);
-			         var myThis = $(this);  //이건쥐엔비
-			         var activeMenu = null;
-				       	var mouseOver = function(){
-										if(activeMenu){ //null이 아니라면
-											activeMenu.next().hide();
-										}
-										var ts = $(this);
-										ts.next().show();
-										activeMenu = ts;
-									}
-			         $("ul>li>div",myThis).hide();
-			         $(">ul>li>a",myThis).on({
-			            "mouseover focus": mouseOver
-			         });
-			         myThis.css({height:"100px;"}); //프로젝트할 때 빼기
-			         
-			         myThis.on({
-			            "mouseleave":function(){
-			               // console.log(3432);
-			               if(activeMenu){
-			               activeMenu.next().hide();
-			            }
-			            }
-			         });
-			      }
-      	/*gnb 실행*/
          $(".gnb_wrapIn").gnb();
 
        	/*sns 호버*/
@@ -95,7 +96,6 @@ $(function(){
 				this.actImg = $myImg;	
 			};
 		};
-		//console.log($("div[data-type=tabmenu]"));
 		var arrTab = []; // 매번객체생성을할수가없으니 배열로지정해주기
 		var tabText = "div[data-type=tabmenu]";
 		var tabMenuWrap = $(tabText);
@@ -232,14 +232,14 @@ $(function(){
 			        showOn: 'both',
 			        buttonText: "달력",
 			        currentText: "이번달",
-			        changeMonth: true,
-			        changeYear: true,
-			        showButtonPanel: true,
+			        changeMonth: false,
+			        changeYear: false,
+			        showButtonPanel: false,
 			        yearRange: 'c-1:c+1',
-			        showOtherMonths: true,
-			        selectOtherMonths: true
+			        showOtherMonths: false,
+			        selectOtherMonths: false
 			    }
-		     $("#calendar").datepicker(datepicker_default);
+		     $("#from,#to").datepicker();
 })
 
 		     /*달력종료*/			

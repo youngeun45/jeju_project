@@ -17,11 +17,8 @@ $(function(){
 	  }
 	});
 	$( ".etc_wrap" ).accordion({
+		
       collapsible: true
     });
-
-
-
-
 
 })
