@@ -16,9 +16,19 @@ $(function(){
 	  	$("#slider_pager").stop().animate({"margin-left":-sliderWidth*sliderNum+"px"},100);
 	  }
 	});
-	$( ".etc_wrap" ).accordion({
-		
-      collapsible: true
-    });
+		$(".etc_wrap h3").on("click",function(e){
+			var myReply = $(this).next();
+			if(myReply.is(":hidden")){     //숨겨져있을때 실행하라
+					$(".etc_wrap h3.on").removeClass("on");
+					$(this).addClass("on");
+					$(".etc_wrap div:visible").slideUp("fast");
+					myReply.slideDown('fast');
+			}else{
+				$(".etc_wrap div:visible").slideUp("fast");
+				$(".etc_wrap h3.on").removeClass("on");
+			}
+		});
+
+
 
 })

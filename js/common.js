@@ -124,7 +124,14 @@ $(function(){
     InitSelect.prototype.selectClickHanddler_1 = function(e){
       e.preventDefault();
       var myObj = $(e.target);
+      if(myObj.find("img").size()>=1) {
+      	myObj = myObj.find("img");
+      }
+
       var myTagName = myObj.prop("tagName").toLowerCase(); // myobj 는 제일하위요소 img 인데 여기서 태그네임을 가져와서 소문자로 만들어랏
+
+
+
 
       if(myTagName == "img") {
       	var myButton = $("button",this.myWrap);
@@ -164,21 +171,23 @@ $(function(){
 			
      $.fn.colorCh = function(){
      						var myThis = $(this);
-			        	var activeColor = false;
-			        	var myBtn = $(" button",myThis);
+			        	var myBtn = $("button",myThis);
+			        	var myUl = $("ul",myThis);
+			        	var myAtag = $("a",myUl);
 				       	var ch = function(){
-
-				       			if(activeColor){
-				       				myBtn.removeClass('on')
-				       				activeColor=false;
-				       			}else{
-				       				var ts = $(this);
+				       			if(myUl.is(":hidden")) {
 				       				myBtn.addClass('on');
-				       				activeColor = true;
+				       			} else {
+				       				myBtn.removeClass('on');
 				       			}
-									}
-			        myBtn.on({"click":ch});
+								}
 
+								var ch_2 = function(e){
+									e.preventDefault();
+				       		myBtn.removeClass('on');
+								}
+			        	myBtn.on({"click":ch});
+			        	myAtag.on({"click":ch_2});
 			      }
 		      $(".lang_wrap").colorCh();   //부모
 
@@ -198,7 +207,7 @@ $(function(){
 
 		     /*select종료*/
 
-})
+});
 $(function(){
 
 	 		     /*달력시작*/

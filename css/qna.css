@@ -8,10 +8,13 @@
 .qna_wrapIn .col_2 a.on{color: #fd6602;}
 .qna_wrapIn .col_2{float: right;width: 65%;border-top: 1px solid #eee;}
 .qna_wrapIn .col_2 ul li{border-bottom: 1px solid #eee;padding-left: 10px;}
-.qna_wrapIn .col_2 ul li div{/*display: none;*/;padding: 10px 0 27px 0;font-size: 14px; color: #282828;}
+.qna_wrapIn .col_2 ul li div{display: none;padding: 10px 0 27px 0;font-size: 14px; color: #282828;}
 .qna_wrapIn .col_2 ul li div span{display: block;padding-bottom: 14px;}
-.qna_wrapIn .col_2 ul li a{display: block;padding: 18px 0;color: #282828; font-size: 16px; font-weight: bold;background: url(../images/qna/qna_arrow.png) 97.8% 50% no-repeat;}
-.qna_wrapIn .col_2 ul li a.on{background-image: url(../images/qna/qna_arrow_ov2.png);}
+.qna_wrapIn .col_2 ul li a{display: block;padding: 18px 0;color: #282828; font-size: 16px; font-weight: bold;position: relative;}
+.qna_wrapIn .col_2 ul li a:hover,.qna_wrapIn .col_2 ul li a.on{color: #fd6602;transition: all 0.3s linear;}
+.qna_wrapIn .col_2 ul li a:after{background: url(../images/qna/qna_arrow.png) 0 0 no-repeat;content: "";display: inline-block; width: 14px; height: 8px;;position: absolute;right:21px; top:25px;transition: all 0.3s linear;}
+.qna_wrapIn .col_2 ul li a:hover:after{background-image: url(../images/qna/qna_arrow_ov.png);transition:none;}
+.qna_wrapIn .col_2 ul li a.on:after{transform: rotate(180deg);background-image: url(../images/qna/qna_arrow_ov2.png);}
 
 
 
