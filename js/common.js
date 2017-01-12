@@ -1,211 +1,267 @@
 $(function(){
-	/*bxSlider*/
-	var mSl = ".main_prdt_Slide";
-				$(mSl).bxSlider({
-			        auto:true,//auto:true 기본값은 false : 자동슬라이더 
-			        autoControls: false, // 정지재생버튼
-			        controls:true,
-			        pager:true
-				}); 
-				var myGnbLiA = $(".gnb_wrapIn ul>li>a");
-	/*gnb*/
-		$.fn.gnb = function(){
-	         //alert(1234);
-	         var myThis = $(this);  //이건쥐엔비
-	         var activeMenu = null;
-		       	var mouseOver = function(){
-								if(activeMenu){ //null이 아니라면
-									activeMenu.next().hide();
-								}
-								var ts = $(this);
-								ts.next().show();
-								activeMenu = ts;
+/*bxSlider*/
+var mSl = ".main_prdt_Slide";
+			$(mSl).bxSlider({
+		        auto:true,//auto:true 기본값은 false : 자동슬라이더 
+		        autoControls: false, // 정지재생버튼
+		        controls:true,
+		        pager:true
+			}); 
+			var myGnbLiA = $(".gnb_wrapIn ul>li>a");
+/*gnb*/
+	$.fn.gnb = function(){
+         //alert(1234);
+         var myThis = $(this);  //이건쥐엔비
+         var activeMenu = null;
+	       	var mouseOver = function(){
+							if(activeMenu){ //null이 아니라면
+								activeMenu.next().hide();
 							}
-	         $("ul>li>div",myThis).hide();
-	         $(">ul>li>a",myThis).on({
-	            "mouseover focus": mouseOver
-	         });
-	         myThis.css({height:"150px;"}); //프로젝트할 때 빼기
-	         
-	         myThis.on({
-	            "mouseleave":function(){
-	               // console.log(3432);
-	               if(activeMenu){
-	               activeMenu.next().hide();
-	            }
-	            }
-	         });
-	      }
-
-         $(".gnb_wrapIn").gnb();
-
-       	/*sns 호버*/
-	      var actImg = $(".sns_wrap li a");
-    		actImg.hover(function(){
-    			var myImg = $("img", this);
-					var imgSrc = myImg.attr("src");
-					var newSrc = imgSrc.replace(".png","_ov.png");
-					myImg.attr("src",newSrc);
-				 	 console.log($(this).attr("src"));
-				},function(){
-					var myImg = $("img", this);
-					var imgSrc = myImg.attr("src");
-					var newSrc = imgSrc.replace("_ov.png",".png");
-					myImg.attr("src",newSrc);					
-				})
-
-      	/*Search*/
-      	var search = $(".search a");
-      	var searchWrap = $(".sch_wrap");
-    		search.on("click",function(){
-						searchWrap.stop().slideToggle("fast");
-    		})
-
-		/*탭메뉴*/
-		/*	
-			1.객체 생성함수를 정의
-			2. 객체 생성
-			3. 속성, 메서드 등록 메서드 등록하는메서드 / 핸들러메서드 
-		*/
-		function TabmenuFnc(objName,idx){ //속성을 만들어주는것
-			this.myObjName = objName;
-			this.myIdx = idx;
-			this.myObj = this.myObjName+":eq("+this.myIdx+")";
-			this.actImg = $(this.myObj).find("h3:first img, h4:first img");
-			this.bindEvent();
-		};
-		TabmenuFnc.prototype.bindEvent=function(){
-			$(document).on("click",this.myObj+" h3 a, "+this.myObj+" h4 a",$.proxy(this.tabEvntHnd,this))
-
-		}
-		TabmenuFnc.prototype.tabEvntHnd=function(e){
-			e.preventDefault();
-			var $myImg = $(e.target);
-			var $myThis = $(e.target).closest('a'); //제일 하위요소  this 대신 쓰기 지정하는것 !!!!!!
-			var $myDiv= $myThis.parent().next();
-			var $visibleDiv = $(this.myObj+">div:visible");
-			//보이는 div 요소는 숨겨라 
-			//클릭한 텝텝에 해당하는 div 는 보여라
-			if($myDiv.is(":hidden")){
-				$visibleDiv.hide();
-				$myDiv.show();
-			 	var src_1 = this.actImg.attr("src").replace("_ov.png",".png");
-			 	this.actImg.attr("src",src_1);
-			 	var src_2 = $myImg.attr("src").replace(".png","_ov.png");
-			 	$myImg.attr("src",src_2);
-				this.actImg = $myImg;	
-			};
-		};
-		var arrTab = []; // 매번객체생성을할수가없으니 배열로지정해주기
-		var tabText = "div[data-type=tabmenu]";
-		var tabMenuWrap = $(tabText);
-		$.each(tabMenuWrap,function(i,o){
-			arrTab[i] = new TabmenuFnc(tabText,i);
-		});
-		/*select*/
-		     /*
-        1.생성함수
-        2.속성,메서드 생성
-        3.객체 생성 (앞글자는 대문자로)
-     */
-     function InitSelect(objName,idx){ //객체 생성함수
-        this.sel_c = objName;
-        this.idx = idx;
-        this.myWrap = "div[data-select="+this.sel_c+"]:eq("+this.idx+")";
-        this.allSelectWrap = $("div[data-select]");
-        this.bindEvent();
-     }
-     InitSelect.prototype.bindEvent = function(){ //메모리 절약으로function InitSelect() 이곳 안에 쓰면 여러개가 만들어지므로 밖으로 빼서 프로토 타입으로 만들어준다. 이벤트 등록 메서드
-        //$("div[data-select=sel_1] button")
-        $(document).on("click",this.myWrap + " button",$.proxy(this.selectHanddler_1, this)); //이벤트 등록 대상
-     		$(document).on("click",this.myWrap + " a",$.proxy(this.selectClickHanddler_1, this));
-     }
-
-    InitSelect.prototype.selectClickHanddler_1 = function(e){
-      e.preventDefault();
-      var myObj = $(e.target);
-      if(myObj.find("img").size()>=1) {
-      	myObj = myObj.find("img");
+							var ts = $(this);
+							ts.next().show();
+							activeMenu = ts;
+						}
+         $("ul>li>div",myThis).hide();
+         $(">ul>li>a",myThis).on({
+            "mouseover focus": mouseOver
+         });
+         
+         
+         myThis.on({
+            "mouseleave":function(){
+               // console.log(3432);
+               if(activeMenu){
+               activeMenu.next().hide();
+            }
+            }
+         });
       }
 
-      var myTagName = myObj.prop("tagName").toLowerCase(); // myobj 는 제일하위요소 img 인데 여기서 태그네임을 가져와서 소문자로 만들어랏
+     $(".gnb_wrapIn").gnb();
+
+   	/*sns 호버*/
+      var actImg = $(".sns_wrap li a");
+		actImg.hover(function(){
+			var myImg = $("img", this);
+				var imgSrc = myImg.attr("src");
+				var newSrc = imgSrc.replace(".png","_ov.png");
+				myImg.attr("src",newSrc);
+			 	 console.log($(this).attr("src"));
+			},function(){
+				var myImg = $("img", this);
+				var imgSrc = myImg.attr("src");
+				var newSrc = imgSrc.replace("_ov.png",".png");
+				myImg.attr("src",newSrc);					
+			})
+
+  	/*Search*/
+  	var search = $(".search a");
+  	var searchWrap = $(".sch_wrap");
+		search.on("click",function(){
+					searchWrap.stop().slideToggle("fast");
+		})
+
+	/*탭메뉴*/
+	/*	
+		1.객체 생성함수를 정의
+		2. 객체 생성
+		3. 속성, 메서드 등록 메서드 등록하는메서드 / 핸들러메서드 
+	*/
+	function TabmenuFnc(objName,idx){ //속성을 만들어주는것
+		this.myObjName = objName;
+		this.myIdx = idx;
+		this.myObj = this.myObjName+":eq("+this.myIdx+")";
+		this.actImg = $(this.myObj).find("h3:first img, h4:first img");
+		this.bindEvent();
+	};
+	TabmenuFnc.prototype.bindEvent=function(){
+		$(document).on("click",this.myObj+" h3 a, "+this.myObj+" h4 a",$.proxy(this.tabEvntHnd,this))
+
+	}
+	TabmenuFnc.prototype.tabEvntHnd=function(e){
+		e.preventDefault();
+		var $myImg = $(e.target);
+		var $myThis = $(e.target).closest('a'); //제일 하위요소  this 대신 쓰기 지정하는것 !!!!!!
+		var $myDiv= $myThis.parent().next();
+		var $visibleDiv = $(this.myObj+">div:visible");
+		//보이는 div 요소는 숨겨라 
+		//클릭한 텝텝에 해당하는 div 는 보여라
+		if($myDiv.is(":hidden")){
+			$visibleDiv.hide();
+			$myDiv.show();
+		 	var src_1 = this.actImg.attr("src").replace("_ov.png",".png");
+		 	this.actImg.attr("src",src_1);
+		 	var src_2 = $myImg.attr("src").replace(".png","_ov.png");
+		 	$myImg.attr("src",src_2);
+			this.actImg = $myImg;	
+		};
+	};
+	var arrTab = []; // 매번객체생성을할수가없으니 배열로지정해주기
+	var tabText = "div[data-type=tabmenu]";
+	var tabMenuWrap = $(tabText);
+	$.each(tabMenuWrap,function(i,o){
+		arrTab[i] = new TabmenuFnc(tabText,i);
+	});
+	/*select*/
+	     /*
+    1.생성함수
+    2.속성,메서드 생성
+    3.객체 생성 (앞글자는 대문자로)
+ */
+ function InitSelect(objName,idx){ //객체 생성함수
+    this.sel_c = objName;
+    this.idx = idx;
+    this.myWrap = "div[data-select="+this.sel_c+"]:eq("+this.idx+")";
+    this.allSelectWrap = $("div[data-select]");
+    this.bindEvent();
+ }
+ InitSelect.prototype.bindEvent = function(){ //메모리 절약으로function InitSelect() 이곳 안에 쓰면 여러개가 만들어지므로 밖으로 빼서 프로토 타입으로 만들어준다. 이벤트 등록 메서드
+    //$("div[data-select=sel_1] button")
+    $(document).on("click",this.myWrap + " button",$.proxy(this.selectHanddler_1, this)); //이벤트 등록 대상
+ 		$(document).on("click",this.myWrap + " a",$.proxy(this.selectClickHanddler_1, this));
+ }
+
+InitSelect.prototype.selectClickHanddler_1 = function(e){
+  e.preventDefault();
+  var myObj = $(e.target);
+  if(myObj.find("img").size()>=1) {
+  	myObj = myObj.find("img");
+  }
+
+  var myTagName = myObj.prop("tagName").toLowerCase(); // myobj 는 제일하위요소 img 인데 여기서 태그네임을 가져와서 소문자로 만들어랏
 
 
 
 
-      if(myTagName == "img") {
-      	var myButton = $("button",this.myWrap);
-      	var btnImg = $("img",myButton);
-      	btnImg.attr("src",myObj.attr("src"));
-	      $(this.myWrap+" ul").hide();      	
-      } else {
-	      var myObjText = myObj.text();
-	      $(this.myWrap+" button").text(myObjText);
-	      $(this.myWrap+" ul").hide();
-	      var url = myObj.attr("href");
-			}
-      $(this.myWrap+" input[type=hidden]").val(url);
-      //window.open("http://"+url);
-    }
-     InitSelect.prototype.selectHanddler_1 = function(e){
-     		e.preventDefault();
-        var $myThis = $(e.target); //이벤트 요소의 가장 하위요소(텍스트는 제외, 돔객체- 문서객체만 선택이 된다.)
-        var $mySelWrap = $(this.myWrap);
-        var $myUl = $("ul",$mySelWrap);
-        var activeColor = null;
-      if($myUl.is(":hidden")){
-         $("ul:visible",this.allSelectWrap).hide();
-            $myUl.show();
+  if(myTagName == "img") {
+  	var myButton = $("button",this.myWrap);
+  	var btnImg = $("img",myButton);
+  	btnImg.attr("src",myObj.attr("src"));
+      $(this.myWrap+" ul").hide();      	
+  } else {
+      var myObjText = myObj.text();
+      $(this.myWrap+" button").text(myObjText);
+      $(this.myWrap+" ul").hide();
+      var url = myObj.attr("href");
+		}
+  $(this.myWrap+" input[type=hidden]").val(url);
+  //window.open("http://"+url);
+}
+ InitSelect.prototype.selectHanddler_1 = function(e){
+ 		e.preventDefault();
+    var $myThis = $(e.target); //이벤트 요소의 가장 하위요소(텍스트는 제외, 돔객체- 문서객체만 선택이 된다.)
+    var $mySelWrap = $(this.myWrap);
+    var $myUl = $("ul",$mySelWrap);
+    var activeColor = null;
+  if($myUl.is(":hidden")){
+     $("ul:visible",this.allSelectWrap).hide();
+        $myUl.show();
+  }else{
+        $myUl.hide();
+  };
+
+		// if(activeColor){ //null이 아니라면
+		// 				activeColor.css({"backgroundColor":"#fff"});
+		// 	}else{
+		// 		var ts = $(this.myWrap+" button");
+		// 			ts.css({"backgroundColor":"#282828"});
+		// 			activeColor =+ 1;
+		// 	}
+		}		
+		
+ $.fn.colorCh = function(){
+ 						var myThis = $(this);
+		        	var myBtn = $("button",myThis);
+		        	var myUl = $("ul",myThis);
+		        	var myAtag = $("a",myUl);
+			       	var ch = function(){
+			       			if(myUl.is(":hidden")) {
+			       				myBtn.addClass('on');
+			       			} else {
+			       				myBtn.removeClass('on');
+			       			}
+							}
+
+							var ch_2 = function(e){
+								e.preventDefault();
+			       		myBtn.removeClass('on');
+							}
+		        	myBtn.on({"click":ch});
+		        	myAtag.on({"click":ch_2});
+		      }
+	      $(".lang_wrap").colorCh();   //부모
+
+
+
+
+ $(function(){
+    var sel = [];
+
+    /*sel[0] = new InitSelect("sel_1");  // var sel_1 => 인스턴트 네임
+    sel[1] = new InitSelect("sel_2");
+    sel[2] = new InitSelect("sel_3");*/
+    $.each($("div[data-select=sel]"),function(i,e){
+       sel[i] = new InitSelect("sel",i);
+    });
+ })
+
+ /*select종료*/
+/*사이즈감지*/
+ $(window).on("resize",function(){
+      console.log($(window).width());
+      var b = $("body") // 이벤트가발생하고실행되는거라 전역으로 해주면안됨
+      var w = $(window).width();
+      if(w >= 1024){
+      	// $("#gnb").attr({"style":""});
+      	// $(".dim_gnb").attr({"style":""});
+        b.attr("class","");
+        b.addClass("pc");
+        }else if(w>=480 && w < 1024){
+        b.attr("class","");
+        b.addClass("tablet");
       }else{
-            $myUl.hide();
-      };
+        b.attr("class","");
+        b.addClass("mobile");
+      }
+    })
 
-			// if(activeColor){ //null이 아니라면
-			// 				activeColor.css({"backgroundColor":"#fff"});
-			// 	}else{
-			// 		var ts = $(this.myWrap+" button");
-			// 			ts.css({"backgroundColor":"#282828"});
-			// 			activeColor =+ 1;
-			// 	}
-			}		
-			
-     $.fn.colorCh = function(){
-     						var myThis = $(this);
-			        	var myBtn = $("button",myThis);
-			        	var myUl = $("ul",myThis);
-			        	var myAtag = $("a",myUl);
-				       	var ch = function(){
-				       			if(myUl.is(":hidden")) {
-				       				myBtn.addClass('on');
-				       			} else {
-				       				myBtn.removeClass('on');
-				       			}
-								}
+$.fn.rsGnb = function(opt){
+	var mode = opt.mode;
+	var ts = $(this);
 
-								var ch_2 = function(e){
-									e.preventDefault();
-				       		myBtn.removeClass('on');
-								}
-			        	myBtn.on({"click":ch});
-			        	myAtag.on({"click":ch_2});
-			      }
-		      $(".lang_wrap").colorCh();   //부모
+	if(mode == "pc tablet"){
+		var selector = ".pc" + " #"+ts.attr("id")+">ul>li>a" + ",.tablet" + " #"+ts.attr("id")+">ul>li>a";
+		console.log(selector)
+		$(document).on("mouseover focus",selector,function(){
+			var myThis = $(this);
+			$(this).closest('ul').find("ul:visible").hide() //비지블 :보여지고있는 유엘 
+			.end().find("a.on").removeClass(".on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
+			myThis.next().show();
+			$(this).addClass("on");
+
+		});
+		var selector2 = ".pc" + " #"+ts.attr("id") + ",.tablet" + " #"+ts.attr("id");
+		$(document).on("mouseleave",selector2,function(){
+			var myThis = $(this);
+			$(">ul",this).find("ul:visible").hide() //비지블 :보여지고있는 유엘 
+			.end().find("a.on").removeClass("on");
+		})
+	}
+	$(document).on("click",".ico_f_show_gnb",function(){
+		$("#gnb").animate({right:0},100)
+		$(".dim_gnb").fadeIn("fast");
+	})
+	$(document).on("click",".mobile_gnb_close",function(){
+		$("#gnb").animate({right:"-500px"},100);
+		$(".dim_gnb").fadeOut("fast");
+
+	})
+}
+
+$("#gnb").rsGnb({mode:"pc tablet"});
+$(window).resize();
 
 
-
-    
-     $(function(){
-        var sel = [];
-
-        /*sel[0] = new InitSelect("sel_1");  // var sel_1 => 인스턴트 네임
-        sel[1] = new InitSelect("sel_2");
-        sel[2] = new InitSelect("sel_3");*/
-        $.each($("div[data-select=sel]"),function(i,e){
-           sel[i] = new InitSelect("sel",i);
-        });
-     })
-
-		     /*select종료*/
 
 });
 $(function(){
