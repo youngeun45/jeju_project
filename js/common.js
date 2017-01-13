@@ -190,13 +190,8 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
 		        	myAtag.on({"click":ch_2});
 		      }
 	      $(".lang_wrap").colorCh();   //부모
-
-
-
-
  $(function(){
     var sel = [];
-
     /*sel[0] = new InitSelect("sel_1");  // var sel_1 => 인스턴트 네임
     sel[1] = new InitSelect("sel_2");
     sel[2] = new InitSelect("sel_3");*/
@@ -204,7 +199,6 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
        sel[i] = new InitSelect("sel",i);
     });
  })
-
  /*select종료*/
 /*사이즈감지*/
  $(window).on("resize",function(){
@@ -224,7 +218,6 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
         b.addClass("mobile");
       }
     })
-
 $.fn.rsGnb = function(opt){
 	var mode = opt.mode;
 	var ts = $(this);
@@ -257,54 +250,81 @@ $.fn.rsGnb = function(opt){
 
 	})
 }
+/*레이어팝업*/
+$.fn.layerPopup = function(){
+
+	var ts = $(this);
+	var openLayer = function(e){
+		e.preventDefault();
+		var url= $(this).attr("href");
+		$.get(url,function(data){
+			//console.log(data);
+			var el_1 = $("<div/>",{"class":"pop_dim"});
+			var el_2 = $("<div/>",{"class":"pop_inner_wrap"}).appendTo(el_1);
+			var el_3 = $("<div/>",{"class":"pop_inner"}).appendTo(el_2);
+			console.log(data);
+			el_3.prepend(data);   //데이타 '전'에다가 버튼넣기 appendTo : 후에다가 버튼넣기
+			//el_3.append(data);
+			$(".pop_dim").remove();
+			$(".header_wrapIn").append(el_1)
+		});
+		$(document).on("click",".btnCloseLayer",function(){
+			// alert(1234)
+			$(".pop_dim").remove();
+		})
+	}
+	$(document).on("click","a[data-type=layerPopup]",openLayer);
+}
+
 
 $("#gnb").rsGnb({mode:"pc tablet"});
 $(window).resize();
+$("a[data-type=layerPopup]").layerPopup();
 
 
 
 });
-$(function(){
+// $(function(){
 
-	 		     /*달력시작*/
-		     $.datepicker.regional['ko'] = {
-		        closeText: '닫기',
-		        prevText: '이전달',
-		        nextText: '다음달',
-		        currentText: '오늘',
-		        monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
-		        '7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
-		        monthNamesShort: ['1월','2월','3월','4월','5월','6월',
-		        '7월','8월','9월','10월','11월','12월'],
-		        dayNames: ['일','월','화','수','목','금','토'],
-		        dayNamesShort: ['일','월','화','수','목','금','토'],
-		        dayNamesMin: ['일','월','화','수','목','금','토'],
-		        weekHeader: 'Wk',
-		        dateFormat: 'yy-mm-dd',
-		        firstDay: 0,
-		        isRTL: false,
-		        showMonthAfterYear: true,
-		        yearSuffix: '',
-		        showOn: 'both',
-		        buttonText: "달력",
-		        changeMonth: true,
-		        changeYear: true,
-		        showButtonPanel: true,
-		        yearRange: 'c-99:c+99' //범위지정
-   			 };
-		     $.datepicker.setDefaults($.datepicker.regional['ko']);
-			     var datepicker_default = {
-			        showOn: 'both',
-			        buttonText: "달력",
-			        currentText: "이번달",
-			        changeMonth: false,
-			        changeYear: false,
-			        showButtonPanel: false,
-			        yearRange: 'c-1:c+1',
-			        showOtherMonths: false,
-			        selectOtherMonths: false
-			    }
-		     $("#from,#to").datepicker();
-})
+// 	 		     /*달력시작*/
+// 		     $.datepicker.regional['ko'] = {
+// 		        closeText: '닫기',
+// 		        prevText: '이전달',
+// 		        nextText: '다음달',
+// 		        currentText: '오늘',
+// 		        monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
+// 		        '7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
+// 		        monthNamesShort: ['1월','2월','3월','4월','5월','6월',
+// 		        '7월','8월','9월','10월','11월','12월'],
+// 		        dayNames: ['일','월','화','수','목','금','토'],
+// 		        dayNamesShort: ['일','월','화','수','목','금','토'],
+// 		        dayNamesMin: ['일','월','화','수','목','금','토'],
+// 		        weekHeader: 'Wk',
+// 		        dateFormat: 'yy-mm-dd',
+// 		        firstDay: 0,
+// 		        isRTL: false,
+// 		        showMonthAfterYear: true,
+// 		        yearSuffix: '',
+// 		        showOn: 'both',
+// 		        buttonText: "달력",
+// 		        changeMonth: true,
+// 		        changeYear: true,
+// 		        showButtonPanel: true,
+// 		        yearRange: 'c-99:c+99' //범위지정
+//    			 };
+// 		     $.datepicker.setDefaults($.datepicker.regional['ko']);
+// 			     var datepicker_default = {
+// 			        showOn: 'both',
+// 			        buttonText: "달력",
+// 			        currentText: "이번달",
+// 			        changeMonth: false,
+// 			        changeYear: false,
+// 			        showButtonPanel: false,
+// 			        yearRange: 'c-1:c+1',
+// 			        showOtherMonths: false,
+// 			        selectOtherMonths: false
+// 			    }
+// 		     $("#from,#to").datepicker();
+// })
 
 		     /*달력종료*/			

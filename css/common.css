@@ -88,8 +88,13 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:hover,.gnb_wrapIn>ul>li>div ul li a:focus{text-decoration: underline;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li a:before{display: inline-block;content:url(../images/common/arrow_gnbMenu.png);position: absolute;top:15px; right:0;}
 .gnb_wrap .gnb_wrapIn>ul>li>div>div>ul:first-child{margin-right: 3.5%;}
+/*딤 시작*/
+.pop_dim{background: url(../images/common/bg_dim.png) 0 0;position: fixed;width: 100%;z-index: 3; height: 100%; left: 0; top: 0;overflow: auto;}
+.pop_dim .pop_inner_wrap{display: table; width: 100%;max-width: 600px; margin: 0 auto;padding: 10px;}
+.pop_inner{display: table-cell;vertical-align: middle;}
+/*딤 종료*/
 /*로그인 시작*/
-.login_wrap{display: none;position: fixed;margin-top: 44px; left: 32%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;}
+.login_wrap{position: fixed;margin-top: 155px; left: 50%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
 .login_wrap .log_logo,.join_wrap .log_logo{margin-bottom: 14px;}
 .login_wrap .inp_sec{float: right;width: 248px;position: relative;}
 .login_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
@@ -109,10 +114,13 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .login_wrap .join_sec>a.join_btn3 span{margin-top: -4px;}
 .login_wrap .join_sec>a span{display: inline-block;padding-left: 20px; color: #fff; font-size: 14px; font-weight: 800;margin-top: -2px;}
 .login_wrap .join_sec>a img{vertical-align: top;}
-.login_wrap .closeWindow{position: absolute;top:16px; right:16px;cursor: pointer}
+.login_wrap .join_sec p{text-align: right; font-size: 14px;}
+.login_wrap .join_sec p a{color: #282828; font-weight: bold;}
+.login_wrap .join_sec p a:hover{text-decoration: underline;}
+.btnCloseLayer{position: absolute;top:16px; right:16px;cursor: pointer;text-indent: -9999px;background: url(../images/common/x_log.png) 0 0 no-repeat;width: 17px; height: 17px;}
 /*로그인종료*/
 /*회원가입 시작*/
-.join_wrap{display: none;position: fixed;margin-top: 44px; left: 32%;background-color: #fff;width: 688px; height: 479px;padding: 34px 40px 41px;z-index:10;}
+.join_wrap{position: fixed;margin-top: 155px; left: 50%;background-color: #fff;width: 688px; height: 479px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
 .join_wrap .log_logo{margin-bottom: 14px;}
 .join_wrap .inp_sec{float: right;width: 248px;position: relative;}
 .join_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
@@ -128,7 +136,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .join_wrap .join_sec p.joinBtn input[type="submit"]{background: url(../images/common/box_join.png) 0 0 no-repeat;border:none;font-size: 16px; color: #fff;width: 64px; height: 36px;cursor: pointer;}
 .join_wrap .join_sec p.joinBtn input[type="reset"]{border:none; background-color: initial;font-size: 16px; color: #282828;margin-left: 20px;margin-bottom: 16px;cursor: pointer;}
 .join_wrap .join_sec p.infoMail_chk{font-size: 14px; font-weight: bold; color: #282828;}
-.join_wrap .closeWindow{position: absolute;top:16px; right:16px;cursor: pointer}
+/*.btnCloseLayer{position: absolute;top:16px; right:16px;cursor: pointer}*/
 /*회원가입 종료*/
 /*헤더종료*/
 /*네비게이션 시작*/
@@ -138,10 +146,10 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 /*네비게이션 종료*/
 /*그레이박스 시작*/
 .row_1{margin-bottom: 78px;}
-.row_1 .sevenMenu{float: right; width: 32.27%;position: relative;}
+.row_1 .sevenMenu{float: right; width: 32.3%;position: relative;}
 .row_1 .sevenMenu>div{display: none;}
-.row_1 .sevenMenu h4{display: inline-block;width: 100%;}
-.row_1 .sevenMenu h4 a{position: relative;display: block;width:50%;text-align: center;}
+.row_1 .sevenMenu h4{display: inline-block;width: 50%;}
+.row_1 .sevenMenu h4 a{position: relative;display: block;width:100%;text-align: center;}
 /*.row_1 .sevenMenu h4 a:before{content: "";width: 114px; height: 1px; background-color: #1c1b1b;display: block;position: absolute;top:96%; left:20%; right:30%;}*/
 .row_1 .sevenMenu.line:before{display: none;}
 .row_1 .sevenMenu h4 a img{width: 100%;}

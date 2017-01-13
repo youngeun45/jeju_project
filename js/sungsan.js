@@ -28,7 +28,10 @@ $(function(){
 				$(".etc_wrap h3.on").removeClass("on");
 			}
 		});
-
-
-
+		$(".btnWrap .btnNext_ss").on("click",function(){
+	$(".bx-controls-direction .bx-next").trigger("click");
+})
+			$(".btnWrap .btnPrev_ss").on("click",function(){
+	$(".bx-controls-direction .bx-prev").trigger("click");
+})
 })

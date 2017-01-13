@@ -19,8 +19,10 @@
 .ss_wrapIn .img_wrap #slider_pager a{margin-left: 4px;}
 .ss_wrapIn .img_wrap #slider_pager a:first-child{margin: 0;}
 .ss_wrapIn .img_wrap .bx-prev,.ss_wrapIn .img_wrap .bx-next{position: absolute;top: 50%; margin-top:-67px;left: 24px;display: inline-block;width:24px; height: 40px;text-indent: -9999px; background: url(../images/main/arrow_left.png) 0 0 no-repeat;z-index: 64}
-.ss_wrapIn .img_wrap .btnWrap .bx-prev,.ss_wrapIn .img_wrap .btnWrap .bx-next{background: url(../images/common/2_arrow_next.png) 0 0 no-repeat;bottom: -50px; margin-top:20px;left: 0;display: inline-block;width:7px; height: 13px;text-indent: -9999px;}
-.ss_wrapIn .img_wrap .bx-next{background: url(../images/main/arrow_right.png) 0 0 no-repeat;left:auto; right:24px;}
+.ss_wrapIn .img_wrap .bx-next{background-image: url(../images/main/arrow_right.png);left:auto; right:24px;}
+.ss_wrapIn .img_wrap .btnWrap{position: relative;}
+.ss_wrapIn .img_wrap .btnWrap .btnPrev_ss,.ss_wrapIn .img_wrap .btnWrap .btnNext_ss{position: absolute; bottom:28px; left: 13px;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;width:7px; height: 13px;text-indent: -9999px;}
+.ss_wrapIn .img_wrap .btnWrap .btnNext_ss{background-image: url(../images/common/2_arrow_next.png);left: auto; right:13px;}
 .ss_wrapIn .sns_wrap{padding-left: 11px;margin-bottom: 35px;}
 .ss_wrapIn .sns_wrap a{display: inline-block; margin-left: 25px;}
 .ss_wrapIn .sns_wrap a:first-child{margin: 0;}
