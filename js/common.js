@@ -284,47 +284,76 @@ $("a[data-type=layerPopup]").layerPopup();
 
 
 });
-// $(function(){
+$.fn.rsGnb = function(opt){
+	var mode = opt.mode;
+	var ts = $(this);
+	var selector = "."+ts.attr("class")+">ul>li>a";
+	console.log(selector)
+		$(document).on("mouseover focus",selector,function(){
+			var myThis = $(this);
+			$(this).closest('ul').find("ul:visible").hide() //비지블 :보여지고있는 유엘 
+			.end().find("a.on").removeClass(".on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
+			myThis.next().show();
+			$(this).addClass("on");
 
-// 	 		     /*달력시작*/
-// 		     $.datepicker.regional['ko'] = {
-// 		        closeText: '닫기',
-// 		        prevText: '이전달',
-// 		        nextText: '다음달',
-// 		        currentText: '오늘',
-// 		        monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
-// 		        '7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
-// 		        monthNamesShort: ['1월','2월','3월','4월','5월','6월',
-// 		        '7월','8월','9월','10월','11월','12월'],
-// 		        dayNames: ['일','월','화','수','목','금','토'],
-// 		        dayNamesShort: ['일','월','화','수','목','금','토'],
-// 		        dayNamesMin: ['일','월','화','수','목','금','토'],
-// 		        weekHeader: 'Wk',
-// 		        dateFormat: 'yy-mm-dd',
-// 		        firstDay: 0,
-// 		        isRTL: false,
-// 		        showMonthAfterYear: true,
-// 		        yearSuffix: '',
-// 		        showOn: 'both',
-// 		        buttonText: "달력",
-// 		        changeMonth: true,
-// 		        changeYear: true,
-// 		        showButtonPanel: true,
-// 		        yearRange: 'c-99:c+99' //범위지정
-//    			 };
-// 		     $.datepicker.setDefaults($.datepicker.regional['ko']);
-// 			     var datepicker_default = {
-// 			        showOn: 'both',
-// 			        buttonText: "달력",
-// 			        currentText: "이번달",
-// 			        changeMonth: false,
-// 			        changeYear: false,
-// 			        showButtonPanel: false,
-// 			        yearRange: 'c-1:c+1',
-// 			        showOtherMonths: false,
-// 			        selectOtherMonths: false
-// 			    }
-// 		     $("#from,#to").datepicker();
-// })
+		});
+		var selector2 = "#"+ts.attr("id");
+		$(document).on("mouseleave",selector2,function(){
+			$(">ul",this).find("ul:visible").hide() //비지블 :보여지고있는 유엘 
+			.end().find("a.on").removeClass("on");
+		})
+	// $(document).on("click",".ico_f_show_gnb",function(){
+	// 	$("#gnb").animate({right:0},100)
+	// 	$(".dim_gnb").fadeIn("fast");
+	// })
+	// $(document).on("click",".mobile_gnb_close",function(){
+	// 	$("#gnb").animate({right:"-500px"},100);
+	// 	$(".dim_gnb").fadeOut("fast");
+
+	// })
+}
+$(function(){
+
+	 		     /*달력시작*/
+		     $.datepicker.regional['ko'] = {
+		        closeText: '닫기',
+		        prevText: '이전달',
+		        nextText: '다음달',
+		        currentText: '오늘',
+		        monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
+		        '7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
+		        monthNamesShort: ['1월','2월','3월','4월','5월','6월',
+		        '7월','8월','9월','10월','11월','12월'],
+		        dayNames: ['일','월','화','수','목','금','토'],
+		        dayNamesShort: ['일','월','화','수','목','금','토'],
+		        dayNamesMin: ['일','월','화','수','목','금','토'],
+		        weekHeader: 'Wk',
+		        dateFormat: 'yy-mm-dd',
+		        firstDay: 0,
+		        isRTL: false,
+		        showMonthAfterYear: true,
+		        yearSuffix: '',
+		        showOn: 'both',
+		        buttonText: "달력",
+		        changeMonth: true,
+		        changeYear: true,
+		        showButtonPanel: true,
+		        yearRange: 'c-99:c+99' //범위지정
+   			 };
+		     $.datepicker.setDefaults($.datepicker.regional['ko']);
+			     var datepicker_default = {
+			        showOn: 'both',
+			        buttonText: "달력",
+			        currentText: "이번달",
+			        changeMonth: false,
+			        changeYear: false,
+			        showButtonPanel: false,
+			        yearRange: 'c-1:c+1',
+			        showOtherMonths: false,
+			        selectOtherMonths: false
+			    }
+		     $("#from,#to").datepicker();
+		     // $(".gnb_wrapIn").rsGnb({mode:"pc tablet"});
+})
 
 		     /*달력종료*/			
