@@ -60,6 +60,17 @@ var mSl = ".main_prdt_Slide";
 		search.on("click",function(){
 					searchWrap.stop().slideToggle("fast");
 		})
+		$(document).on("click"," button[type=reset]",function(){
+			searchWrap.stop().slideUp("fast");
+		})
+	$.fn.removeLabel = function(){
+		var myTs = $(this);
+		var myLb =$(this).find("label");
+		$(document).on("click"," input[type=text]",function(){
+			myLb.hide();
+		})
+	}
+
 
 	/*탭메뉴*/
 	/*	
@@ -202,7 +213,7 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
  /*select종료*/
 /*사이즈감지*/
  $(window).on("resize",function(){
-      console.log($(window).width());
+      // console.log($(window).width());
       var b = $("body") // 이벤트가발생하고실행되는거라 전역으로 해주면안됨
       var w = $(window).width();
       if(w >= 1024){
@@ -218,38 +229,37 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
         b.addClass("mobile");
       }
     })
-$.fn.rsGnb = function(opt){
-	var mode = opt.mode;
-	var ts = $(this);
+// $.fn.rsGnb = function(opt){
+// 	var mode = opt.mode;
+// 	var ts = $(this);
 
-	if(mode == "pc tablet"){
-		var selector = ".pc" + " #"+ts.attr("id")+">ul>li>a" + ",.tablet" + " #"+ts.attr("id")+">ul>li>a";
-		console.log(selector)
-		$(document).on("mouseover focus",selector,function(){
-			var myThis = $(this);
-			$(this).closest('ul').find("ul:visible").hide() //비지블 :보여지고있는 유엘 
-			.end().find("a.on").removeClass(".on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
-			myThis.next().show();
-			$(this).addClass("on");
+// 	if(mode == "pc tablet"){
+// 		var selector = ".pc" + " #"+ts.attr("id")+">ul>li>a" + ",.tablet" + " #"+ts.attr("id")+">ul>li>a";
+// 		$(document).on("mouseover focus",selector,function(){
+// 			var myThis = $(this);
+// 			$(this).closest('ul').find("ul:visible").hide() //비지블 :보여지고있는 유엘 
+// 			.end().find("a.on").removeClass(".on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
+// 			myThis.next().show();
+// 			$(this).addClass("on");
 
-		});
-		var selector2 = ".pc" + " #"+ts.attr("id") + ",.tablet" + " #"+ts.attr("id");
-		$(document).on("mouseleave",selector2,function(){
-			var myThis = $(this);
-			$(">ul",this).find("ul:visible").hide() //비지블 :보여지고있는 유엘 
-			.end().find("a.on").removeClass("on");
-		})
-	}
-	$(document).on("click",".ico_f_show_gnb",function(){
-		$("#gnb").animate({right:0},100)
-		$(".dim_gnb").fadeIn("fast");
-	})
-	$(document).on("click",".mobile_gnb_close",function(){
-		$("#gnb").animate({right:"-500px"},100);
-		$(".dim_gnb").fadeOut("fast");
+// 		});
+// 		var selector2 = ".pc" + " #"+ts.attr("id") + ",.tablet" + " #"+ts.attr("id");
+// 		$(document).on("mouseleave",selector2,function(){
+// 			var myThis = $(this);
+// 			$(">ul",this).find("ul:visible").hide() //비지블 :보여지고있는 유엘 
+// 			.end().find("a.on").removeClass("on");
+// 		})
+// 	}
+// 	$(document).on("click",".ico_f_show_gnb",function(){
+// 		$("#gnb").animate({right:0},100)
+// 		$(".dim_gnb").fadeIn("fast");
+// 	})
+// 	$(document).on("click",".mobile_gnb_close",function(){
+// 		$("#gnb").animate({right:"-500px"},100);
+// 		$(".dim_gnb").fadeOut("fast");
 
-	})
-}
+// 	})
+// }
 /*레이어팝업*/
 $.fn.layerPopup = function(){
 
@@ -288,7 +298,6 @@ $.fn.rsGnb = function(opt){
 	var mode = opt.mode;
 	var ts = $(this);
 	var selector = "."+ts.attr("class")+">ul>li>a";
-	console.log(selector)
 		$(document).on("mouseover focus",selector,function(){
 			var myThis = $(this);
 			$(this).closest('ul').find("ul:visible").hide() //비지블 :보여지고있는 유엘 
@@ -302,16 +311,21 @@ $.fn.rsGnb = function(opt){
 			$(">ul",this).find("ul:visible").hide() //비지블 :보여지고있는 유엘 
 			.end().find("a.on").removeClass("on");
 		})
-	// $(document).on("click",".ico_f_show_gnb",function(){
-	// 	$("#gnb").animate({right:0},100)
-	// 	$(".dim_gnb").fadeIn("fast");
-	// })
-	// $(document).on("click",".mobile_gnb_close",function(){
-	// 	$("#gnb").animate({right:"-500px"},100);
-	// 	$(".dim_gnb").fadeOut("fast");
+	
 
-	// })
+
+	$(document).on("click",".open_menu_mobile",function(){
+		$(".gnb_wrapIn").animate({left:0},100)
+		$(".dim_gnbwrap").fadeIn("fast");
+	})
+	$(document).on("click",".mobile_close",function(){
+		$(".gnb_wrapIn").animate({left:"-500px"},100);
+		$(".dim_gnbwrap").fadeOut("fast");
+
+	})
 }
+
+
 $(function(){
 
 	 		     /*달력시작*/
@@ -353,7 +367,10 @@ $(function(){
 			        selectOtherMonths: false
 			    }
 		     $("#from,#to").datepicker();
-		     // $(".gnb_wrapIn").rsGnb({mode:"pc tablet"});
+		     $(".gnb_wrapIn").rsGnb({mode:"pc tablet"});
+		     $(".sch_wrapIn").removeLabel();
+
+
 })
 
 		     /*달력종료*/			

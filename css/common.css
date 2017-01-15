@@ -33,7 +33,17 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 [class="ObulletB_big"]:before {content:"";display:block;position: absolute;width: 59px; height: 10px;bottom: 0; left: 0;background-color: #fd6602;}
 .boxShadow a span{position: relative; display: inline-block;}
 .boxShadow:hover span:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(0,0,0,0.2);}
-
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?46025317');
+  src: url('../font/fontello.eot?46025317#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?46025317') format('woff2'),
+       url('../font/fontello.woff?46025317') format('woff'),
+       url('../font/fontello.ttf?46025317') format('truetype'),
+       url('../font/fontello.svg?46025317#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*헤더*/
 #header_wrap{ width: 100%;position: relative;background-color: #fff;border-bottom: 1px solid #eee;}
@@ -62,14 +72,18 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul{box-shadow:0 0 2px 3px rgba(0,0,0,0.1);}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul>li>a{display: block;padding: 0 20px;border-bottom: 1px solid #eee;background-color: #fff;}
 .header .util_wrap .util_wrapIn .snsLng_wrap .lang_wrap ul>li>a:hover{background-color: #eee;}
-.header .header_wrapIn{position: relative;margin-bottom: 29px;padding-top:38px}
+.header .header_wrapIn{position: relative;padding-bottom: 29px;padding-top:38px}
 .header .header_wrapIn h1{;margin-left:20px;}
 .header .header_wrapIn .iconMenu{position: absolute;top:38px; right:0;width: 50%;}
 .header .header_wrapIn .iconMenu ul{text-align: right;}
-.header .header_wrapIn .iconMenu li{float: left;margin-left: 20%;text-align: center;}
+.header .header_wrapIn .iconMenu li{float: left;width: 33.33%;text-align: center;}
+.open_menu_mobile{display: none;padding-top: 18px;font-size:16px; font-weight: 800; padding-left: 40px;background: #fff url(../images/common/ico_menu.png) 13px 16px no-repeat;color: #282828;}
+.mobile_close{; background: url(../images/common/icon_x.png) 0 0 no-repeat;}
 .sch_wrap{display: none;z-index:5;background-color: #fff;position: absolute;top: 148px; left: 0;width: 100%; height: 77px ;box-shadow:0 4px 10px -2px rgba(0,0,0,0.4);}
-.sch_wrap .sch_wrapIn{padding: 26px 0;}
-.sch_wrap input[type=text]{font-style: italic; font-size: 20px; color: #ccc; font-weight: bold;width:83.33% ;}
+.sch_wrap .sch_wrapIn{padding: 26px 0;position: relative;}
+.sch_wrap input[type=text]{;width:83.33% ;padding: 10px 0;}
+.sch_wrap label{position: absolute;top:34px; left: 7px; font-style: italic; font-size: 20px; color: #ccc; font-weight: bold}
+.sch_wrap button[type=reset]{width: 22px; height: 22px;}
 .sch_wrap button[type=submit]{width: 116px; height: 40px;background-color: #363636; color: #fff; font-weight: bold;margin-left: 24px; font-size: 14px;}
 .sch_wrap button[type=submit] em{padding-left: 30px;margin-top: -5px;}
 .sch_wrap img{margin-top: -4px;}
@@ -105,7 +119,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .pop_inner{display: table-cell;vertical-align: middle;}
 /*딤 종료*/
 /*로그인 시작*/
-.login_wrap{position: fixed;margin-top: 155px; left: 50%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
+.login_wrap{position: fixed;margin-top: 177px; left: 50%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
 .login_wrap .log_logo,.join_wrap .log_logo{margin-bottom: 14px;}
 .login_wrap .inp_sec{float: right;width: 248px;position: relative;}
 .login_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
@@ -131,7 +145,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .btnCloseLayer{position: absolute;top:16px; right:16px;cursor: pointer;text-indent: -9999px;background: url(../images/common/x_log.png) 0 0 no-repeat;width: 17px; height: 17px;}
 /*로그인종료*/
 /*회원가입 시작*/
-.join_wrap{position: fixed;margin-top: 155px; left: 50%;background-color: #fff;width: 688px; height: 479px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
+.join_wrap{position: fixed;margin-top: 177px; left: 50%;background-color: #fff;width: 688px; height: 479px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
 .join_wrap .log_logo{margin-bottom: 14px;}
 .join_wrap .inp_sec{float: right;width: 248px;position: relative;}
 .join_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
@@ -237,6 +251,7 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .col_tablet_10{width: 83.33%;}
 .col_tablet_11{width: 91.663%;}
 .col_tablet_12{width: 100%!important;}
+.sns_wrap{display: none;}
 .visual_wrap .visual_wrapIn{font-size: 40px;}
 .row_1 .main_prdt_wrap{display: block;margin:0 auto;float: none;margin-bottom: 100px;}
 .row_1 .sevenMenu{width: 100%; float: none;}
@@ -246,23 +261,61 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .row_1 .sevenMenu .seven_wrap{height: 302px; }
 .row_1 .sevenMenu .seven_wrap ul li{width: 24.99%;}
 .wrapIn{padding: 0 20px !important;}
-/*
+
+
+}
+@media (max-width:800px) {
+.util_wrap{display: none;}
+h1{width: 100%;}
+h1 a{display: block;width: 65px;}
+h1 img{width: 100%;}
+.header .header_wrapIn .iconMenu li a p+p{display: none;}
+.header .header_wrapIn{padding: 11px 0;}
 .gnb_wrapIn {
         transition: all 1s linear;
         position: fixed;
         z-index: 21;
-        left: 0px;
+        left: -500px;
         top: 0;
         width: 300px;
         height: 100%;
         background-color: #fff;
-        border-left:s 1px solid #d8d8d8;
+        border-left: 1px solid #d8d8d8;
         box-shadow: -1px 0 5px rgba(0,0,0,0.5)
     }
 .gnb_wrap .gnb_wrapIn>ul>li {float: none;}
 .gnb_wrap .gnb_wrapIn>ul>li>a{color: #282828}
 .gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap .gnb_wrapIn>ul>li>a:focus{color: #fff;}
-*/
+.gnb_wrap .gnb_wrapIn>ul>li>div{display: none;}
+.gnb_wrap{background-color: #fff;border-top: 1px solid #eee;}
+.header .header_wrapIn .iconMenu{z-index: 3;top:65px;}
+.header .header_wrapIn .iconMenu ul li {border:solid #eee;border-width: 0 0 0 1px}
+.header .header_wrapIn .iconMenu ul li a p:first-child{width: 23px; margin: 2px auto 0;}
+.header .header_wrapIn .iconMenu ul li a p img{width: 100%;}
+.header .header_wrapIn .iconMenu ul li:first-child+li a p:first-child{width: 29px;}
+.wrap .visual_wrap{background: url(../images/main/bg_visual_m.png) center 0 no-repeat ;height: 185px ;}
+.wrap .visual_wrap .visual_wrapIn{line-height: 136px;font-size: 30px;}
+#container .row_1 .main_prdt_wrap{border: 10px solid #fff;}
+#container .row_1 .main_prdt_wrap:before{right:-17.5px;top: 21px;}
+.open_menu_mobile{display: block;}
+.mobile_close {
+        position: absolute;
+        right:-42px;
+        top: 3px;
+        width: 35px;
+        height: 35px;
+    }
+   .dim_gnbwrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/common/bg_dim.png)0 0;
+        z-index: 20;
+        display: none
+    }
+
 }
 @media (max-width:640px) {
 .col_mobile_1{width: 8.333%;}
@@ -277,4 +330,14 @@ h3:before{content:"";width: 20px; height: 5px;position: absolute;top: 39px; left
 .col_mobile_10{width: 83.33%;}
 .col_mobile_11{width: 91.663%;}
 .col_mobile_12{width: 100%;}
+.row_1 .sevenMenu h4.tabBtn_1,.row_1 .sevenMenu h4.tabBtn_2{width: 50%;display: inline-block;}
+.row_1 .sevenMenu h4.tabBtn_2{left:50%;}
+.row_1 .sevenMenu.line:before{display: block;}
+.row_1 .sevenMenu .seven_wrap{height: 552px; }
+.row_1 .sevenMenu .seven_wrap ul li{width: 50%;}
+.row_1 .sevenMenu .seven_wrap ul li a {font-size: 12px;}
+h3{font-size: 20px;}
+.row_1 .main_prdt_frame .main_prdt_Slide  li div {padding: 40px 20px;}
+.row_1 .main_prdt_frame .main_prdt_Slide  li div a h4 {font-size: 16px;}
+.row_1 .main_prdt_frame .main_prdt_Slide div a:first-child+a{display: none;}
 }

@@ -117,7 +117,7 @@
 .row_2 [class^=unesco_row_] div h4 a {margin-bottom: 8px;font-weight:bold; color: #282828; font-size: 16px}
 .row_2 .cot_unesco_wrap a span{margin-bottom: 13px;}
 .cot_unesco_wrap .unesco_row_2 [class^=unesco_row_2_col_]{width: 100%; float: none;}
-.row_3 .whtsOn_row_wrap2 ul li,.row_3 .whtsOn_row_wrap2 ul li:first-child+li+li,.row_3 .whtsOn_row_wrap2 ul li:first-child{width: 100%;float:none;margin:0 auto 20px;max-width:400px;min-width: 280px }
+.row_3 .whtsOn_row_wrap2 ul li,.row_3 .whtsOn_row_wrap2 ul li:first-child+li+li,.row_3 .whtsOn_row_wrap2 ul li:first-child{width: 100%;float:none;margin:0 auto 20px;max-width:400px;min-width: 264px }
 .row_3 .whtsOn_row_wrap2>ul>li>a:first-child{min-height: 330px;}
 .row_3 .whtsOn_row_wrap2>ul>li>a>span{text-align: center;}
 .row_2 .cot_unesco_wrap .unesco_row_1{background-color: #fff;}

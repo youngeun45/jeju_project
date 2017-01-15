@@ -82,8 +82,9 @@
                 <form action="#" method="get">
                     <fieldset>
                         <legend>검색창</legend>
-                        <input type="text" name="search" id="search" title="검색어를 입력하세요." placeholder="검색어를 입력해주세요.">
-                        <button><img src="images/common/icon_x_sch.png" alt="닫기버튼"></button>
+                        <label for="search">검색어를 입력해주세요.</label>
+                        <input type="text" name="search" id="search" title="검색어를 입력하세요.">
+                        <button type="reset"><img src="images/common/icon_x_sch.png" alt="닫기버튼"></button>
                         <button type="submit">완료<em><img src="images/main/arrow_sch.png" alt="완료화살표"></em></button>
                     </fieldset>
                 </form>
@@ -157,10 +158,17 @@
                       </div>
                     </li>
                 </ul>
+            <button class="mobile_close">
+                <span class="blind">메뉴닫기</span>
+            </button>
             </div>
-            <button class="ico_f_show_gnb" tabindex="0">
+            <button class="open_menu_mobile">
+                <h2>MENU</h2>
+            </button>
+            <div class="dim_gnbwrap"></div>
+           <!--  <button class="ico_f_show_gnb" tabindex="0">
                     <span class="blind">메뉴보기</span>
-                </button>
+                </button> -->
         </div>
     </header>
 </div>
