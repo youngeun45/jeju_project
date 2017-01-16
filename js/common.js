@@ -60,15 +60,49 @@ var mSl = ".main_prdt_Slide";
 		search.on("click",function(){
 					searchWrap.stop().slideToggle("fast");
 		})
-		$(document).on("click"," button[type=reset]",function(){
-			searchWrap.stop().slideUp("fast");
-		})
+		// $(document).on("click"," input[type=button]",function(){
+		// 	searchWrap.stop().slideUp("fast");
+		// })
 	$.fn.removeLabel = function(){
 		var myTs = $(this);
 		var myLb =$(this).find("label");
-		$(document).on("click"," input[type=text]",function(){
-			myLb.hide();
+		var myInput = "."+$(this).attr("class") + " input[type=text]";
+		var myXbtn = "."+$(this).attr("class") + " input[type=button]";
+
+		var m = true;
+		$(document).on("focus",myInput,function(){
+			if(m) {
+				myLb.hide();
+			}		
+		});
+		$(document).on("blur",myInput,function(){
+			console.log(Boolean($(this).val()));
+			if($(this).val()) {
+				m = false;
+			} else {
+				myLb.show();				
+				m = true;				
+			}
+		});
+				$(document).on("blur",myInput,function(){
+			// console.log(Boolean($(this).val()));
+			if($(this).val()) {
+				m = false;
+			} else {
+				myLb.show();				
+				m = true;				
+			}
+		});
+		$(document).on("click",myXbtn,function(){
+			$(myInput).val("");
+			myTs.stop().slideUp("fast");
+			myLb.show();
+			m = true;
 		})
+	
+
+
+
 	}
 
 
@@ -212,6 +246,7 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
  })
  /*select종료*/
 /*사이즈감지*/
+ var k = true;
  $(window).on("resize",function(){
       // console.log($(window).width());
       var b = $("body") // 이벤트가발생하고실행되는거라 전역으로 해주면안됨
@@ -228,7 +263,85 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
         b.attr("class","");
         b.addClass("mobile");
       }
-    })
+ if($(window).width() <= 800 && k){
+ 				k = !k;
+      	var myImg = $("h1 img")
+      	var mySrc = myImg.attr("src");
+      	var newSrc = mySrc.replace(".png","_wh.png");
+      	myImg .attr("src",newSrc);
+      }else if($(window).width() > 800 && !k){
+      	k = !k;
+      	var myImg = $("h1 img")
+      	var mySrc = myImg.attr("src");
+      	var newSrc = mySrc.replace("_wh.png",".png");
+      	myImg .attr("src",newSrc);
+      }
+
+})
+
+
+/*레이어팝업*/
+$.fn.layerPopup = function(){
+
+	var ts = $(this);
+	var openLayer = function(e){
+		e.preventDefault();
+		var url= $(this).attr("href");
+		$.get(url,function(data){
+			//console.log(data);
+			var el_1 = $("<div/>",{"class":"pop_dim"});
+			var el_2 = $("<div/>",{"class":"pop_inner_wrap"}).appendTo(el_1);
+			var el_3 = $("<div/>",{"class":"pop_inner"}).appendTo(el_2);
+			console.log(data);
+			el_3.prepend(data);   //데이타 '전'에다가 버튼넣기 appendTo : 후에다가 버튼넣기
+			//el_3.append(data);
+			$(".pop_dim").remove();
+			$(".header_wrapIn").append(el_1)
+		});
+		$(document).on("click",".btnCloseLayer",function(){
+			// alert(1234)
+			$(".pop_dim").remove();
+		})
+	}
+	$(document).on("click","a[data-type=layerPopup]",openLayer);
+}
+
+
+$("#gnb").rsGnb({mode:"pc mobile"});
+$(window).resize();
+$("a[data-type=layerPopup]").layerPopup();
+
+});
+/*반응형gnb*/
+
+$.fn.rsGnb = function(opt){
+	var mode = opt.mode;
+	var ts = $(this);
+	var selector = "."+ts.attr("class")+">ul>li>a";
+	console.log(selector)
+		$(document).on("mouseover focus",selector,function(){
+			var myThis = $(this);
+			$(">div",this).find("div:visible").hide() //비지블 :보여지고있는 유엘 
+			// .end().find("a.on").removeClass(".on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
+			myThis.next().show();
+			// $(this).addClass("on");
+
+		});
+		// var selector2 = "#"+ts.attr("id");
+		// $(document).on("mouseleave",selector2,function(){
+		// 	$(">div",this).find("div:visible").hide() //비지블 :보여지고있는 유엘 
+		// 	.end().find("a.on").removeClass("on");
+		// })
+	$(document).on("click",".open_menu_mobile",function(){
+		$(".gnb_wrapIn").animate({left:0},100)
+		$(".dim_gnbwrap").fadeIn("fast");
+	})
+	$(document).on("click",".mobile_close",function(){
+		$(".gnb_wrapIn").animate({left:"-500px"},100);
+		$(".dim_gnbwrap").fadeOut("fast");
+
+	})
+}
 // $.fn.rsGnb = function(opt){
 // 	var mode = opt.mode;
 // 	var ts = $(this);
@@ -260,71 +373,6 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
 
 // 	})
 // }
-/*레이어팝업*/
-$.fn.layerPopup = function(){
-
-	var ts = $(this);
-	var openLayer = function(e){
-		e.preventDefault();
-		var url= $(this).attr("href");
-		$.get(url,function(data){
-			//console.log(data);
-			var el_1 = $("<div/>",{"class":"pop_dim"});
-			var el_2 = $("<div/>",{"class":"pop_inner_wrap"}).appendTo(el_1);
-			var el_3 = $("<div/>",{"class":"pop_inner"}).appendTo(el_2);
-			console.log(data);
-			el_3.prepend(data);   //데이타 '전'에다가 버튼넣기 appendTo : 후에다가 버튼넣기
-			//el_3.append(data);
-			$(".pop_dim").remove();
-			$(".header_wrapIn").append(el_1)
-		});
-		$(document).on("click",".btnCloseLayer",function(){
-			// alert(1234)
-			$(".pop_dim").remove();
-		})
-	}
-	$(document).on("click","a[data-type=layerPopup]",openLayer);
-}
-
-
-$("#gnb").rsGnb({mode:"pc tablet"});
-$(window).resize();
-$("a[data-type=layerPopup]").layerPopup();
-
-
-
-});
-$.fn.rsGnb = function(opt){
-	var mode = opt.mode;
-	var ts = $(this);
-	var selector = "."+ts.attr("class")+">ul>li>a";
-		$(document).on("mouseover focus",selector,function(){
-			var myThis = $(this);
-			$(this).closest('ul').find("ul:visible").hide() //비지블 :보여지고있는 유엘 
-			.end().find("a.on").removeClass(".on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
-			myThis.next().show();
-			$(this).addClass("on");
-
-		});
-		var selector2 = "#"+ts.attr("id");
-		$(document).on("mouseleave",selector2,function(){
-			$(">ul",this).find("ul:visible").hide() //비지블 :보여지고있는 유엘 
-			.end().find("a.on").removeClass("on");
-		})
-	
-
-
-	$(document).on("click",".open_menu_mobile",function(){
-		$(".gnb_wrapIn").animate({left:0},100)
-		$(".dim_gnbwrap").fadeIn("fast");
-	})
-	$(document).on("click",".mobile_close",function(){
-		$(".gnb_wrapIn").animate({left:"-500px"},100);
-		$(".dim_gnbwrap").fadeOut("fast");
-
-	})
-}
-
 
 $(function(){
 
@@ -368,7 +416,7 @@ $(function(){
 			    }
 		     $("#from,#to").datepicker();
 		     $(".gnb_wrapIn").rsGnb({mode:"pc tablet"});
-		     $(".sch_wrapIn").removeLabel();
+		     $(".sch_wrap").removeLabel();
 
 
 })
