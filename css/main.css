@@ -42,7 +42,7 @@
 .row_3 .whtsOn_row_wrap1{width: 100%;height: 153px; background-color: #fd6602;padding: 32px 29px 36px 32px;}
 .row_3 .whtsOn_col_1 .whtsList {width:84.5%; height: 41px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
 
-.row_3 .slideToggleBtn{display: none;background-color:  #fd6602;color: #fff;width: 100%; height: 40px; padding: 13px 30px 13px 15px;display: block;text-align: left;font-size: 16px;}
+.row_3 .slideToggleBtn{display: none  !important;background-color:  #fd6602;color: #fff;width: 100%; height: 40px; padding: 13px 30px 13px 15px;display: block;text-align: left;font-size: 16px;}
 .row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_]{display: inline-block; color: #fff;font-weight: bold;}
 .row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] label {display: inline-block;text-align: center;width: 24%; font-size: 16px; font-style: italic;}
 .row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] input {width: 71.5%; height: 41px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
@@ -61,6 +61,9 @@
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul{display: none;position: absolute;top:41px; left:14.8%;background-color: #fff;width: 84.5%;z-index: 2}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a{display: block;padding: 5px;font-size: 14px; color: #282828;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a:hover,.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a:focus{color: #fff; background-color: #666;}
+.whtsOn_row_wrap1 .ui-datepicker-trigger{text-indent: -9999px;position: absolute;top:37px; right:14px;width: 27px; height: 27px; }
+
+.whtsOn_row_wrap1 .ui-datepicker-prev .ui-widget-header .ui-icon {color: #f00;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;}
 .row_3 .whtsOn_row_wrap2{padding-top: 22px;}
 .row_3 .whtsOn_row_wrap2 ul li{float: left;width: 23.68%;margin-left: 1.75%;position: relative;}
 .row_3 .whtsOn_row_wrap2 ul li:first-child{margin-left: 0;}
@@ -112,8 +115,21 @@
 .row_3 .whtsOn_row_wrap2 ul li{width: 48.99%;margin-bottom: 20px;}
 .row_3 .whtsOn_row_wrap2 ul li:first-child+li+li{margin: 0;}
 .row_3 .whtsOn_row_wrap2>ul>li>a:first-child{min-height: 350px;}
-.row_3 .slideToggleBtn{display: block;}
+.row_3 .slideToggleBtn{display: block !important;}
 .row_3 .whtsOn_row_wrap1 {display: none;}
+.row_3 .whtsOn_row_wrap1{height: 272px; ;padding: 24px 22px 29px 25px;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_1{width: 100%;margin-bottom: 36px;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 span{display: none;}
+.row_3 .whtsOn_col_1 .whtsList {width:100%;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 p{top:46px; left:1px; font-size: 12px;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_2,.row_3 .whtsOn_col_3{padding-bottom: 20px;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_2, .row_3 .whtsOn_col_3{width: 49%;}
+.row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] label {width: 100%; font-size: 14px;text-align: left}
+.row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] input {width: 100%;}
+.row_3 .whtsOn_col_3{float: right;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_4{width: 39%;float: right;text-align: right}
+.row_3 .whtsOn_row_wrap1 .specialSch{padding-top: 52px;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_4 button[type=submit]{width:115px ;};
 }
 @media (max-width:640px) {
 .row_2 .unesco_row_1 div{width: 100%;padding: 0;}
