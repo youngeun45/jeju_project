@@ -55,7 +55,7 @@ var mSl = ".main_prdt_Slide";
 			})
 
   	/*Search*/
-  	var search = $(".search a");
+  	var search = $(".search button");
   	var searchWrap = $(".sch_wrap");
 		search.on("click",function(){
 					searchWrap.stop().slideToggle("fast");
