@@ -1,36 +1,58 @@
 #container{margin: 0;padding-top: 40px;}
-#container .row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
+.row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
 .festival_main_wrap{float: left;width: 65.2%;}
 .festival_main_wrap>p{font-size: 14px;line-height: 23px;padding-bottom: 30px;}
 .festival_main_wrap .ftvl_main h3{margin-bottom: 30px;}
-.festival_main_wrap .ftvl_main .festival_row_1{width: 100%;background-color: #eee;}
+.festival_main_wrap .ftvl_main .festival_row_1{width: 100%;background-color: #eee;margin: 0 auto;max-width: 768px}
 .festival_main_wrap .ftvl_main .festival_row_1:hover h4 a,.festival_main_wrap .ftvl_main .festival_row_1:focus h4 a{text-decoration: underline;}
 .festival_main_wrap .ftvl_main .festival_row_1>a{display: inline-block;width:49%;}
-
-.festival_main_wrap .ftvl_main .festival_row_1 a span img{width: 100%;}
 .festival_main_wrap .ftvl_main .festival_row_1 div{display: inline-block;width: 50%;vertical-align: top;padding: 32px 21px;}
 .festival_main_wrap .ftvl_main .festival_row_1 div h4 a{font-weight: bold; font-size: 24px; color: #282828;display: inline-block;margin-bottom: 15px;overflow: hidden;-ms-text-overflow: ellipsis;
 text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .festival_main_wrap .ftvl_main .festival_row_1 div h4+p{line-height: 22px;height: 66px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word; }
-/*.row_1{min-height:500px;}
+.row_1{min-height:500px;}
 .row_1 .sevenMenu{width: 28.11%;}
-.row_1 .sevenMenu:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left:-12%;}*/
-/*.row_1 .sevenMenu .seven_wrap{height: 439px;}
+.row_1 .sevenMenu:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left:-12%;}
+.row_1 .sevenMenu .seven_wrap{height: 439px;}
 .row_1 .sevenMenu .seven_wrap ul li a{height: 98px;padding: 14px 0;font-size: 12px;}
-.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 48px; line-height: 48px;bottom: 0;}
+.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 44px; line-height: 48px;bottom: 0;}
 .row_2 {position: relative;margin-bottom: 98px;}
 .row_2.line:before {top :-46px;}
-.row_1 .sevenMenu .sevenWhts_wrap div ul{width: 85%;}*/
-
+.row_1 .sevenMenu .sevenWhts_wrap div ul{width: 85%;}
 .row_2 .festival_row_2 ul li{float: left;width: 25%;padding: 10px;}
 .row_2 .festival_row_2 ul li img{width: 100%;}
 .row_2 .festival_row_2 ul li a{display: block; width: 100%;max-width: 277px;text-align: center;background-color: #eee}
 .row_2 .festival_row_2 ul li a div{height: 118px;padding: 21px 19px;}
 .row_2 .festival_row_2 ul li a div h5{color: #282828;font-weight: bold; font-size: 16px;padding-bottom: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
 .row_2 .festival_row_2 ul li a div p{line-height: 18px;height:36px ;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word;}
-
 .plan_wrapIn {position: relative;}
 .plan_wrapIn.line:before{top:-45px;}
+@media (max-width:1024px) {
+.row_1 .sevenMenu{position: relative;}
+.row_1 .sevenMenu:before{content: "";display: block; background: url(../images/common/line.png) 0 0 repeat-x;width: 200%; height: 8px; position: absolute;top:-40px; left:-97px;}
+.row_1 .sevenMenu .seven_wrap{height: 241px;}
+.festival_main_wrap{float: none; margin-bottom: 100px;}
+.festival_row_1 a span{width: 100%;}
+.row_2.line:before {top :0;}
+.row_2 .festival_row_2 ul {max-width: 600px;margin: 0 auto;}
+
+.row_2 .festival_row_2 ul li{float: left;width: 50%;padding: 10px;}
+.row_2 .festival_row_2 ul li a{margin:0 auto;}
+
+}
+@media (max-width:640px) {
+.festival_main_wrap .ftvl_main .festival_row_1{background: none;max-width: 375px}
+.festival_main_wrap .ftvl_main .festival_row_1>a{width: 100%;}
+.festival_main_wrap .ftvl_main .festival_row_1 div{width: 100%; padding: 15px 0;}
+.festival_main_wrap .ftvl_main .festival_row_1 div h4 a{margin: 0; font-size: 18px;}
+
+.row_1 .sevenMenu .seven_wrap{height: 439px;}
+.row_2 .festival_row_2 ul li a div p{display: none;}
+.row_2 .festival_row_2 ul li a div p{display: none;}
+.row_2 .festival_row_2 ul li a div{padding: 8px;overflow: auto;height: 70px;}
+.row_2 .festival_row_2 ul li a div h5{font-size: 14px;}
+.festival_main_wrap>p{display: none;}
+}
 
 
 

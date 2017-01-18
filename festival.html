@@ -13,8 +13,8 @@
 <!-- 컨테이너 시작 -->
     <div id="container">
         <section class="row_1 wrapIn clearFix">
-             <div class="festival_main_wrap">
-                <h2>축제 / 행사</h2>
+             <div class="festival_main_wrap col_tablet_12">
+                <h2 class="line">축제 / 행사</h2>
                 <p> 제주 어디까지 가보셨어요? 수많은 제주의 축제와 행사를 취향에 맞게 선택해 보자.<br/>제주의 보석 같은 여행지가 여러분의 선택을 기다린다.</p>
                 <div class="ftvl_main">
                     <h3>fucus on</h3>
@@ -28,7 +28,7 @@
 
                 </div>
             </div>
-            <div class="sevenMenu" data-type="tabmenu">
+            <div class="sevenMenu col_tablet_12" data-type="tabmenu">
                 <h4 class="tabBtn_1"><a href="#"><img src="images/main/tab_7_ov.png" alt="7대비경"></a></h4>
                 <div class="seven_wrap">
                     <ul>
@@ -201,63 +201,7 @@
     </div>
 <!-- 컨테이너 종료 -->
 <!-- 계획짜기 시작 -->
-    <div class="plan_wrapIn line clearFix">
-        <h3>plan your stay</h3>
-        <div class="plan_col_1">
-            <a href="#" class="clearFix">
-                <div>
-                    <img src="images/common/icon_clouds.png" alt="구름">
-                </div>
-                <p>
-                    <span>11ºC/남동풍,3m/s</span>
-                    <span>Sunday 25 December 2016</span>
-                    <span>13:54 JEJU</span>
-                </p>
-            </a>
-        </div>
-        <div class="plan_col_2">
-            <ul class="clearFix">
-                <li>
-                    <a href="#"><img src="images/common/icon_insta_btm.png" alt="instagram">
-                        <p>Instagram</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_blog_btm.png" alt="blog">
-                        <p>Blog</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_fab_btm.png" alt="facebook">
-                        <p>Facebook</p>
-                    </a>
-                </li>
-            </ul>
-            <ul class="clearFix">
-                <li>
-                    <a href="#"><img src="images/common/icon_lett_btm.png" alt="뉴스레터">
-                        <p>Newsletter</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_you_btm.png" alt="유투브">
-                        <p>Youtube</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_q_btm.png" alt="묻고답하기">
-                        <p>Q&amp;A</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="plan_col_3">
-            <span>customer<br/>Reviews</span>
-            <img src="images/common/thumb.png" alt="엄지손가락으뜸">
-            <p class="percent">95%</p>
-            <p>of customers recommend<br/>jeju.co.kr</p>
-        </div>
-    </div>
+<? include "inc/plan.html"; ?>
 <!-- 계획짜기 종료 -->
 <!-- 푸터 시작 -->
 <? include "inc/footer.html"; ?>

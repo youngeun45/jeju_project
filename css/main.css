@@ -3,6 +3,7 @@
 #container{margin-top: -60px;}
 .main_prdt_wrap{position: relative;border: 20px solid #fff;border-bottom: none;display: inline-block;max-width: 780px;width:66%;float: left;}
 .row_1 .main_prdt_wrap:before{display: inline-block;content:url(../images/main/bg_mainImg_shadow.png); width: 8px; height: 168px; position: absolute;top: 40px; right: -28px;}
+.row_1 .main_prdt_wrap:after{display: none !important;content: "";display: block; background: url(../images/common/line.png) 0 0 repeat-x;width: 200%;height: 8px;position: absolute;bottom:-50px; left: -128px;}
 .row_1 .main_prdt_wrap img{width: 100%;}
 .row_1 .main_prdt_frame .bx-pager-item{display: inline;margin: 0 10px;}
 .row_1 .main_prdt_frame .bx-pager-link{display: inline-block;width: 13px; height: 13px;text-indent: -9999px;background: url(../images/main/mainImg_btn.png) 0 0 no-repeat;}
@@ -11,7 +12,8 @@
 .row_1 .main_prdt_frame .bx-prev,.main_prdt_frame .bx-next{position: absolute;top: 50%; margin-top:-126px;left: 24px;display: inline-block;width:24px; height: 40px;text-indent: -9999px; background: url(../images/main/arrow_left.png) 0 0 no-repeat;}
 .row_1 .main_prdt_frame .bx-next{background: url(../images/main/arrow_right.png) 0 0 no-repeat;left:auto; right:24px;}
 .row_1 .main_prdt_frame .main_prdt_Slide div {height: 212px;padding: 42px 33px;background-color:#eee}
-.row_1 .main_prdt_frame .main_prdt_Slide div a h4{font-weight: bold; font-size: 26px; color: #282828;margin-bottom: 13px;}
+.row_1 .main_prdt_frame .main_prdt_Slide div a h4{font-weight: bold; font
+	-size: 26px; color: #282828;margin-bottom: 13px;}
 .row_1 .main_prdt_frame .main_prdt_Slide div a p{font-size: 14px; color: #282828;line-height: 25px;height: 20px;}
 .row_2{position: relative;margin-bottom: 86px;}
 .row_2 .cot_unesco_wrap{float: left;width: 66%;}
@@ -98,6 +100,7 @@
 .row_4 .video_wrapIn ul li a {color: #fff;}
 
 @media (max-width:1024px) {
+.row_1 .main_prdt_wrap:after{display: block !important;}
 .row_2 .cot_unesco_wrap{width: 100%;float: none;}
 .row_2 .cot_unesco_wrap .unesco_row_1{margin-bottom: 22px;}
 .row_2 .unesco_row_1:before{display: none;}
@@ -110,6 +113,7 @@
 .row_4 .video_wrapIn ul li{width: 50%;}
 .row_4 .video_wrapIn ul li:first-child+li+li+li+li,.row_4 .video_wrapIn ul li:first-child+li+li+li+li+li{display: none;}
 .row_4 .video_wrapIn ul li{min-height: 160px}
+
 }
 @media (max-width:800px) {
 .row_3 .whtsOn_row_wrap2 ul li{width: 48.99%;margin-bottom: 20px;}

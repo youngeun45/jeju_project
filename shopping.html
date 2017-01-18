@@ -12,8 +12,8 @@
 <!-- 컨테이너 시작 -->
     <div id="container">
         <section class="row_1 wrapIn clearFix">
-             <div class="shopping_main_wrap">
-                <h2>SHOPPING</h2>
+             <div class="shopping_main_wrap col_tablet_12">
+                <h2 class="line">SHOPPING</h2>
                 <p> 소장하고 싶은 물건들을 고를 때의 설렘이나 가족, 친구들에게 줄 선물을 고를 때의 두근거림은 늘 여행을 꿈꾸게 합니다.제주의 특산품을 비롯해 시중보다 저렴한 면세점, 정감어린 전통시장, 작은 상점들이 초대하는 기쁨의 축제에 빠져듭시다.</p>
                 <div class="sp_main">
                     <h3>fucus on</h3>
@@ -27,7 +27,7 @@
 
                 </div>
             </div>
-            <div class="sevenMenu"  data-type="tabmenu">
+            <div class="sevenMenu col_tablet_12"  data-type="tabmenu">
                 <h4 class="tabBtn_1"><a href="#"><img src="images/main/tab_7_ov.png" alt="7대비경"></a></h4>
                 <div class="seven_wrap">
                     <ul>
@@ -95,7 +95,7 @@
                     <form action="#" method="get">
                         <fieldset>
                             <legend>제주에서 할것</legend>
-                            <div>
+                            <div data-select = "sel">
                               <p><img src="images/main/icon_whtsOn_sch.png" alt="검색"></p>
                                 <button class="seven_whtsList">All</button>
                                 <ul>
@@ -110,11 +110,11 @@
                                     <li><a href="#">Second-hand market</a></li>
                                 </ul>
                             </div>
-                            <div>
+                            <div class="p_r">
                                 <p><label for="from">from</label></p>
                                 <input type="text" name="from" id="from" readonly>
                             </div>
-                            <div>
+                            <div class="p_r">
                                 <p><label for="to">to</label></p>
                                 <input type="text" name="to" id="to" readonly>
                             </div>
@@ -129,7 +129,7 @@
         <section class="row_2 wrapIn line clearFix">
             <h3 class="blind">shopping</h3>
                <div class="shopping_row_2 clearFix">
-                    <ul>
+                    <ul class="clearFix">
                         <li class="boxShadow">
                             <a href="spcProduct.html"><span class="ObulletB_big"><img src="images/shopping/sh_sub1.png" alt="특산품"></span>
                             <div>
@@ -209,63 +209,7 @@
     </div>
 <!-- 컨테이너 종료 -->
 <!-- 계획짜기 시작 -->
-    <div class="plan_wrapIn line clearFix">
-        <h3>plan your stay</h3>
-        <div class="plan_col_1">
-            <a href="#" class="clearFix">
-                <div>
-                    <img src="images/common/icon_clouds.png" alt="구름">
-                </div>
-                <p>
-                    <span>11ºC/남동풍,3m/s</span>
-                    <span>Sunday 25 December 2016</span>
-                    <span>13:54 JEJU</span>
-                </p>
-            </a>
-        </div>
-        <div class="plan_col_2">
-            <ul class="clearFix">
-                <li>
-                    <a href="#"><img src="images/common/icon_insta_btm.png" alt="instagram">
-                        <p>Instagram</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_blog_btm.png" alt="blog">
-                        <p>Blog</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_fab_btm.png" alt="facebook">
-                        <p>Facebook</p>
-                    </a>
-                </li>
-            </ul>
-            <ul class="clearFix">
-                <li>
-                    <a href="#"><img src="images/common/icon_lett_btm.png" alt="뉴스레터">
-                        <p>Newsletter</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_you_btm.png" alt="유투브">
-                        <p>Youtube</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/common/icon_q_btm.png" alt="묻고답하기">
-                        <p>Q&amp;A</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="plan_col_3">
-            <span>customer<br/>Reviews</span>
-            <img src="images/common/thumb.png" alt="엄지손가락으뜸">
-            <p class="percent">95%</p>
-            <p>of customers recommend<br/>jeju.co.kr</p>
-        </div>
-    </div>
+<? include "inc/plan.html"; ?>
 <!-- 계획짜기 종료 -->
 <!-- 푸터 시작 -->
 <? include "inc/footer.html"; ?>

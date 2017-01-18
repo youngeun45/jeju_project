@@ -1,13 +1,13 @@
 /*서브 common*/
 #container{margin: 0;padding-top: 40px;}
-#container .row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
+.row_1 h2{font-weight:800;font-size: 36px; color: #f9893f;margin-bottom: 36px;}
 
 
 
 .shopping_main_wrap{float: left;width: 65.2%;}
 .shopping_main_wrap>p{font-size: 14px;line-height: 23px;padding-bottom: 30px;}
 .shopping_main_wrap .sp_main h3{margin-bottom: 30px;}
-.shopping_main_wrap .sp_main .shopping_row_1{width: 100%;background-color: #eee;}
+.shopping_main_wrap .sp_main .shopping_row_1{width: 100%;background-color: #eee;max-width: 768px;margin: 0 auto;}
 .shopping_main_wrap .sp_main .shopping_row_1:hover h4 a,.shopping_main_wrap .sp_main .shopping_row_1:focus h4 a{text-decoration: underline;}
 .shopping_main_wrap .sp_main .shopping_row_1>a{display: inline-block;width:49%;}
 .shopping_main_wrap .sp_main .shopping_row_1 a span img{width: 100%;}
@@ -15,13 +15,18 @@
 .shopping_main_wrap .sp_main .shopping_row_1 div h4 a{font-weight: bold; font-size: 24px; color: #282828;display: inline-block;margin-bottom: 15px;overflow: hidden;-ms-text-overflow: ellipsis;
 text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .shopping_main_wrap .sp_main .shopping_row_1 div h4+p{line-height: 22px;height: 66px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word; }
-.row_1{margin-bottom: 127px;}
+
+.row_1{margin-bottom: 127px;min-height:565px;}
 .row_1 .sevenMenu{width: 28.11%;}
-.row_1 .sevenMenu:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left:-12%;}
 .row_1 .sevenMenu .seven_wrap{height: 439px;}
 .row_1 .sevenMenu .seven_wrap ul li a{height: 98px;padding: 14px 0;font-size: 12px;}
-.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 48px; line-height: 48px;bottom: 0;}
+.row_1 .sevenMenu:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left:-12%;}
+
+.row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 44px; line-height: 48px;bottom: 0;}
 .row_2 {position: relative;margin-bottom: 84px;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul{width: 85%;}
+
+
 .row_2.line:before {top :-46px;}
 .row_2 .shopping_row_2 ul li{float: left;width: 25%;padding: 10px;}
 .row_2 .shopping_row_2 ul li img{width: 100%;}
@@ -51,9 +56,42 @@ text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .cot_donM_wrap ul li>a span{margin-bottom: 13px}
 .cot_donM_wrap ul li h5{margin-bottom: 8px;font-weight:bold; color: #282828; font-size: 18px;}
 
-.cot_ad_wrap [class^=ad_col_] img{width: 100%;}
-.cot_ad_wrap .ad_col_1{margin-bottom: 52px;}
 
+.cot_ad_wrap .ad_col_1{margin-bottom: 52px;}
+@media (max-width:1024px) {
+.row_1 .sevenMenu{position: relative;}
+.row_1 .sevenMenu:before{content: "";display: block; background: url(../images/common/line.png) 0 0 repeat-x;width: 200%; height: 8px; position: absolute;top:-40px; left:-97px;}
+.row_1 .sevenMenu .seven_wrap{height: 241px;}
+.shopping_main_wrap{float: none; margin-bottom: 100px;}
+.shopping_row_1 a span{width: 100%;}
+.row_1{margin-bottom: 48px;}
+.row_2.line:before {top :0;}
+.row_2 .shopping_row_2 ul {max-width: 600px;margin: 0 auto;}
+.row_2 .shopping_row_2 ul li{width: 50%;padding: 10px;}
+.row_2 .shopping_row_2 ul li a{margin:0 auto;}
+.row_3 .cot_donM_wrap,.cot_donM_wrap ul li>a span{width: 100%;}
+.row_3 .donM_row_1,.row_3 .donM_row_2{margin:0 auto;max-width: 900px; }
+.row_3 .donM_row_1:before,.cot_donM_wrap:after{display: none;}
+.row_3 .cot_ad_wrap{width: 100%;text-align: center;}
+.cot_ad_wrap .ad_col_1,.cot_ad_wrap .ad_col_2{display: inline-block;padding: 0 14px;}
+.row_3{margin-bottom: 100px;}
+}
+
+@media (max-width:640px) {
+.shopping_main_wrap .sp_main .shopping_row_1{background: none;max-width: 375px}
+.shopping_main_wrap .sp_main .shopping_row_1>a{width: 100%;}
+.shopping_main_wrap .sp_main .shopping_row_1 div{width: 100%; padding: 15px 0;}
+.shopping_main_wrap .sp_main .shopping_row_1 div h4 a{margin: 0; font-size: 18px;}
+.row_1 .sevenMenu .seven_wrap{height: 439px;}
+.row_2 .shopping_row_2 ul li a div p{display: none;}
+.row_2 .shopping_row_2 ul li a div p{display: none;}
+.row_2 .shopping_row_2 ul li a div{padding: 8px;overflow: auto;height: 70px;}
+.row_2 .shopping_row_2 ul li a div h5{font-size: 14px;}
+.shopping_main_wrap>p{display: none;}
+.row_3 .donM_row_1,.row_3 .donM_row_2{max-width: 362px; }
+#container .row_3 .cot_donM_wrap ul li{width: 100%;max-width: 500px}
+
+}
 
 
 
