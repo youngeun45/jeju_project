@@ -1,4 +1,5 @@
 $(function(){
+
 /*bxSlider*/
 var mSl = ".main_prdt_Slide";
 			$(mSl).bxSlider({
@@ -8,61 +9,25 @@ var mSl = ".main_prdt_Slide";
 		        pager:true
 			}); 
 			var myGnbLiA = $(".gnb_wrapIn ul>li>a");
-/*gnb*/
-	// $.fn.gnb = function(){
- //         //alert(1234);
- //         var myThis = $(this);  //이건쥐엔비
- //         var activeMenu = null;
-	//        	var mouseOver = function(){
-	// 						if(activeMenu){ //null이 아니라면
-	// 							activeMenu.next().hide();
-	// 						}
-	// 						var ts = $(this);
-	// 						ts.next().show();
-	// 						activeMenu = ts;
-	// 					}
- //         $("ul>li>div",myThis).hide();
- //         $(">ul>li>a",myThis).on({
- //            "mouseover focus": mouseOver
- //         });
-         
-         
- //         myThis.on({
- //            "mouseleave":function(){
- //               // console.log(3432);
- //               if(activeMenu){
- //               activeMenu.next().hide();
- //            }
- //            }
- //         });
- //      }
-
- //     $(".gnb_wrapIn").gnb();
-
-   	/*sns 호버*/
-      var actImg = $(".sns_wrap li a");
-		actImg.hover(function(){
-			var myImg = $("img", this);
-				var imgSrc = myImg.attr("src");
-				var newSrc = imgSrc.replace(".png","_ov.png");
-				myImg.attr("src",newSrc);
-			 	 console.log($(this).attr("src"));
-			},function(){
-				var myImg = $("img", this);
-				var imgSrc = myImg.attr("src");
-				var newSrc = imgSrc.replace("_ov.png",".png");
-				myImg.attr("src",newSrc);					
-			})
-
-  	/*Search*/
-  	var search = $(".search button");
-  	var searchWrap = $(".sch_wrap");
-		search.on("click",function(){
-					searchWrap.stop().slideToggle("fast");
-		})
-		// $(document).on("click"," input[type=button]",function(){
-		// 	searchWrap.stop().slideUp("fast");
-		// })
+/*sns 호버*/
+  var actImg = $(".sns_wrap li a");
+	actImg.hover(function(){
+	var myImg = $("img", this);
+	var imgSrc = myImg.attr("src");
+	var newSrc = imgSrc.replace(".png","_ov.png");
+	myImg.attr("src",newSrc);
+	},function(){
+		var myImg = $("img", this);
+		var imgSrc = myImg.attr("src");
+		var newSrc = imgSrc.replace("_ov.png",".png");
+		myImg.attr("src",newSrc);					
+	})
+/*Search*/
+	var search = $(".search button");
+	var searchWrap = $(".sch_wrap");
+	search.on("click",function(){
+				searchWrap.stop().slideToggle("fast");
+	})
 	$.fn.removeLabel = function(){
 		var myTs = $(this);
 		var myLb =$(this).find("label");
@@ -85,7 +50,6 @@ var mSl = ".main_prdt_Slide";
 			}
 		});
 				$(document).on("blur",myInput,function(){
-			// console.log(Boolean($(this).val()));
 			if($(this).val()) {
 				m = false;
 			} else {
@@ -99,14 +63,8 @@ var mSl = ".main_prdt_Slide";
 			myLb.show();
 			m = true;
 		})
-	
-
-
-
 	}
-
-
-	/*탭메뉴*/
+/*탭메뉴*/
 	/*	
 		1.객체 생성함수를 정의
 		2. 객체 생성
@@ -147,7 +105,7 @@ var mSl = ".main_prdt_Slide";
 	$.each(tabMenuWrap,function(i,o){
 		arrTab[i] = new TabmenuFnc(tabText,i);
 	});
-	/*select*/
+/*select*/
 	     /*
     1.생성함수
     2.속성,메서드 생성
@@ -172,12 +130,7 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
   if(myObj.find("img").size()>=1) {
   	myObj = myObj.find("img");
   }
-
   var myTagName = myObj.prop("tagName").toLowerCase(); // myobj 는 제일하위요소 img 인데 여기서 태그네임을 가져와서 소문자로 만들어랏
-
-
-
-
   if(myTagName == "img") {
   	var myButton = $("button",this.myWrap);
   	var btnImg = $("img",myButton);
@@ -190,7 +143,6 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
       var url = myObj.attr("href");
 		}
   $(this.myWrap+" input[type=hidden]").val(url);
-  //window.open("http://"+url);
 }
  InitSelect.prototype.selectHanddler_1 = function(e){
  		e.preventDefault();
@@ -204,37 +156,32 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
   }else{
         $myUl.hide();
   };
-
-		// if(activeColor){ //null이 아니라면
-		// 				activeColor.css({"backgroundColor":"#fff"});
-		// 	}else{
-		// 		var ts = $(this.myWrap+" button");
-		// 			ts.css({"backgroundColor":"#282828"});
-		// 			activeColor =+ 1;
-		// 	}
-		}		
+}		
 		
  $.fn.colorCh = function(){
- 						var myThis = $(this);
-		        	var myBtn = $("button",myThis);
-		        	var myUl = $("ul",myThis);
-		        	var myAtag = $("a",myUl);
-			       	var ch = function(){
-			       			if(myUl.is(":hidden")) {
-			       				myBtn.addClass('on');
-			       			} else {
-			       				myBtn.removeClass('on');
-			       			}
-							}
+				var myThis = $(this);
+      	var myBtn = $("button",myThis);
+      	var myUl = $("ul",myThis);
+      	var myAtag = $("a",myUl);
+       	var ch = function(){
+       			if(myUl.is(":hidden") && !myBtn.hasClass("on")) {
+       				myBtn.addClass('on');
+       			} else {
+       				myBtn.removeClass('on');
+       			}
+				}
 
-							var ch_2 = function(e){
-								e.preventDefault();
-			       		myBtn.removeClass('on');
-							}
-		        	myBtn.on({"click":ch});
-		        	myAtag.on({"click":ch_2});
-		      }
-	      $(".lang_wrap").colorCh();   //부모
+				var ch_2 = function(e){
+					e.preventDefault();
+       		myBtn.removeClass('on');
+				}
+      	myBtn.on({"click":ch});
+      	myAtag.on({"click":ch_2});
+    }
+$(function(){
+	$(".lang_wrap").colorCh();   //부모
+})
+	     
  $(function(){
     var sel = [];
     /*sel[0] = new InitSelect("sel_1");  // var sel_1 => 인스턴트 네임
@@ -243,6 +190,7 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
     $.each($("div[data-select=sel]"),function(i,e){
        sel[i] = new InitSelect("sel",i);
     });
+ 		 
  })
  /*select종료*/
 /*사이즈감지*/
