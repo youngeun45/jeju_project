@@ -287,8 +287,16 @@ $.fn.rsGnb = function(opt){
 		$(".gnb_wrap").animate({left:0},100)
 		$(".dim_gnbwrap").fadeIn("fast");
 	})
+	// console.log(Boolean($("body").attr("class") == !"pc"))
 	$(document).on("click",".mobile_close",function(){
-		$(".gnb_wrap").animate({left:"-500px"},100);
+		// if($("body").attr("class") == !"pc"){
+		// 	$(".gnb_wrap").animate({left:"-500px"},100);
+		// }
+			$(".gnb_wrap").animate({left:"-500px"},100);
+
+		
+
+
 		$(".dim_gnbwrap").fadeOut("fast");
 
 	})
