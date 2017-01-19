@@ -18,7 +18,13 @@
 .sp_wrapIn .img_wrap #slider_pager a{margin-left: 4px;}
 .sp_wrapIn .img_wrap #slider_pager a:first-child{margin: 0;}
 .sp_wrapIn .img_wrap .bx-prev,.sp_wrapIn .img_wrap .bx-next{position: absolute;top: 50%; margin-top:-67px;left: 24px;display: inline-block;width:24px; height: 40px;text-indent: -9999px; background: url(../images/main/arrow_left.png) 0 0 no-repeat;z-index: 64}
-.sp_wrapIn .img_wrap .btnWrap .bx-prev,.sp_wrapIn .img_wrap .btnWrap .bx-next{background: url(../images/common/2_arrow_next.png) 0 0 no-repeat;bottom: -50px; margin-top:20px;left: 0;display: inline-block;width:7px; height: 13px;text-indent: -9999px;}
+/*.sp_wrapIn .img_wrap .btnWrap .bx-prev,.sp_wrapIn .img_wrap .btnWrap .bx-next{background: url(../images/common/2_arrow_next.png) 0 0 no-repeat;bottom: -50px; margin-top:20px;left: 0;display: inline-block;width:7px; height: 13px;text-indent: -9999px;}*/
+.sp_wrapIn .img_wrap .btnWrap{position: relative;}
+
+.sp_wrapIn .img_wrap .btnWrap .btnPrev,.sp_wrapIn .img_wrap .btnWrap .btnNext{position: absolute; bottom:28px; left: 13px;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;width:7px; height: 13px;text-indent: -9999px;}
+.sp_wrapIn .img_wrap .btnWrap .btnNext{background-image: url(../images/common/2_arrow_next.png);left: auto; right:13px;}
+
+
 .sp_wrapIn .img_wrap .bx-next{background: url(../images/main/arrow_right.png) 0 0 no-repeat;left:auto; right:24px;}
 .sp_wrapIn .sns_wrap{padding-left: 11px;margin-bottom: 35px;}
 .sp_wrapIn .sns_wrap a{display: inline-block; margin-left: 25px;}
@@ -49,6 +55,20 @@
 .sp_wrapIn .ad_wrap div {width: 100%;background-color: #393939;text-align: center;color: #fff;height: 70px;padding: 15px 0;font-size: 14px; line-height: 21px;position: absolute;bottom:0; left:0; z-index: 20;}
 .sp_wrapIn .ad_wrap p.more{font-size: 12px;}
 
+@media (max-width:1024px) {
+.sp_wrapIn .cot_dscp_wrap {display: block;height: 208px;width: 100%;float: none;}
+.sp_wrapIn .cot_wrap{display: block;width: 100%;float: none;}
+.sp_wrapIn .img_wrap{max-width: 640px;margin: 0 auto;}
+.sp_wrapIn{max-width: 664px}
+.sp_wrapIn .cot_dscp_wrap h5{padding: 14px 0;}
+.sp_wrapIn .cot_dscp_wrap p{padding-bottom: 9px;}
 
+}
+@media (max-width:800px) {
+
+}
+@media (max-width:640px) {
+
+}
 
 

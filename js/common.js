@@ -254,15 +254,11 @@ $.fn.layerPopup = function(){
 	}
 	$(document).on("click","a[data-type=layerPopup]",openLayer);
 }
-
-
 $("#gnb").rsGnb({mode:"pc mobile"});
 $(window).resize();
 $("a[data-type=layerPopup]").layerPopup();
-
 });
 /*반응형gnb*/
-
 $.fn.rsGnb = function(opt){
 	var mode = opt.mode;
 	var ts = $(this);
@@ -280,9 +276,6 @@ $.fn.rsGnb = function(opt){
 			$(">ul>li>div",this).filter(":visible").hide()
 			$(selector2).find("a.on").removeClass("on");
 		});
-
-
-
 	$(document).on("click",".open_menu_mobile",function(){
 		$(".gnb_wrap").animate({left:0},100)
 		$(".dim_gnbwrap").fadeIn("fast");
@@ -293,24 +286,108 @@ $.fn.rsGnb = function(opt){
 		// 	$(".gnb_wrap").animate({left:"-500px"},100);
 		// }
 			$(".gnb_wrap").animate({left:"-500px"},100);
-
-		
-
-
 		$(".dim_gnbwrap").fadeOut("fast");
-
 	})
 }
 $(function(){
-var whtsBtn = $(".slideToggleBtn");
-var whtsWrap = $(".whtsOn_row_wrap1");
+	var whtsBtn = $(".slideToggleBtn");
+	var whtsWrap = $(".whtsOn_row_wrap1");
 	whtsBtn.on("click",function(){
-		whtsWrap.stop().slideToggle("fast");
+	whtsWrap.stop().slideToggle("fast");
 	})
 });
 
-$(function(){
+/*날씨*/
+function weather() {
+    $.ajax({
+        url: "http://api.wunderground.com/api/6276e73095ee3caa/geolookup/conditions/lang:KR/q/South%20Korea/jeju.json",
+        dataType: "json",
+        success: function(data) {
+            var w = data.current_observation;
+            var temp = w.temp_c;
+            var winDir = w.wind_dir;
+            arrWin = [];
+            arrWin["E"] = "동";
+						arrWin["W"] = "서";            
+						arrWin["N"] = "북";            
+						arrWin["S"] = "남";
+						var hangul = "";            
+						for (var i = 0; i < winDir.length; i++) {
+							var t = winDir.charAt(i);
+							hangul += arrWin[t];
+						}
 
+            var myImgSrc = w.icon_url;
+            var weatherText = w.weather;
+            var weatherSrc;
+            if(weatherText.indexOf("맑음") >= 0) {
+                weatherSrc = "images/common/sun.png";
+            } else if(weatherText.indexOf("눈") >= 0) {
+                weatherSrc = "images/common/snow.png";
+            } else if(weatherText.indexOf("비") >= 0) {
+                weatherSrc = "images/common/rain.png";
+            } else if(weatherText.indexOf("흐림") >= 0) {
+                weatherSrc = "images/common/clouds.png";
+            } else {
+                weatherSrc = "images/common/sun.png";
+            }
+            var myDay = w.local_time_rfc822.substring(0, 17); 
+            var myTime = w.local_time_rfc822.substring(17, 22); //15:23
+            var myMinu =  w.local_time_rfc822.substring(20, 22); //:23
+            var myTimeA = myTime.substr(0, 2)
+            if(myTimeA > 12){ 
+            	myTimeA = myTimeA - 12;
+            	myTT = myTimeA +":"+ myMinu
+            }else{
+            	myTT = myTime
+            }
+            var myWiSpd = w.wind_kph;
+            var myTemp = $("<em/>", { text: temp+"℃"+ " / " + hangul+ "풍 ,"+myWiSpd+"m/s"});
+            var myImage = $("<img/>", { src: weatherSrc,alt: weatherText});
+            var myToday = $("<em/>", { text: myDay });
+            var myThisTime = $("<em/>", { text: myTT+" JEJU" });
+            $(".plan_col_1 a div").empty();
+            $(".plan_col_1 a p span").empty();
+            myImage.appendTo(".plan_col_1 a div");
+            myTemp.appendTo(".plan_col_1 a p .temp");
+            myToday.appendTo(".plan_col_1 a p .date");
+            myThisTime.appendTo(".plan_col_1 a p .time");
+        }
+    });
+}
+$(function() {
+    weather();
+    setInterval(weather, 1000);
+});
+/*날시종료*/
+
+/*로그인*/
+$(function(){
+	var loginFnc =function(e){
+		e.preventDefault();
+		var reg_email = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/g;
+		var reg_pw = /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{7,30}$/g;
+		var my_email = $("#user_email");
+		var my_pw = $("#user_pw");
+		var result_email = reg_email.exec(my_email.val())
+		var result_pw = reg_pw.exec(my_pw.val())
+		if(result_email == null){
+			alert("잘못된아이디입니다.");
+			my_email.val("");
+			my_email.focus();
+		}else if(result_pw == null){
+			alert("잘못된 패스워드입니다.")
+			my_pw.val("");
+			my_pw.focus();
+			return false;
+		}
+	}
+	$(document).on("submit","#login_f",loginFnc)
+})
+/*로그인종료*/
+
+
+$(function(){
 	 		     /*달력시작*/
 		     $.datepicker.regional['ko'] = {
 		        closeText: '닫기',

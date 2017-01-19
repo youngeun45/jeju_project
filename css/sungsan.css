@@ -6,14 +6,13 @@
 .ss_wrapIn .cot_dscp_wrap {float: right;width: 39.66%;height: 385px;}
 .ss_wrapIn .cot_dscp_wrap h4{font-size: 14px;color: #282828;}
 .ss_wrapIn .cot_dscp_wrap h5{font-size: 28px;color: #282828;font-weight: bold;padding: 30px 0;}
-.ss_wrapIn .cot_dscp_wrap p.c_28{color: #282828;}
 .ss_wrapIn .cot_dscp_wrap p{font-size: 14px;font-weight: bold;padding-bottom: 16px;}
 .ss_wrapIn .cot_wrap {float: left;width: 52.58%;}
 .ss_wrapIn .img_wrap{position: relative;padding-bottom: 39px;z-index:1;}
 .ss_wrapIn .img_wrap .active{position: relative;display: inline-block;}
 .ss_wrapIn .img_wrap .active:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(253,102,2,0.7);}
 .ss_wrapIn .img_wrap .bx-viewport{margin-bottom: 22px;}
-.ss_wrapIn .img_wrap .bx-wrapper img{width: 100%;}
+.ss_wrapIn .img_wrap .bx-wrapper img{width: 100%;min-width: 621px}
 .ss_wrapIn .img_wrap .frame{width: 551px;overflow: hidden;margin: 0 auto;}
 .ss_wrapIn .img_wrap #slider_pager{width: 600%;}
 .ss_wrapIn .img_wrap #slider_pager a{margin-left: 4px;}
@@ -23,9 +22,9 @@
 .ss_wrapIn .img_wrap .btnWrap{position: relative;}
 .ss_wrapIn .img_wrap .btnWrap .btnPrev_ss,.ss_wrapIn .img_wrap .btnWrap .btnNext_ss{position: absolute; bottom:28px; left: 13px;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;width:7px; height: 13px;text-indent: -9999px;}
 .ss_wrapIn .img_wrap .btnWrap .btnNext_ss{background-image: url(../images/common/2_arrow_next.png);left: auto; right:13px;}
-.ss_wrapIn .sns_wrap{padding-left: 11px;margin-bottom: 35px;}
-.ss_wrapIn .sns_wrap a{display: inline-block; margin-left: 25px;}
-.ss_wrapIn .sns_wrap a:first-child{margin: 0;}
+.ss_wrapIn .sns_wrap_ss{padding-left: 11px;margin-bottom: 35px;}
+.ss_wrapIn .sns_wrap_ss a{display: inline-block; margin-left: 25px;}
+.ss_wrapIn .sns_wrap_ss a:first-child{margin: 0;}
 .ss_wrapIn .dscp_wrap h3{margin-bottom: 30px;}
 .ss_wrapIn .etc_wrap h3{cursor: pointer;position: relative;}
 .ss_wrapIn .etc_wrap h3:after{content: "";display: inline-block; width: 16px; height: 9px; background: url(../images/sungsan/ss_bullet_arrow.png) 0 0 no-repeat;position: absolute;right:16px; top:38px;transition: all 0.5s linear;}
@@ -44,7 +43,21 @@
 .ss_wrapIn .ad_wrap a:hover p.more{text-decoration: underline;}
 .ss_wrapIn .ad_wrap div {width: 100%;background-color: #393939;text-align: center;color: #fff;height: 70px;padding: 15px 0;font-size: 14px; line-height: 21px;position: absolute;bottom:0; left:0; z-index: 20;}
 .ss_wrapIn .ad_wrap p.more{font-size: 12px;}
+@media (max-width:1024px) {
+.ss_wrapIn .cot_dscp_wrap {display: block;height: 189px;width: 100%;float: none;}
+.ss_wrapIn .cot_wrap{display: block;width: 100%;float: none;}
+.ss_wrapIn .img_wrap{max-width: 640px;margin: 0 auto;}
+.ss_wrapIn{max-width: 664px}
+.ss_wrapIn .cot_dscp_wrap h5{padding: 14px 0;}
+.ss_wrapIn .cot_dscp_wrap p{padding-bottom: 9px;}
+.ss_wrapIn .ad_wrap {display: none;}
+}
+@media (max-width:800px) {
 
+}
+@media (max-width:640px) {
+
+}
 
 
 

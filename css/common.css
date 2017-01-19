@@ -148,7 +148,7 @@ img{max-width: 100%}
 .login_wrap .inp_sec label{color: #282828;font-weight: 800;font-size: 14px;padding-bottom: 5px;display: block;}
 .login_wrap .inp_sec a{display: block;font-size: 14px; color: #fd6602; font-weight: 800;margin-bottom: 19px;}
 .login_wrap .inp_sec a:hover,.login_wrap .inp_sec a:focus{text-decoration: underline;}
-.login_wrap .inp_sec p.logBtn input[type=button]{background: url(../images/common/box_log.png) 0 0 no-repeat;color: #fff; font-size: 14px;border: none;width: 78px; height: 36px;cursor: pointer;}
+.login_wrap .inp_sec p.logBtn input[type=submit]{background: url(../images/common/box_log.png) 0 0 no-repeat;color: #fff; font-size: 14px;border: none;width: 78px; height: 36px;cursor: pointer;}
 
 .login_wrap .join_sec{float: left;width: 255px;}
 .login_wrap .join_sec h4{font-size: 16px; font-weight: 800;margin-bottom: 21px;}
@@ -259,12 +259,18 @@ img{max-width: 100%}
 
 
 /*미디어쿼리*/
-@media (max-width:1118px) {
+@media (max-width:1140px) {
 .plan_wrapIn .plan_col_1{padding-top: 10px;}
 .plan_wrapIn .plan_col_1 a{text-align: center;}
 .plan_wrapIn .plan_col_1 div{margin: 0 0 26px 0;width: 100%; text-align: center;}
 .plan_wrapIn .plan_col_1 p{width: 100%;}
 }
+
+@media (min-width:1024px) {
+.gnb_wrap{left: auto !important;}
+}
+
+
 @media (max-width:1024px) {
 .col_tablet_1{width: 8.333%;}
 .col_tablet_2{width: 16.666%;}
