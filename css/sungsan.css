@@ -12,10 +12,13 @@
 .ss_wrapIn .img_wrap .active{position: relative;display: inline-block;}
 .ss_wrapIn .img_wrap .active:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(253,102,2,0.7);}
 .ss_wrapIn .img_wrap .bx-viewport{margin-bottom: 22px;}
-.ss_wrapIn .img_wrap .bx-wrapper img{width: 100%;min-width: 621px}
+.ss_wrapIn .img_wrap .bx-wrapper img{width: 100%;}
 .ss_wrapIn .img_wrap .frame{width: 551px;overflow: hidden;margin: 0 auto;}
 .ss_wrapIn .img_wrap #slider_pager{width: 600%;}
-.ss_wrapIn .img_wrap #slider_pager a{margin-left: 4px;}
+.ss_wrapIn .img_wrap #slider_pager a{margin-left: 4px;width: 104px; height: 67px; display: inline-block;background:url(../images/sungsan/ss_subImg_1.png) 0 0 no-repeat;}
+.ss_wrapIn .img_wrap #slider_pager a:first-child+a{background-image: url(../images/sungsan/ss_subImg_2.png);}
+.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a{background-image: url(../images/sungsan/ss_subImg_3.png);}
+.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a{background-image: url(../images/sungsan/ss_subImg_4.png);}
 .ss_wrapIn .img_wrap #slider_pager a:first-child{margin: 0;}
 .ss_wrapIn .img_wrap .bx-prev,.ss_wrapIn .img_wrap .bx-next{position: absolute;top: 50%; margin-top:-67px;left: 24px;display: inline-block;width:24px; height: 40px;text-indent: -9999px; background: url(../images/main/arrow_left.png) 0 0 no-repeat;z-index: 64}
 .ss_wrapIn .img_wrap .bx-next{background-image: url(../images/main/arrow_right.png);left:auto; right:24px;}
@@ -53,10 +56,17 @@
 .ss_wrapIn .ad_wrap {display: none;}
 }
 @media (max-width:800px) {
-
+.ss_wrapIn .img_wrap #slider_pager a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a{width: 13px; height: 13px;background: url(../images/main/mainImg_btn.png) 0 0 no-repeat;}
+#container .ss_wrapIn .img_wrap a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a.active{width: 13px; height: 13px;background: url(../images/main/mainImg_btn_ov.png) 0 0 no-repeat;}
+.ss_wrapIn .img_wrap a.active:after,.ss_wrapIn .img_wrap .btnWrap{display: none;}
+.ss_wrapIn .img_wrap .frame{width: auto;position: relative;left: 50%; margin-left: -54px;}
+.ss_wrapIn .cot_dscp_wrap h5{padding: 8px 0 ;font-size: 24px;}
+.ss_wrapIn .cot_dscp_wrap p{font-size: 12px;}
+.ss_wrapIn .cot_dscp_wrap{height: 145px;}
 }
 @media (max-width:640px) {
-
+.ss_wrapIn .sns_wrap_ss a{margin-left: 13px;}
+.ss_wrapIn .etc_wrap p{font-size: 12px;}
 }
 
 

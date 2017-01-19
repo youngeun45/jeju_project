@@ -12,8 +12,7 @@
 .row_1 .main_prdt_frame .bx-prev,.main_prdt_frame .bx-next{position: absolute;top: 50%; margin-top:-126px;left: 24px;display: inline-block;width:24px; height: 40px;text-indent: -9999px; background: url(../images/main/arrow_left.png) 0 0 no-repeat;}
 .row_1 .main_prdt_frame .bx-next{background: url(../images/main/arrow_right.png) 0 0 no-repeat;left:auto; right:24px;}
 .row_1 .main_prdt_frame .main_prdt_Slide div {height: 212px;padding: 42px 33px;background-color:#eee}
-.row_1 .main_prdt_frame .main_prdt_Slide div a h4{font-weight: bold; font
-	-size: 26px; color: #282828;margin-bottom: 13px;}
+.row_1 .main_prdt_frame .main_prdt_Slide div a h4{font-weight: bold; font-size: 26px; color: #282828;margin-bottom: 13px;}
 .row_1 .main_prdt_frame .main_prdt_Slide div a p{font-size: 14px; color: #282828;line-height: 25px;height: 20px;}
 .row_2{position: relative;margin-bottom: 86px;}
 .row_2 .cot_unesco_wrap{float: left;width: 66%;}
