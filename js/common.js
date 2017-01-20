@@ -300,9 +300,11 @@ $(function(){
 /*날씨*/
 function weather() {
     $.ajax({
+    		//crossOrigin:true,
         url: "http://api.wunderground.com/api/6276e73095ee3caa/geolookup/conditions/lang:KR/q/South%20Korea/jeju.json",
-        dataType: "json",
+        dataType: "jsonp",
         success: function(data) {
+        		//var data = JSON.parse(data);
             var w = data.current_observation;
             var temp = w.temp_c;
             var winDir = w.wind_dir;
@@ -357,7 +359,7 @@ function weather() {
 }
 $(function() {
     weather();
-    setInterval(weather, 1000);
+    // setInterval(weather, 10000);
 });
 /*날시종료*/
 

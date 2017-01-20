@@ -20,8 +20,8 @@ text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .row_2.line:before {top :-46px;}
 .row_1 .sevenMenu .sevenWhts_wrap div ul{width: 85%;}
 .row_2 .festival_row_2 ul li{float: left;width: 25%;padding: 10px;}
-.row_2 .festival_row_2 ul li img{width: 100%;}
 .row_2 .festival_row_2 ul li a{display: block; width: 100%;max-width: 277px;text-align: center;background-color: #eee}
+#container .row_2 .festival_row_2 ul li.boxShadow a span{display: block;}
 .row_2 .festival_row_2 ul li a div{height: 118px;padding: 21px 19px;}
 .row_2 .festival_row_2 ul li a div h5{color: #282828;font-weight: bold; font-size: 16px;padding-bottom: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
 .row_2 .festival_row_2 ul li a div p{line-height: 18px;height:36px ;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word;}

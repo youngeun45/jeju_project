@@ -33,7 +33,7 @@
 .cot_unesco_wrap .unesco_row_2 [class^=unesco_row_2_col_]>a img{width:100%;}
 .cot_unesco_wrap .unesco_row_2 [class^=unesco_row_2_col_]>a span{margin-bottom: 13px}
 .cot_unesco_wrap .unesco_row_2 [class^=unesco_row_2_col_] h5{margin-bottom: 8px;font-weight:bold; color: #282828; font-size: 16px}
-
+.cot_unesco_wrap .unesco_row_1 a span,.unesco_row_2 .unesco_row_2_col_1 a span,.unesco_row_2 .unesco_row_2_col_2 a span{display: block;}
 .cot_ad_wrap [class^=ad_col_] img{width: 100%;}
 .cot_ad_wrap{position: relative;}
 .cot_ad_wrap:before{content: "";width: 1px; height: 100%; background-color: #eee;display: block;position: absolute;top:0; left: -19.5%}

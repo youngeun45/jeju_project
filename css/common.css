@@ -109,7 +109,7 @@ img{max-width: 100%}
 .gnb_wrap .gnb_wrapIn>ul>li:first-child a{display: block;padding-left: 45px;position: relative;}
 .gnb_wrap .gnb_wrapIn>ul>li:first-child a:after{position: absolute;top: 0;left: 18px;content:"\e800";font-family: "fontello" ; font-size: 20px;}
 .gnb_wrap .gnb_wrapIn>ul>li>a{position: relative;font-weight: bold;display: block;color: #fff;font-size: 14px;padding: 0 20px;}
-.gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap ul li a:focus,.gnb_wrap ul li a.on{background-color: #f9893f;height: 50px;border-bottom: 5px solid #fff;}
+.gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap>ul>li>a:focus,.gnb_wrap>ul>li>a.on{background-color: #f9893f;height: 50px;border-bottom: 5px solid #fff;}
 .gnb_wrap .gnb_wrapIn>ul>li>a:before{display: inline-block;content:url(../images/common/bar_gnb.png);position: absolute;top:7px; right:0;}
 .gnb_wrap .gnb_wrapIn>ul>li>div{display: none;position: absolute;top:51px; left:0;height: 220px;width: 100%;background: #fff url(../images/common/subGnb_c_line.png) center center no-repeat;z-index: 10;border-bottom: 1px solid #ccc;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul{display:inline-block;width: 48%;vertical-align: top;}
@@ -227,7 +227,7 @@ img{max-width: 100%}
 /*플랜유어스테이 시작*/
 .plan_wrapIn{margin-bottom: 107px;}
 .plan_wrapIn .plan_col_1{float: left;width: 37.25%;padding-left: 24px;padding-top: 81px;}
-.plan_wrapIn .plan_col_1 a{display: inline-block;;width: 100%;}
+.plan_wrapIn .plan_col_1 a{display: block;;width: 100%;}
 .plan_wrapIn .plan_col_1 div{float: left;margin-right: 29px;}
 .plan_wrapIn .plan_col_1 p{float: left;}
 .plan_wrapIn .plan_col_1 p span{display: block;}
@@ -312,17 +312,17 @@ h1 img{width: 100%;}
 .header .header_wrapIn .iconMenu li a p+p,.header .header_wrapIn .iconMenu li button em{display: none;}
 .header .header_wrapIn .iconMenu li button img{max-width: 100%;}
 .header .header_wrapIn{padding: 0;}
-.gnb_wrap {transition: all 1s linear;position: fixed;z-index: 21;left: -500px;top: 0; width: 200px;height: 100%;background-color: #fff; border-left: 1px solid #d8d8d8; line-height: 50px;    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);}
+.gnb_wrap {transition: all 1s linear;position: fixed;z-index: 21;left: -500px;top: 0; width: 200px;height: 100%; border-left: 1px solid #d8d8d8; line-height: 50px;    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);}
 .subGnb_wrapIn{padding: 0;}
 /*.gnb_wrap{;background:none;border-top: 1px solid #eee;line-height: 50px;}*/
-.gnb_wrapIn{padding: 0;z-index: 4;}
+.gnb_wrapIn{padding: 0;z-index: 4;background-color: #fff;height: 100%;}
 .gnb_wrap .gnb_wrapIn>ul>li {float: none;border-bottom: 1px solid #eee;}
 
 .gnb_wrap .gnb_wrapIn>ul>li:first-child,.gnb_wrap .gnb_wrapIn>ul>li.lang{display: block;}
 .gnb_wrap .gnb_wrapIn>ul>li>a{color: #282828}
 .gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap .gnb_wrapIn>ul>li>a:focus{color: #fff;}
 .gnb_wrap .gnb_wrapIn>ul>li>a:before,.gnb_wrap .gnb_wrapIn>ul>li>div ul li a:before{display: none;}
-.gnb_wrap .gnb_wrapIn>ul>li>a:hover, .gnb_wrap ul li a:focus, .gnb_wrap ul li a.on{border: none;background-color: #282828;color: #fff;}
+.gnb_wrap .gnb_wrapIn>ul>li>a:hover, .gnb_wrap>ul>li>a:focus, .gnb_wrap>ul>li>a.on{border: none;background-color: #282828;color: #fff;}
 .gnb_wrap .gnb_wrapIn>ul>li>div{display: none;position: static;height: auto;background: none;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li{border: none;font-size: 12px;padding:0 10px;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul {width: 100%;}

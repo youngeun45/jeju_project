@@ -1,6 +1,11 @@
 <? include "inc/top.html"; ?>
 <title>JEjU | 세계 자연 유산</title>
 <link rel="stylesheet" type="text/css" href="css/hallasan.css">
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript" src="js/hallasan.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+
 </head>
 <body>
 <!-- 헤더시작 -->
@@ -12,29 +17,44 @@
 <!-- 컨테이너 시작 -->
     <div id="container">
       <div class="wrapIn clearFix">
-        <div class="col_quick">
-            <ul>
-                <li><a href="#"><img src="images/common/cot_sns_1.png" alt="페이스북"></a></li>
-                <li><a href="#"><img src="images/common/cot_sns_2.png" alt="인스타그램"></a></li>
-                <li><a href="#"><img src="images/common/cot_sns_3.png" alt="블로그"></a></li>
-                <li><a href="#"><img src="images/common/cot_sns_4.png" alt="유투브"></a></li>
-                <li><a href="#"><img src="images/common/cot_sns_5.png" alt="뉴스레터"></a></li>
-                <li><a href="#"><img src="images/common/cot_sns_6.png" alt="고객센터"></a></li>
-            </ul>
-        </div>
+        <section class="Navigation">
+          <a href="#" class="prevGumun">거문오름용암동굴계</a>
+          <a href="#" class="summary">요약</a>
+          <a href="#" class="nextSungsan">성산일출봉</a>
+        </section>
         <section class="col_1 line_bom col_tablet_12">
            <div class="hallasan_cot_wrap">
               <div class="h2_wrap">
                 <h2>한라산</h2>
-                <p>한라산은 제주도의 상징이자 순상화산의 중심봉우리이며, <br/>해발고도 1950m로 남한에서 가장 높은산이다.</p>
+                <p>한라산은 제주도의 상징이자 순상화산의 중심봉우리이며, 해발고도 1950m로 남한에서 가장 높은산이다.</p>
               </div>
               <div class="hallasan_dscp">
-              <img src="images/hallasan/halla_main.png" alt="한라산이미지">
-              <p> 한라산은 정상부의 백록담 분화구, 영실기암의 가파른 암벽과 약 40여개의 오름 등 다양한 화산지형을 갖고 있다. 특히, 백록담은 화구의 서쪽 절반은 조면암, 동쪽 절반은 현무암으로 구성되어 있는 매우 독특한 분화구로 조면암질 용암돔이 형성된 이후 현무암질 용암이 분출하여 분화구가 만들어졌다.<br/>한라산국립공원 내에는 인간의 활동이 엄격히 통제되어 왔으며, 화산지질 및 화산지형과 더불어 독특한 생태계와 생물다양성을 갖게 되었다.<br/>또한 우리나라에서 자라는 4,000여 종의 식물 가운데 2,000여 종이 서식하고 있어 '살아있는 생태 공원'으로 불리는데 특히 정상부의 구상나무 숲은 세계 최대 규모이다. 뛰어난 경관과 지질학 · 생물학적 가치로 인해 2002년 유네스코 생물권보전지역, <strong>2007년 세계자연유산, 2010년 세계지질공원으로 인증받았다.</strong></p>
+                  <img src="images/hallasan/halla_main.png" alt="한라산이미지">
+                  <p> 한라산은 정상부의 백록담 분화구, 영실기암의 가파른 암벽과 약 40여개의 오름 등 다양한 화산지형을 갖고 있다. 특히, 백록담은 화구의 서쪽 절반은 조면암, 동쪽 절반은 현무암으로 구성되어 있는 매우 독특한 분화구로 조면암질 용암돔이 형성된 이후 현무암질 용암이 분출하여 분화구가 만들어졌다.<br/>한라산국립공원 내에는 인간의 활동이 엄격히 통제되어 왔으며, 화산지질 및 화산지형과 더불어 독특한 생태계와 생물다양성을 갖게 되었다.<br/>또한 우리나라에서 자라는 4,000여 종의 식물 가운데 2,000여 종이 서식하고 있어 '살아있는 생태 공원'으로 불리는데 특히 정상부의 구상나무 숲은 세계 최대 규모이다. 뛰어난 경관과 지질학 · 생물학적 가치로 인해 2002년 유네스코 생물권보전지역, <strong>2007년 세계자연유산, 2010년 세계지질공원으로 인증받았다.</strong></p>
+              </div>
+              <div class="col_quick">
+                  <ul>
+                      <li><a href="#" class="sns_1">페이스북</a></li>
+                      <li><a href="#" class="sns_2">인스타그램</a></li>
+                      <li><a href="#" class="sns_3">블로그</a></li>
+                      <li><a href="#" class="sns_4">유투브></a></li>
+                      <li><a href="#" class="sns_5">뉴스레터</a></li>
+                      <li><a href="#" class="sns_6">고객센터</a></li>
+                  </ul>
+              </div>
+              <div class="sns_wrap_ha">
+                  <ul class="clearFix">
+                      <li><a href="#" class="sns_1">페이스북</a></li>
+                      <li><a href="#" class="sns_2">인스타그램</a></li>
+                      <li><a href="#" class="sns_3">블로그</a></li>
+                      <li><a href="#" class="sns_4">유투브></a></li>
+                      <li><a href="#" class="sns_5">뉴스레터</a></li>
+                      <li><a href="#" class="sns_6">고객센터</a></li>
+                  </ul>
               </div>
               <h3>탐방안내</h3>
               <div class="hallasan_road_1">
-                <img src="images/hallasan/halla_road_1.png" alt="어리목 탐방로">
+              <a class="fancybox-effects-a" href="images/hallasan/halla_road_1.png" title="성판악 탐방로"><img src="images/hallasan/halla_road_1.png" alt="어리목 탐방로" /></a>
                 <p>
                   <span>어리목 탐방로</span>
                   <em>총 6.8㎞ [어리목→윗세오름(4.7㎞)→남벽분기점(2.1㎞)]</em><br/>
@@ -46,7 +66,7 @@
                 </p>
               </div>
               <div class="hallasan_road_2">
-                <img src="images/hallasan/halla_road_1.png" alt="영실 탐방로">
+              <a class="fancybox-effects-a" href="images/hallasan/halla_road_2.png" title="성판악 탐방로"><img src="images/hallasan/halla_road_2.png" alt="영실 탐방로" /></a>
                 <p>
                   <span>영실 탐방로</span>
                   <em>총 5.8㎞ [영실→윗세오름(3.7㎞)→남벽분기점(2.1㎞)]</em><br/>
@@ -58,7 +78,9 @@
                 </p>
               </div>
               <div class="hallasan_road_3">
-                <img src="images/hallasan/halla_road_3.png" alt="성판악 탐방로">
+                <p>
+                  <a class="fancybox-effects-a" href="images/hallasan/halla_road_3.png" title="성판악 탐방로"><img src="images/hallasan/halla_road_3.png" alt="성판악 탐방로" /></a>
+                </p>
                 <p>
                   <span>성판악 탐방로</span>
                   <em>총 9.6㎞ [성판악→진달래밭(7.3㎞)→정상(동능 2.3㎞)]</em><br/>

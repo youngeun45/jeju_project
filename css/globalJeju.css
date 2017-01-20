@@ -27,6 +27,7 @@ text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .row_2 .global_row_2 ul li a div{height: 118px;padding: 21px 19px;}
 .row_2 .global_row_2 ul li a div h5{color: #282828;font-weight: bold; font-size: 16px;padding-bottom: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
 .row_2 .global_row_2 ul li a div p{line-height: 18px;height:36px ;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical;word-wrap:break-word;}
+#container .row_2 .global_row_2 ul li.boxShadow a span,#container .row_1 .global_main_wrap .glb_main .global_row_1 a span{display: block;}
 
 .plan_wrapIn {position: relative;}
 .plan_wrapIn.line:before{top:-45px;}
