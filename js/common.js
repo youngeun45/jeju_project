@@ -306,18 +306,20 @@ function weather() {
         success: function(data) {
         		//var data = JSON.parse(data);
             var w = data.current_observation;
+            console.log(w)
             var temp = w.temp_c;
             var winDir = w.wind_dir;
             arrWin = [];
             arrWin["E"] = "동";
-						arrWin["W"] = "서";            
-						arrWin["N"] = "북";            
-						arrWin["S"] = "남";
-						var hangul = "";            
-						for (var i = 0; i < winDir.length; i++) {
-							var t = winDir.charAt(i);
-							hangul += arrWin[t];
-						}
+			arrWin["W"] = "서";            
+			arrWin["N"] = "북";            
+			arrWin["S"] = "남";
+			arrWin["North"] = "북";
+			var hangul = "";            
+			for (var i = 0; i < winDir.length; i++) {
+				var t = winDir.charAt(i);
+				hangul += arrWin[t];
+			}
 
             var myImgSrc = w.icon_url;
             var weatherText = w.weather;
