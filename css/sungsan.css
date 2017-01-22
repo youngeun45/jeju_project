@@ -26,8 +26,14 @@
 .ss_wrapIn .img_wrap .btnWrap .btnPrev_ss,.ss_wrapIn .img_wrap .btnWrap .btnNext_ss{position: absolute; bottom:28px; left: 13px;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;width:7px; height: 13px;text-indent: -9999px;}
 .ss_wrapIn .img_wrap .btnWrap .btnNext_ss{background-image: url(../images/common/2_arrow_next.png);left: auto; right:13px;}
 .ss_wrapIn .sns_wrap_ss{padding-left: 11px;margin-bottom: 35px;}
-.ss_wrapIn .sns_wrap_ss a{display: inline-block; margin-left: 25px;}
-.ss_wrapIn .sns_wrap_ss a:first-child{margin: 0;}
+.ss_wrapIn .sns_wrap_ss a{transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;position: relative;display: inline-block; margin-left: 25px;background: url(../images/common/2_sns_1.png) 0 0 no-repeat;width: 30px; height: 40px;text-indent: -9999px;}
+.ss_wrapIn .sns_wrap_ss a.sns_1_ss{margin: 0;}
+.ss_wrapIn .sns_wrap_ss a.sns_2_ss{background-image: url(../images/common/2_sns_2.png);}
+.ss_wrapIn .sns_wrap_ss a.sns_3_ss{background-image: url(../images/common/2_sns_3.png);}
+.ss_wrapIn .sns_wrap_ss a.sns_4_ss{background-image: url(../images/common/2_sns_4.png);}
+.ss_wrapIn .sns_wrap_ss a.sns_5_ss{background-image: url(../images/common/2_sns_5.png);}
+.ss_wrapIn .sns_wrap_ss a.sns_6_ss{background-image: url(../images/common/2_sns_6.png);}
+.ss_wrapIn .sns_wrap_ss a:hover,.ss_wrapIn .sns_wrap_ss a:focus{transform: translateY(-5px)}
 .ss_wrapIn .dscp_wrap h3{margin-bottom: 30px;}
 .ss_wrapIn .etc_wrap h3{cursor: pointer;position: relative;}
 .ss_wrapIn .etc_wrap h3:after{content: "";display: inline-block; width: 16px; height: 9px; background: url(../images/sungsan/ss_bullet_arrow.png) 0 0 no-repeat;position: absolute;right:16px; top:38px;transition: all 0.5s linear;}

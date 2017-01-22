@@ -18,7 +18,6 @@ text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 .row_1 .sevenMenu .seven_wrap p.seven_moreBtn a{height: 44px; line-height: 48px;bottom: 0;}
 .row_2 {position: relative;margin-bottom: 98px;}
 .row_2.line:before {top :-46px;}
-.row_1 .sevenMenu .sevenWhts_wrap div ul{width: 85%;}
 .row_2 .festival_row_2 ul li{float: left;width: 25%;padding: 10px;}
 .row_2 .festival_row_2 ul li a{display: block; width: 100%;max-width: 277px;text-align: center;background-color: #eee}
 #container .row_2 .festival_row_2 ul li.boxShadow a span{display: block;}

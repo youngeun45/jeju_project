@@ -91,7 +91,7 @@ img{max-width: 100%}
 .header .header_wrapIn .iconMenu ul li a{display: block;width:100px;margin: 0 auto;}
 .header .header_wrapIn .iconMenu ul li em{display: block;}
 .open_menu_mobile{display: none;padding-top: 6px;font-size:16px;padding-left: 40px;background: #fff url(../images/common/ico_menu.png) 11px 4px no-repeat;color: #282828;}
-.mobile_close{display: none;background: url(../images/common/icon_x.png) 0 0 no-repeat;}
+.mobile_close{display: none;background: url(../images/common/icon_x_sch.png) 0 0 no-repeat;}
 .sch_wrap{display: none;z-index:5;background-color: #fff;position: absolute;top: 148px; left: 0;width: 100%; height: 77px ;box-shadow:0 4px 10px -2px rgba(0,0,0,0.4);}
 .sch_wrap .sch_wrapIn{padding: 26px 187px 26px 20px;position: relative;}
 .sch_wrap input[type=text]{;width:100% ;padding: 10px 10px}
@@ -191,7 +191,7 @@ img{max-width: 100%}
 /*네비게이션 종료*/
 /*그레이박스 시작*/
 .row_1{margin-bottom: 78px;}
-.row_1 .sevenMenu{float: right; width: 32.2%;position: relative;}
+.row_1 .sevenMenu{float: right; width: 32%;position: relative;}
 .row_1 .sevenMenu>div{display: none;}
 .row_1 .sevenMenu h4{display: inline-block;width: 50%;}
 .row_1 .sevenMenu h4 a{position: relative;display: block;width:100%;}
@@ -218,8 +218,9 @@ img{max-width: 100%}
 .row_1 .sevenMenu .sevenWhts_wrap .ui-datepicker-prev span {color: #f00;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;}
 .row_1 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
 .row_1 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
-.row_1 .sevenMenu .sevenWhts_wrap div ul{z-index: 2;display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:86.7%;}
-.row_1 .sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul{z-index: 2;display: none;position: absolute;padding: 0 20px;top: 101px ; left: 0; width:100%;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul li{background-color: #fff;width: 97%;margin: 0 auto;}
+.row_1 .sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
 .row_1 .sevenMenu .sevenWhts_wrap div ul a:hover,.row_1 .sevenMenu .sevenWhts_wrap div ul a:focus{color: #fff; background-color: #f9893f;}
 /*그레이박스 종료*/
 
@@ -300,7 +301,7 @@ h1 img{width: 100%;}
 .header .header_wrapIn .iconMenu li a p+p,.header .header_wrapIn .iconMenu li button em{display: none;}
 .header .header_wrapIn .iconMenu li button img{max-width: 100%;}
 .header .header_wrapIn{padding: 0;}
-.gnb_wrap {transition: all 1s linear;position: fixed;z-index: 21;left: -500px;top: 0; width: 200px;height: 100%; border-left: 1px solid #d8d8d8; line-height: 50px;    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);}
+.gnb_wrap {transition: all 0.5s linear;position: fixed;z-index: 21;left: -500px;top: 0; width: 200px;height: 100%; border-left: 1px solid #d8d8d8; line-height: 50px;    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);}
 .subGnb_wrapIn{padding: 0;}
 /*.gnb_wrap{;background:none;border-top: 1px solid #eee;line-height: 50px;}*/
 .gnb_wrapIn{padding: 0;z-index: 4;background-color: #fff;height: 100%;}
@@ -310,7 +311,7 @@ h1 img{width: 100%;}
 .gnb_wrap .gnb_wrapIn>ul>li>a{color: #282828}
 .gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap .gnb_wrapIn>ul>li>a:focus{color: #fff;}
 .gnb_wrap .gnb_wrapIn>ul>li>a:before,.gnb_wrap .gnb_wrapIn>ul>li>div ul li a:before{display: none;}
-.gnb_wrap .gnb_wrapIn>ul>li>a:hover, .gnb_wrap>ul>li>a:focus, .gnb_wrap>ul>li>a.on{border: none;background-color: #282828;color: #fff;}
+.gnb_wrap .gnb_wrapIn>ul>li>a:hover,.gnb_wrap .gnb_wrapIn>ul>li>a:focus,.gnb_wrap .gnb_wrapIn>ul>li>a.on{border: none;background-color: #282828;color: #fff;}
 .gnb_wrap .gnb_wrapIn>ul>li>div{display: none;position: static;height: auto;background: none;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul li{border: none;font-size: 12px;padding:0 10px;}
 .gnb_wrap .gnb_wrapIn>ul>li>div ul {width: 100%;}

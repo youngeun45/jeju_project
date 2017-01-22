@@ -3,12 +3,24 @@
 .col_quick {position: absolute;top:45px;left:-100px;border-top: 5px solid #eee;text-align: center;width: 73px;}
 .col_quick ul li{margin-bottom: 28px;}
 .col_quick ul li:first-child+li+li+li+li+li{margin: 0;}
-.col_quick ul li a,.sns_wrap_ha ul li a{display: inline-block;width: 26px; height: 27px; background: url(../images/common/cot_sns_1.png) 0 0 no-repeat;text-indent: -9999px;}
+.col_quick ul li a,.sns_wrap_ha ul li a{transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out,background 200ms;display: inline-block;width: 26px; height: 27px; background: url(../images/common/cot_sns_1.png) 0 0 no-repeat;text-indent: -9999px;}
 .col_quick ul li a.sns_2,.sns_wrap_ha ul li a.sns_2{width: 27px; background-image: url(../images/common/cot_sns_2.png);}
 .col_quick ul li a.sns_3,.sns_wrap_ha ul li a.sns_3{width: 27px; background-image: url(../images/common/cot_sns_3.png);}
 .col_quick ul li a.sns_4,.sns_wrap_ha ul li a.sns_4{width: 28px; background-image: url(../images/common/cot_sns_4.png);}
 .col_quick ul li a.sns_5,.sns_wrap_ha ul li a.sns_5{width: 29px; background-image: url(../images/common/cot_sns_5.png);}
 .col_quick ul li a.sns_6,.sns_wrap_ha ul li a.sns_6{width: 29px; background-image: url(../images/common/cot_sns_6.png);}
+.jejuStry_cot_wrap ul li a:hover,.jejuStry_cot_wrap ul li a:focus{transform: translateY(-5px);background:url(../images/common/cot_sns_1_ov.png) 0 0 no-repeat;}
+.jejuStry_cot_wrap ul li a.sns_2:hover,.jejuStry_cot_wrap ul li a.sns_2:focus{background:url(../images/common/cot_sns_2_ov.png) 0 0 no-repeat;}
+.jejuStry_cot_wrap ul li a.sns_3:hover,.jejuStry_cot_wrap ul li a.sns_3:focus{background:url(../images/common/cot_sns_3_ov.png) 0 0 no-repeat;}
+.jejuStry_cot_wrap ul li a.sns_4:hover,.jejuStry_cot_wrap ul li a.sns_4:focus{background:url(../images/common/cot_sns_4_ov.png) 0 0 no-repeat;}
+.jejuStry_cot_wrap ul li a.sns_5:hover,.jejuStry_cot_wrap ul li a.sns_5:focus{background:url(../images/common/cot_sns_5_ov.png) 0 0 no-repeat;}
+.jejuStry_cot_wrap ul li a.sns_6:hover,.jejuStry_cot_wrap ul li a.sns_6:focus{background:url(../images/common/cot_sns_6_ov.png) 0 0 no-repeat;}
+
+
+
+
+
+
 .sns_wrap_ha{text-align: center;display: none;}
 .sns_wrap_ha ul{display: inline-block;}
 .sns_wrap_ha ul li {float: left;margin-left: 15px;}
@@ -45,7 +57,8 @@
 .col_2 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;/*background: #fff url(../images/main/calendar.png) 98% center no-repeat*/;cursor: pointer;}
 .col_2 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
 .col_2 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
-.col_2 .sevenMenu .sevenWhts_wrap div ul{z-index: 2;display: none;position: absolute;top: 101px ; left: 25px; background-color: #fff;width:85%;}
+.col_2 .sevenMenu .sevenWhts_wrap div ul{z-index: 2;display: none;position: absolute;top: 101px ; left: 0;padding: 0 20px;width:100%;}
+.col_2 .sevenMenu .sevenWhts_wrap div ul li{ background-color: #fff;width: 97%;margin: 0 auto;}
 .col_2 .sevenMenu .sevenWhts_wrap div ul a{display: block;text-align: left;;width: 100%; padding: 5px 5px;color: #282828; font-size: 14px;}
 .col_2 .sevenMenu .sevenWhts_wrap div ul a:hover,.col_2 .sevenMenu .sevenWhts_wrap div ul a:focus{color: #fff; background-color: #f9893f;}
 .sevenMenu .sevenWhts_wrap .p_r{position: relative;}
