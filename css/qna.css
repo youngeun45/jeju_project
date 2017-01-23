@@ -18,6 +18,11 @@
 .qna_wrapIn .col_2 ul li a:hover:after{background-image: url(../images/qna/qna_arrow_ov.png);transition:none;}
 .qna_wrapIn .col_2 ul li a.on:after{transform: rotate(180deg);background-image: url(../images/qna/qna_arrow_ov2.png);}
 
+@media (min-width:1024px) {
+.qna_wrapIn .col_2{display: block !important;}
+}
+
+
 @media (max-width:1024px) {
 .qna_wrapIn{max-width: 800px }
 }

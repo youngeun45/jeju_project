@@ -1,10 +1,10 @@
 .visual_wrap{background: url(../images/main/bg_visual.png) center 0 no-repeat;width: 100%;height: 298px;}
 .visual_wrapIn{text-align: center;line-height: 237px; color: #fff; font-size: 50px; font-weight: 800;}
 #container{margin-top: -60px;}
-.main_prdt_wrap{position: relative;border: 20px solid #fff;border-bottom: none;display: inline-block;max-width: 780px;width:66%;float: left;}
+.main_prdt_wrap{position: relative;border: 20px solid #fff;border-bottom: none;display: inline-block;max-width: 780px;width:65%;float: left;}
 .row_1 .main_prdt_wrap:before{display: inline-block;content:url(../images/main/bg_mainImg_shadow.png); width: 8px; height: 168px; position: absolute;top: 40px; right: -28px;}
 .row_1 .main_prdt_wrap:after{display: none !important;content: "";display: block; background: url(../images/common/line.png) 0 0 repeat-x;width: 200%;height: 8px;position: absolute;bottom:-50px; left: -128px;}
-.row_1 .main_prdt_wrap img{width: 100%;}
+/*.row_1 .main_prdt_wrap img{width: 100%;}*/
 .row_1 .main_prdt_frame .bx-pager-item{display: inline;margin: 0 10px;}
 .row_1 .main_prdt_frame .bx-pager-link{display: inline-block;width: 13px; height: 13px;text-indent: -9999px;background: url(../images/main/mainImg_btn.png) 0 0 no-repeat;}
 .row_1 .main_prdt_frame .bx-pager{position: absolute;bottom: 177px;text-align: center; left:0;width: 100%;}

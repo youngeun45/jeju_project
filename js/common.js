@@ -32,7 +32,7 @@ var mSl = ".main_prdt_Slide";
 		var myTs = $(this);
 		var myLb =$(this).find("label");
 		var myInput = "."+$(this).attr("class") + " input[type=text]";
-		var myXbtn = "."+$(this).attr("class") + " input[type=button]";
+		var myXbtn = "."+$(this).attr("class") + " button";
 
 		var m = true;
 		$(document).on("focus",myInput,function(){
@@ -58,6 +58,7 @@ var mSl = ".main_prdt_Slide";
 			}
 		});
 		$(document).on("click",myXbtn,function(){
+			console.log(myXbtn)
 			$(myInput).val("");
 			myTs.stop().slideUp("fast");
 			myLb.show();
@@ -204,7 +205,7 @@ $(function(){
       	// $(".dim_gnb").attr({"style":""});
         b.attr("class","");
         b.addClass("pc");
-        }else if(w>=480 && w < 1024){
+        }else if(w>=640 && w < 1024){
         b.attr("class","");
         b.addClass("tablet");
       }else{
@@ -213,13 +214,13 @@ $(function(){
       }
 
  /*로고이미지바꾸기*/
- if($(window).width() <= 800 && k){
+ if($(window).width() <= 783 && k){
  				k = !k;
       	var myImg = $("h1 img")
       	var mySrc = myImg.attr("src");
       	var newSrc = mySrc.replace(".png","_wh.png");
       	myImg .attr("src",newSrc);
-      }else if($(window).width() > 800 && !k){
+      }else if($(window).width() > 783 && !k){
       	k = !k;
       	var myImg = $("h1 img")
       	var mySrc = myImg.attr("src");
@@ -265,14 +266,13 @@ $.fn.rsGnb = function(opt){
 	var selector = "."+ts.attr("class")+">ul>li>a";
 			$(document).on("mouseover focus",selector,function(){
 			var myThis = $(this);
-			$(this).closest("ul").find(">li>div").filter(":visible").hide(); //비지블 :보여지고있는 유엘 
-			$(this).closest("div").find("a.on").removeClass("on");//엔드를한번쓰면 뒤에 비지블 유엘이 없어진 유엘에 접근 두번쓰면 디스에 접근(마지막꺼 제거)
+			$(this).closest("ul").find(">li>div").filter(":visible").hide();
+			$(this).closest("div").find("a.on").removeClass("on");
 			myThis.next().show();
 			$(this).addClass("on");
 		});
 		var selector2 = "."+ts.attr("class");
 		$(document).on("mouseleave",selector2,function(){
-			//$(">ul",this).find("div:visible").hide() //비지블 :보여지고있는 유엘 
 			$(">ul>li>div",this).filter(":visible").hide()
 			$(selector2).find("a.on").removeClass("on");
 		});
@@ -280,11 +280,7 @@ $.fn.rsGnb = function(opt){
 		$(".gnb_wrap").animate({left:0},100)
 		$(".dim_gnbwrap").fadeIn("fast");
 	})
-	// console.log(Boolean($("body").attr("class") == !"pc"))
 	$(document).on("click",".mobile_close",function(){
-		// if($("body").attr("class") == !"pc"){
-		// 	$(".gnb_wrap").animate({left:"-500px"},100);
-		// }
 			$(".gnb_wrap").animate({left:"-500px"},100);
 		$(".dim_gnbwrap").fadeOut("fast");
 	})
@@ -300,26 +296,33 @@ $(function(){
 /*날씨*/
 function weather() {
     $.ajax({
-    		//crossOrigin:true,
         url: "http://api.wunderground.com/api/6276e73095ee3caa/geolookup/conditions/lang:KR/q/South%20Korea/jeju.json",
         dataType: "jsonp",
         success: function(data) {
-        		//var data = JSON.parse(data);
             var w = data.current_observation;
-            console.log(w)
+            //console.log(data);
+            if(!w) return false;            
             var temp = w.temp_c;
             var winDir = w.wind_dir;
             arrWin = [];
+            var hangul = "";
+						arrWin["North"] = "북";
+						arrWin["South"] = "남";
+						arrWin["East"] = "동";
+						arrWin["West"] = "서";
             arrWin["E"] = "동";
-			arrWin["W"] = "서";            
-			arrWin["N"] = "북";            
-			arrWin["S"] = "남";
-			arrWin["North"] = "북";
-			var hangul = "";            
-			for (var i = 0; i < winDir.length; i++) {
-				var t = winDir.charAt(i);
-				hangul += arrWin[t];
-			}
+						arrWin["W"] = "서";            
+						arrWin["N"] = "북";            
+						arrWin["S"] = "남";						
+
+            if(winDir != "North" && winDir != "South" && winDir != "East" && winDir != "West") {
+							for (var i = 0; i < winDir.length; i++) {
+								var t = winDir.charAt(i);
+								hangul += arrWin[t];
+							}
+						} else {
+								hangul += arrWin[winDir];
+						}
 
             var myImgSrc = w.icon_url;
             var weatherText = w.weather;
@@ -400,8 +403,8 @@ $(function(){
 		        currentText: '오늘',
 		        monthNames: ['1월(JAN)','2월(FEB)','3월(MAR)','4월(APR)','5월(MAY)','6월(JUN)',
 		        '7월(JUL)','8월(AUG)','9월(SEP)','10월(OCT)','11월(NOV)','12월(DEC)'],
-		        monthNamesShort: ['1월','2월','3월','4월','5월','6월',
-		        '7월','8월','9월','10월','11월','12월'],
+		        monthNamesShort: ['1','2','3','4','5','6',
+		        '7','8','9','10','11','12'],
 		        dayNames: ['일','월','화','수','목','금','토'],
 		        dayNamesShort: ['일','월','화','수','목','금','토'],
 		        dayNamesMin: ['일','월','화','수','목','금','토'],
@@ -413,16 +416,15 @@ $(function(){
 		        yearSuffix: '',
 		        showOn: 'both',
 		        buttonText: "달력",
-		        changeMonth: true,
-		        changeYear: true,
-		        showButtonPanel: true,
+		        changeMonth: false,
+		        changeYear: false,
+		        showButtonPanel: false,
 		        yearRange: 'c-99:c+99' //범위지정
    			 };
 		     $.datepicker.setDefaults($.datepicker.regional['ko']);
 			     var datepicker_default = {
 			        showOn: 'both',
 			        buttonText: "달력",
-			        currentText: "이번달",
 			        changeMonth: false,
 			        changeYear: false,
 			        showButtonPanel: false,
@@ -433,8 +435,6 @@ $(function(){
 		     $("#from,#to,#from_2,#to_2").datepicker();
 		     $(".gnb_wrapIn").rsGnb({mode:"pc tablet"});
 		     $(".sch_wrap").removeLabel();
-
-
 })
 
 		     /*달력종료*/			
