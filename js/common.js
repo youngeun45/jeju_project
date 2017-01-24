@@ -438,3 +438,4 @@ $(function(){
 		     $(".sch_wrap").removeLabel();
 })
 		     /*달력종료*/			
+
