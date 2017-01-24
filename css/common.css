@@ -236,7 +236,8 @@ a.ui-state-default{display: block;width: 100%;height: 36px; line-height: 36px; b
 .plan_wrapIn{margin-bottom: 107px;}
 .plan_wrapIn .plan_col_1{float: left;width: 37.25%;padding-left: 24px;padding-top: 81px;}
 .plan_wrapIn .plan_col_1 a{display: block;;width: 100%;}
-.plan_wrapIn .plan_col_1 div{float: left;margin-right: 29px;}
+.plan_wrapIn .plan_col_1 div{float: left;margin-right: 20px;}
+.plan_wrapIn .plan_col_1 img{max-width: 136px}
 .plan_wrapIn .plan_col_1 p{float: left;}
 .plan_wrapIn .plan_col_1 p span{display: block;}
 .plan_wrapIn .plan_col_1 p span:first-child{font-weight: 800; font-size: 26px; color: #fd6602;padding-bottom:14px;}

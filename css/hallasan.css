@@ -93,7 +93,7 @@
 .col_2 .sevenMenu .seven_wrap{height: 241px; display: block;}
 .col_2 .sevenMenu .seven_wrap ul li{display: table-cell;width: 24.99%;}
 .cot_ad_wrap{display: none;}
-.context_wrap_t_m{display: none;/*display: block*/;position: absolute;top:9px;left: 50%;width: 520px;text-align: left;transform: translateX(-50%); height: auto;padding: 40px ; border: 2px solid #c8c8c8 ; background-color: #eee;z-index: 9;margin-top: 39px;border-radius: 6px}
+.context_wrap_t_m{display: none;/*display: block*/;position: absolute;top:9px;left: 50%;margin-left: -260px;width: 520px;text-align: left; height: auto;padding: 40px ; border: 2px solid #c8c8c8 ; background-color: #eee;z-index: 9;margin-top: 39px;border-radius: 6px}
 .context_wrap_t_m:before{content: url(../images/hallasan/summary.png); width: 30px; height: 21px; float: left;margin-top: -61px; margin-left: 46.5%; }
 .context_wrap_t_m dt{text-align: center;font-size: 22px; line-height: 27px; color: #282828; padding-bottom: 11px; border-bottom: 1px solid #fff;font-weight: bold;}
 .context_wrap_t_m dd a{display: block;margin: 22px 0; font-size: 16px; font-weight: bold;}
@@ -126,7 +126,7 @@
 .col_2 .sevenMenu .seven_wrap ul li{width: 50%;}
 .col_2 .sevenMenu .seven_wrap{height: 439px; }
 .col_2 .sevenMenu .seven_wrap ul li a {font-size: 12px;}
-.context_wrap_t_m {display: none;width: 100%; border: none; padding: 10px;height: 100%; top:-39px; border-radius: 0; position: fixed;}
+.context_wrap_t_m {display: none;width: 100%; border: none; padding: 10px;height: 100%; top:0; border-radius: 0; position: fixed;margin: 0;left: 0;}
 .context_wrap_t_m:before{display: none;}
 .context_wrap_t_m dt{font-weight: normal;text-align: left;}
 .context_wrap_t_m dd a{font-weight: normal}

@@ -5,22 +5,19 @@
 <meta name="Author" content="">
 <meta name="Keywords" content="">
 <meta name="Description" content="">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
-<link rel="stylesheet" type="text/css" href="css/common.css">
 <title>JEjU | 메인페이지</title>
 </head>
 <body>
 <div class="join_wrap">
     <div class="log_logo"><img src="images/common/logo.png" alt="로고"></div>
     <div class="inp_sec">
-        <form action="#" method="post">
+        <form action="#" method="post" id="login_f">
             <fieldset>
                 <legend>로그인</legend>
                 <h4>Already a JEjU member?</h4>
                 <p>
-                    <label for="user_name">Email address</label>
-                    <input type="text" name="user_name" id="user_name">
+                    <label for="user_email">Email address</label>
+                    <input type="text" name="user_email" id="user_email">
                 </p>
                 <p>
                     <label for="user_pw">password</label>
@@ -34,17 +31,17 @@
         </form>
     </div>
     <div class="join_sec">
-        <form action="#" method="post">
+        <form action="#" method="post" id="join_f">
             <fieldset>
                 <legend>회원가입</legend>
                 <h4>Join now — it's free</h4>
                 <p>
-                    <label for="user_name">Email address</label>
-                    <input type="text" name="user_name" id="user_name">
+                    <label for="user_email_jo">Email address</label>
+                    <input type="text" name="user_email_jo" id="user_email_jo">
                 </p>
                 <p>
-                    <label for="user_pw">password</label>
-                    <input type="password" name="user_pw" id="user_pw">
+                    <label for="user_pw_jo">password</label>
+                    <input type="password" name="user_pw_jo" id="user_pw_jo">
                 </p>
                 <p class="agree">계속 진행하시면 <em class="c_28">개인정보 보호정책</em> 및 <em class="c_28">이용약관</em> 에 동의한것을 간주되어집니다. </p>
                 <p class="joinBtn">
@@ -52,7 +49,7 @@
                     <input type="reset" value="cancle">
                 </p>
                 <p class="infoMail_chk">
-                    <input type="checkbox" name="infoMail_chk" id="infoMail_chk" checked>여행정보, 팁 및 새로운 정보에 대한 메일을 받겠습니다.
+                    <input type="checkbox" name="infoMail_chk" id="infoMail_chk" checked title="여행정보, 팁 및 새로운 정보에 대한 메일을 받겠습니다.">여행정보, 팁 및 새로운 정보에 대한 메일을 받겠습니다.
                 </p>
             </fieldset>
         </form>

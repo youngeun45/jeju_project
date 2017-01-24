@@ -1,10 +1,9 @@
 $(function(){
-
 /*bxSlider*/
 var mSl = ".main_prdt_Slide";
 			$(mSl).bxSlider({
-		        auto:true,//auto:true 기본값은 false : 자동슬라이더 
-		        autoControls: false, // 정지재생버튼
+		        auto:true,
+		        autoControls: false,
 		        controls:true,
 		        pager:true
 			}); 
@@ -32,7 +31,7 @@ var mSl = ".main_prdt_Slide";
 		var myTs = $(this);
 		var myLb =$(this).find("label");
 		var myInput = "."+$(this).attr("class") + " input[type=text]";
-		var myXbtn = "."+$(this).attr("class") + " button";
+		var myXbtn = "."+$(this).attr("class") + " input[type=button]";
 
 		var m = true;
 		$(document).on("focus",myInput,function(){
@@ -88,8 +87,6 @@ var mSl = ".main_prdt_Slide";
 		var $myThis = $(e.target).closest('a'); //제일 하위요소  this 대신 쓰기 지정하는것 !!!!!!
 		var $myDiv= $myThis.parent().next();
 		var $visibleDiv = $(this.myObj+">div:visible");
-		//보이는 div 요소는 숨겨라 
-		//클릭한 텝텝에 해당하는 div 는 보여라
 		if($myDiv.is(":hidden")){
 			$visibleDiv.hide();
 			$myDiv.show();
@@ -100,7 +97,7 @@ var mSl = ".main_prdt_Slide";
 			this.actImg = $myImg;	
 		};
 	};
-	var arrTab = []; // 매번객체생성을할수가없으니 배열로지정해주기
+	var arrTab = [];
 	var tabText = "div[data-type=tabmenu]";
 	var tabMenuWrap = $(tabText);
 	$.each(tabMenuWrap,function(i,o){
@@ -124,7 +121,6 @@ var mSl = ".main_prdt_Slide";
     $(document).on("click",this.myWrap + " button",$.proxy(this.selectHanddler_1, this)); //이벤트 등록 대상
  		$(document).on("click",this.myWrap + " a",$.proxy(this.selectClickHanddler_1, this));
  }
-
 InitSelect.prototype.selectClickHanddler_1 = function(e){
   e.preventDefault();
   var myObj = $(e.target);
@@ -158,7 +154,6 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
         $myUl.hide();
   };
 }		
-		
  $.fn.colorCh = function(){
 				var myThis = $(this);
       	var myBtn = $("button",myThis);
@@ -171,7 +166,6 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
        				myBtn.removeClass('on');
        			}
 				}
-
 				var ch_2 = function(e){
 					e.preventDefault();
        		myBtn.removeClass('on');
@@ -180,14 +174,11 @@ InitSelect.prototype.selectClickHanddler_1 = function(e){
       	myAtag.on({"click":ch_2});
     }
 $(function(){
-	$(".lang_wrap").colorCh();   //부모
+	$(".lang_wrap").colorCh(); 
 })
 	     
  $(function(){
     var sel = [];
-    /*sel[0] = new InitSelect("sel_1");  // var sel_1 => 인스턴트 네임
-    sel[1] = new InitSelect("sel_2");
-    sel[2] = new InitSelect("sel_3");*/
     $.each($("div[data-select=sel]"),function(i,e){
        sel[i] = new InitSelect("sel",i);
     });
@@ -197,12 +188,9 @@ $(function(){
 /*사이즈감지*/
  var k = true;
  $(window).on("resize",function(){
-      // console.log($(window).width());
-      var b = $("body") // 이벤트가발생하고실행되는거라 전역으로 해주면안됨
+      var b = $("body") 
       var w = $(window).width();
       if(w >= 1024){
-      	// $("#gnb").attr({"style":""});
-      	// $(".dim_gnb").attr({"style":""});
         b.attr("class","");
         b.addClass("pc");
         }else if(w>=640 && w < 1024){
@@ -211,8 +199,7 @@ $(function(){
       }else{
         b.attr("class","");
         b.addClass("mobile");
-      }
-
+     }
  /*로고이미지바꾸기*/
  if($(window).width() <= 783 && k){
  				k = !k;
@@ -228,8 +215,6 @@ $(function(){
       	myImg .attr("src",newSrc);
       }
 })
-
-
 /*레이어팝업*/
 $.fn.layerPopup = function(){
 
@@ -238,18 +223,15 @@ $.fn.layerPopup = function(){
 		e.preventDefault();
 		var url= $(this).attr("href");
 		$.get(url,function(data){
-			//console.log(data);
 			var el_1 = $("<div/>",{"class":"pop_dim"});
 			var el_2 = $("<div/>",{"class":"pop_inner_wrap"}).appendTo(el_1);
 			var el_3 = $("<div/>",{"class":"pop_inner"}).appendTo(el_2);
 			console.log(data);
-			el_3.prepend(data);   //데이타 '전'에다가 버튼넣기 appendTo : 후에다가 버튼넣기
-			//el_3.append(data);
+			el_3.prepend(data); 
 			$(".pop_dim").remove();
 			$(".header_wrapIn").append(el_1)
 		});
 		$(document).on("click",".btnCloseLayer",function(){
-			// alert(1234)
 			$(".pop_dim").remove();
 		})
 	}
@@ -292,16 +274,14 @@ $(function(){
 	whtsWrap.stop().slideToggle("fast");
 	})
 });
-
 /*날씨*/
 function weather() {
     $.ajax({
-        url: "http://api.wunderground.com/api/6276e73095ee3caa/geolookup/conditions/lang:KR/q/South%20Korea/jeju.json",
+        url: "http://api.wunderground.com/api/627f6e73095ee3caa/geolookup/conditions/lang:KR/q/South%20Korea/jeju.json",
         dataType: "jsonp",
         success: function(data) {
             var w = data.current_observation;
-            //console.log(data);
-            if(!w) return false;            
+            if(!w) return false; 
             var temp = w.temp_c;
             var winDir = w.wind_dir;
             arrWin = [];
@@ -364,7 +344,6 @@ function weather() {
 }
 $(function() {
     weather();
-    // setInterval(weather, 10000);
 });
 /*날시종료*/
 
@@ -379,7 +358,7 @@ $(function(){
 		var result_email = reg_email.exec(my_email.val())
 		var result_pw = reg_pw.exec(my_pw.val())
 		if(result_email == null){
-			alert("잘못된아이디입니다.");
+			alert("잘못된 메일 입니다.");
 			my_email.val("");
 			my_email.focus();
 		}else if(result_pw == null){
@@ -388,8 +367,30 @@ $(function(){
 			my_pw.focus();
 			return false;
 		}
+		$(this).submit();
 	}
 	$(document).on("submit","#login_f",loginFnc)
+	var joinFnc =function(e){
+		e.preventDefault();
+		var reg_email = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/g;
+		var reg_pw = /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{7,30}$/g;
+		var my_email = $("#user_email_jo");
+		var my_pw = $("user_pw_jo");
+		var result_email = reg_email.exec(my_email.val())
+		var result_pw = reg_pw.exec(my_pw.val())
+		if(result_email == null){
+			alert("잘못된 메일 입니다.");
+			my_email.val("");
+			my_email.focus();
+		}else if(result_pw == null){
+			alert("잘못된 패스워드입니다.")
+			my_pw.val("");
+			my_pw.focus();
+			return false;
+		}
+		$(this).submit();
+	}
+	$(document).on("submit","#join_f",joinFnc)
 })
 /*로그인종료*/
 
@@ -436,5 +437,4 @@ $(function(){
 		     $(".gnb_wrapIn").rsGnb({mode:"pc tablet"});
 		     $(".sch_wrap").removeLabel();
 })
-
 		     /*달력종료*/			

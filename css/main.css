@@ -14,6 +14,7 @@
 .row_1 .main_prdt_frame .main_prdt_Slide div {height: 212px;padding: 42px 33px;background-color:#eee}
 .row_1 .main_prdt_frame .main_prdt_Slide div a h4{font-weight: bold; font-size: 26px; color: #282828;margin-bottom: 13px;}
 .row_1 .main_prdt_frame .main_prdt_Slide div a p{font-size: 14px; color: #282828;line-height: 25px;height: 20px;}
+.row_1 .main_prdt_frame .main_prdt_Slide li a {display: block;width: 100%;}
 .row_2{position: relative;margin-bottom: 86px;}
 .row_2 .cot_unesco_wrap{float: left;width: 66%;}
 .row_2 .cot_ad_wrap{float: right;width: 25.3%;}
@@ -46,11 +47,11 @@
 .row_3 .slideToggleBtn{display: none  !important;background:  #fd6602 url(../images/main/arrow_sch.png) 97% center no-repeat;color: #fff;width: 100%; height: 40px; padding: 13px 30px 13px 15px;display: block;text-align: left;font-size: 16px;}
 .row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_]{display: inline-block; color: #fff;font-weight: bold;}
 .row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] label {display: inline-block;text-align: center;width: 24%; font-size: 16px; font-style: italic;}
-.row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] input {width: 71.5%; height: 41px;background: #fff url(../images/main/calendar.png) 98% center no-repeat;cursor: pointer;}
+.row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] input {width: 71.5%; height: 41px;cursor: pointer;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1{width: 41%;position: relative;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 p{position: absolute;top:69px; left:68px;font-style: normal; font-size: 14px;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 span{display: inline-block;padding-right: 2%;width: 14%;}
-.row_3 .whtsOn_row_wrap1 .whtsOn_col_2,.row_3 .whtsOn_col_3{width: 20%;}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_2,.row_3 .whtsOn_col_3{width: 20%;position: relative;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_4{width: 17%;padding-left:3%;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_4 button[type=submit]{width: 100%; height: 41px; line-height: 41px; color: #fff;; font-size: 16px;background-color: #ad521e;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_4 button[type=submit] em {margin-left:15%;}
@@ -62,8 +63,8 @@
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul{display: none;position: absolute;top:41px; left:14.8%;background-color: #fff;width: 84.5%;z-index: 2}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a{display: block;padding: 5px;font-size: 14px; color: #282828;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a:hover,.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a:focus{color: #fff; background-color: #666;}
-.whtsOn_row_wrap1 .ui-datepicker-trigger{text-indent: -9999px;position: absolute;top:37px; right:14px;width: 27px; height: 27px; }
-
+.row_3 .whtsOn_row_wrap1 .ui-datepicker-trigger{text-indent: -9999px;position: absolute;top:7px; right:14px;width: 27px; height: 27px;background: #fff url(../images/main/calendar.png) 0 0 no-repeat; }
+.row_3 .whtsOn_row_wrap1 [class^=whtsOn_col_] input{padding: 11px 10px 10px;}
 .whtsOn_row_wrap1 .ui-datepicker-prev .ui-widget-header .ui-icon {color: #f00;background: url(../images/common/2_arrow_prev.png) 0 0 no-repeat;}
 .row_3 .whtsOn_row_wrap2{padding-top: 22px;}
 .row_3 .whtsOn_row_wrap2 ul li{float: left;width: 23.68%;margin-left: 1.75%;position: relative;}
@@ -136,6 +137,7 @@
 }
 @media (max-width:640px) {
 .row_1 .main_prdt_frame .main_prdt_Slide div {height: 130px;}
+
 .row_1 .main_prdt_frame .bx-pager {bottom: 99px;}
 .row_1 .main_prdt_frame .bx-prev, .main_prdt_frame .bx-next{margin-top: -82px;}
 .row_2 .unesco_row_1 div{width: 100%;padding: 0;}

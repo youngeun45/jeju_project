@@ -2,18 +2,21 @@
 $(function(){
 	var sliderNum =0;
 	var sliderWidth = 110;
+
+				
 	var mySlider_1 = $('.slider').bxSlider({
 		mode: 'fade',
 	  pagerCustom: '#slider_pager',
 	  onSlideAfter:function(){
-	  	var c = mySlider_1.getCurrentSlide();
-	  	console.log(c);
-	  	if(c>=5) {
-	  		sliderNum++;
-	  	}else{
-	  		sliderNum = 0;
-	  	}
-	  	$("#slider_pager").stop().animate({"margin-left":-sliderWidth*sliderNum+"px"},100);
+	  	if($("body").attr("class") == "pc"){
+	 				var c = mySlider_1.getCurrentSlide();
+			  	if(c>=5) {
+			  		sliderNum++;
+			  	}else{
+			  		sliderNum = 0;
+			  	}
+			  	$("#slider_pager").stop().animate({"margin-left":-sliderWidth*sliderNum+"px"},100);
+	 			}
 	  }
 	});
 		$(".etc_wrap h3").on("click",function(e){
