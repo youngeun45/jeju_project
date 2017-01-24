@@ -5,7 +5,7 @@ $.fn.quickMenu = function(opt){
      var myThis = $(this); //window
      var scT = myThis.scrollTop() ; //상단에서부터의 거리
      console.log(scT)
-     var scH = $('body').prop("scrollHeight")-$("#footerwrap").height()-1210;
+     var scH = $('body').prop("scrollHeight")-$("#footerwrap").height()-1000;
 
      if(myThis.scrollTop() >= scH) {
         ts.stop();
