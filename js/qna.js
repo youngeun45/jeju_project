@@ -1,6 +1,7 @@
 
 $(function(){
 		$(".col_2 ul li a").on("click",function(e){
+			e.preventDefault();
 			var myReply = $(this).next();
 			if(myReply.is(":hidden")){     //숨겨져있을때 실행하라
 					$(".col_2 ul li a.on").removeClass("on");

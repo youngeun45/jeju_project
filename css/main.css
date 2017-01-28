@@ -60,7 +60,7 @@
 .row_3 .whtsOn_row_wrap1 .specialSch a {color: #fff; font-size: 14px;font-weight: bold;}
 .row_3 .whtsOn_row_wrap1 .specialSch em {padding-left: 10px;margin-top:-2px;}
 .row_3 .whtsOn_row_wrap1 .specialSch em img{margin-top:-2px;}
-.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul{display: none;position: absolute;top:41px; left:14.8%;background-color: #fff;width: 84.5%;z-index: 2}
+.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul{display: none;position: absolute;top:41px; left:0;background-color: #fff;width: 100%;z-index: 2}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a{display: block;padding: 5px;font-size: 14px; color: #282828;}
 .row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a:hover,.row_3 .whtsOn_row_wrap1 .whtsOn_col_1 ul li a:focus{color: #fff; background-color: #666;}
 .row_3 .whtsOn_row_wrap1 .ui-datepicker-trigger{text-indent: -9999px;position: absolute;top:7px; right:14px;width: 27px; height: 27px;background: #fff url(../images/main/calendar.png) 0 0 no-repeat; }
