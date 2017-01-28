@@ -68,7 +68,7 @@
 .sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
 .sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
 .sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
-.sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;;cursor: pointer;}
+.sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;;cursor: pointer;padding: 0 5px}
 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
 .sevenMenu .sevenWhts_wrap div ul{z-index: 3;display: none;position: absolute;padding: 0 20px;top: 101px; left: 0;width:100%;}

@@ -54,7 +54,7 @@
 .col_2 .sevenMenu .sevenWhts_wrap button.seven_whtsList{width: 97%; height: 52px;text-align: left;background: #fff url(../images/main/arrow_bottom_dark.png) 98% center no-repeat;padding: 0 5px;font-size: 14px;}
 .col_2 .sevenMenu .sevenWhts_wrap div{margin-bottom: 24px;}
 .col_2 .sevenMenu .sevenWhts_wrap p{width: 97%; text-align: left;color: #fff;font-size: 14px;font-style: italic; margin: 0 auto 6px;}
-.col_2 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;/*background: #fff url(../images/main/calendar.png) 98% center no-repeat*/;cursor: pointer;}
+.col_2 .sevenMenu .sevenWhts_wrap input[type=text]{width: 97%; height: 52px;cursor: pointer;padding: 0 5px}
 .col_2 .sevenMenu .sevenWhts_wrap button.submit{width: 130px; height: 44px;line-height: 44px; color: #fff;background-color: #fd6602; }
 .col_2 .sevenMenu .sevenWhts_wrap button.submit em img{padding-left: 30px;margin-top:-2px;}
 .col_2 .sevenMenu .sevenWhts_wrap div ul{z-index: 2;display: none;position: absolute;top: 101px ; left: 0;padding: 0 20px;width:100%;}
