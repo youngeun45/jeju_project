@@ -348,49 +348,62 @@ $(function() {
 /*날시종료*/
 
 /*로그인*/
+
+
+
+
+
+
 $(function(){
-	var loginFnc =function(e){
-		e.preventDefault();
-		var reg_email = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/g;
-		var reg_pw = /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{7,30}$/g;
-		var my_email = $("#user_email");
-		var my_pw = $("#user_pw");
-		var result_email = reg_email.exec(my_email.val())
-		var result_pw = reg_pw.exec(my_pw.val())
-		if(result_email == null){
-			alert("잘못된 메일 입니다.");
-			my_email.val("");
-			my_email.focus();
-		}else if(result_pw == null){
-			alert("잘못된 패스워드입니다.")
-			my_pw.val("");
-			my_pw.focus();
-			return false;
-		}
-		$(this).submit();
-	}
-	$(document).on("submit","#login_f",loginFnc)
-	var joinFnc =function(e){
-		e.preventDefault();
-		var reg_email = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/g;
-		var reg_pw = /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{7,30}$/g;
-		var my_email = $("#user_email_jo");
-		var my_pw = $("user_pw_jo");
-		var result_email = reg_email.exec(my_email.val())
-		var result_pw = reg_pw.exec(my_pw.val())
-		if(result_email == null){
-			alert("잘못된 메일 입니다.");
-			my_email.val("");
-			my_email.focus();
-		}else if(result_pw == null){
-			alert("잘못된 패스워드입니다.")
-			my_pw.val("");
-			my_pw.focus();
-			return false;
-		}
-		$(this).submit();
-	}
-	$(document).on("submit","#join_f",joinFnc)
+	$(document).on("submit","#login_f", function(e){
+				//e.preventDefault();
+				var reg_email = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/g;
+				var reg_pw = /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{7,30}$/g;
+
+				var my_email = $("#user_email");
+				var my_pw = $("#user_pw");
+
+				var result_email = reg_email.exec(my_email.val());
+				var result_pw = reg_pw.exec(my_pw.val());
+
+				if (result_email == null){
+					alert("이메일 주소를 확인해주세요.");
+					my_email.val("");
+					my_email.focus();
+					return false;
+				}else if (result_pw == null){
+					alert("비밀번호를 확인해주세요.");
+					my_pw.val("");
+					my_pw.focus();
+					return false;
+				}
+				$(this).submit(); 
+			});
+		$(document).on("submit","#join_f", function(e){
+				//e.preventDefault();
+				var reg_email = /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/g;
+				var reg_pw = /^((?=.*[\d])(?=.*[a-z])(?=.*[A-Z])|(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[A-Z])(?=.*[^\w\d\s])|(?=.*[\d])(?=.*[a-z])(?=.*[^\w\d\s])).{7,30}$/g;
+
+				var my_email = $("#user_email_jo");
+				var my_pw = $("#user_pw_jo");
+
+				var result_email = reg_email.exec(my_email.val());
+				var result_pw = reg_pw.exec(my_pw.val());
+
+				if (result_email == null){
+					alert("이메일 주소를 확인해주세요.");
+					my_email.val("");
+					my_email.focus();
+					return false;
+				}else if (result_pw == null){
+					alert("비밀번호를 확인해주세요.");
+					my_pw.val("");
+					my_pw.focus();
+					return false;
+				}
+				$(this).submit(); 
+				alert("가입을 축하드립니다. 새롭게 로그인해주세요.")
+			});
 })
 /*로그인종료*/
 
