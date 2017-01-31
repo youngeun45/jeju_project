@@ -70,7 +70,7 @@
 .sp_wrapIn .img_wrap #slider_pager a,.sp_wrapIn .img_wrap #slider_pager a:first-child+a,.sp_wrapIn .img_wrap #slider_pager a:first-child+a+a,.sp_wrapIn .img_wrap #slider_pager a:first-child+a+a+a{width: 13px; height: 13px;background: url(../images/main/mainImg_btn.png) 0 0 no-repeat;}
 #container .sp_wrapIn .img_wrap a.active,.sp_wrapIn .img_wrap #slider_pager a:first-child+a.active,.sp_wrapIn .img_wrap #slider_pager a:first-child+a+a.active,.sp_wrapIn .img_wrap #slider_pager a:first-child+a+a+a.active{width: 13px; height: 13px;background: url(../images/main/mainImg_btn_ov.png) 0 0 no-repeat;}
 .sp_wrapIn .img_wrap a.active:after,.sp_wrapIn .img_wrap .btnWrap{display: none;}
-.sp_wrapIn .img_wrap .frame{width: auto;position: relative;left: 50%; margin-left: -37px;}
+.sp_wrapIn .img_wrap .frame{width: 200px;position: relative;left: 50%; margin-left: -37px;}
 .sp_wrapIn .cot_dscp_wrap h5{padding: 8px 0 ;font-size: 24px;}
 .sp_wrapIn .cot_dscp_wrap p{font-size: 12px;}
 .sp_wrapIn .cot_dscp_wrap{height: 168px;}
