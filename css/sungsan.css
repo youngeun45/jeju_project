@@ -67,7 +67,7 @@
 .ss_wrapIn .img_wrap #slider_pager a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a+a,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a+a+a{width: 13px; height: 13px;background: url(../images/main/mainImg_btn.png) 0 0 no-repeat;}
 #container .ss_wrapIn .img_wrap a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a+a.active,.ss_wrapIn .img_wrap #slider_pager a:first-child+a+a+a+a+a.active{width: 13px; height: 13px;background: url(../images/main/mainImg_btn_ov.png) 0 0 no-repeat;}
 .ss_wrapIn .img_wrap a.active:after,.ss_wrapIn .img_wrap .btnWrap{display: none;}
-.ss_wrapIn .img_wrap .frame{width: auto;position: relative;left: 50%; margin-left: -54px;}
+.ss_wrapIn .img_wrap .frame{width: 200px;position: relative;left: 50%; margin-left: -54px;}
 .ss_wrapIn .cot_dscp_wrap h5{padding: 8px 0 ;font-size: 24px;}
 .ss_wrapIn .cot_dscp_wrap p{font-size: 12px;}
 .ss_wrapIn .cot_dscp_wrap{height: 145px;}
