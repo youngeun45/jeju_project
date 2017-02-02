@@ -1,0 +1,70 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+html{height: 100%; overflow-y: scroll;}
+li,dl,dt,dd,ol{list-style: none;}
+img,input[type=image],input[type=radio],input[type=checkbox]{border:none; vertical-align: middle;line-height: 0;}
+body{font: 12px/1.3 Nanum Gothic,'나눔고딕',Malgun Gothic,'맑은고딕',sans-serif;color: #666;height: 100%;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;font-weight: normal;}
+.blind,legend{position: absolute;left: -9999px;}
+fieldset,select{border: none}
+a,a:hover,a:focus{text-decoration: none;color: #666;}
+input,select{border-collapse: collapse;}
+.clearFix:after{content: "";display: block;clear: both;}
+.claerFix{*zoom:1;}
+button,input[type=image],select,input[type=button],input[type=submit]{cursor: pointer;}
+button{border: none;background: none;}
+button span{text-indent: -9999px;display: inline-block}
+address, em, strong{font-style: normal;}
+[class*=wrapIn]{margin: 0 auto;padding: 0 9px;max-width: 1200px}
+input[type=text],input[type=password],input[type=button],input[type=submit]{border:none;}
+.m_0{margin: 0;}
+.ta_r{text-align: right;}
+.c_28{color: #282828 !important;}
+.line:before{content: "";display: block; background: url(../images/common/line.png) 0 0 repeat-x;width: 100%;height: 8px;position: absolute;top:-40px; left: 0;}
+h3{font-size: 30px;text-transform: uppercase;color: #282828;position: relative;margin-bottom: 45px;}
+h3:before{content:"";width: 20px; height: 5px;position: absolute;bottom:-8px; left: 0;background-color: #fd6602;}
+/*[class^="Obullet"]{position: relative;}*/
+[class^="Obullet"]{position: relative;display: inline-block;}
+[class="ObulletT"]:before {content:"";display:block;position: absolute;width: 59px; height: 5px;top: 0; right: 0;background-color: #fd6602;}
+[class="ObulletB"]:before {content:"";display:block;position: absolute;width: 59px; height: 5px;bottom: 0; left: 0;background-color: #fd6602;}
+[class="ObulletB_big"]:before {content:"";display:block;position: absolute;width: 59px; height: 10px;bottom: 0; left: 0;background-color: #fd6602;}
+.boxShadow a span{position: relative; display: inline-block;}
+.boxShadow:hover span:after{width: 100%; height: 100%;position: absolute; content: "";top:0; left:0;box-shadow: inset 0 0 0 5px rgba(0,0,0,0.2);}
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?19782255');
+  src: url('../font/fontello.eot?19782255#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?19782255') format('woff2'),
+       url('../font/fontello.woff?19782255') format('woff'),
+       url('../font/fontello.ttf?19782255') format('truetype'),
+       url('../font/fontello.svg?19782255#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+img{max-width: 100%}
+
+/*로그인 시작*/
+.login_wrap{position: fixed;margin-top: 177px; left: 50%;background-color: #fff;width: 688px; height: 387px;padding: 34px 40px 41px;z-index:10;margin-left: -345px;}
+.login_wrap .log_logo,.join_wrap .log_logo{margin-bottom: 14px;}
+.login_wrap .inp_sec{float: right;width: 248px;position: relative;}
+.login_wrap .inp_sec:before{content: ""; width: 1px; height: 100%;background-color: #eee; display: block;position: absolute;top:0; left:-51px;}
+.login_wrap .inp_sec h4 {font-size: 16px; font-weight: bold;margin-bottom: 20px;}
+.login_wrap .inp_sec input[type=text],.login_wrap .inp_sec input[type=password]{width: 100%; border: 1px solid #ccc;padding: 5px 0;margin-bottom: 14px;}
+.login_wrap .inp_sec label{color: #282828;font-weight: 800;font-size: 14px;padding-bottom: 5px;display: block;}
+.login_wrap .inp_sec a{display: block;font-size: 14px; color: #fd6602; font-weight: 800;margin-bottom: 19px;}
+.login_wrap .inp_sec a:hover,.login_wrap .inp_sec a:focus{text-decoration: underline;}
+.login_wrap .inp_sec p.logBtn input[type=submit]{background: url(../images/common/box_log.png) 0 0 no-repeat;color: #fff; font-size: 14px;border: none;width: 78px; height: 36px;cursor: pointer;}
+
+.login_wrap .join_sec{float: left;width: 255px;}
+.login_wrap .join_sec h4{font-size: 16px; font-weight: 800;margin-bottom: 21px;}
+.login_wrap .join_sec>a{display: block;width: 255px; height: 36px; background: url(../images/common/bg_box_login_1.png) 0 0 no-repeat;margin-bottom: 9px;padding: 10px 16px;}
+.login_wrap .join_sec>a.join_btn2{background-image: url(../images/common/bg_box_login_2.png);}
+.login_wrap .join_sec>a.join_btn2 span{color: #666;}
+.login_wrap .join_sec>a.join_btn3{background-image: url(../images/common/bg_box_login_3.png);padding: 12px 16px;}
+.login_wrap .join_sec>a.join_btn3 span{margin-top: -4px;}
+.login_wrap .join_sec>a span{display: inline-block;padding-left: 20px; color: #fff; font-size: 14px; font-weight: 800;margin-top: -2px;}
+.login_wrap .join_sec>a img{vertical-align: top;}
+.login_wrap .join_sec p{text-align: right; font-size: 14px;}
+.login_wrap .join_sec p a{color: #282828; font-weight: bold;}
+.login_wrap .join_sec p a:hover{text-decoration: underline;}
+.btnCloseLayer{position: absolute;top:16px; right:16px;cursor: pointer;text-indent: -9999px;background: url(../images/common/x_log.png) 0 0 no-repeat;width: 17px; height: 17px;}
+/*로그인종료*/
